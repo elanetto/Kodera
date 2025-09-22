@@ -1,5 +1,6 @@
 import "./index.css";
 import SortLogo from "./assets/branding/kodera-logo-01.svg";
+import Offers from "./components/offers";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         />
         <p>FrontEnd Development / Nettsider kodet av Kvinner</p>
       </div>
+      <Offers />
     </div>
   );
 }
