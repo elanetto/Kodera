@@ -15,6 +15,9 @@ function App() {
         />
         <p>FrontEnd Development / Nettsider kodet av Kvinner</p>
       </div>
+      <h2 className="text-xl font-semibold text-coal p-4">
+        Dette kan vi tilby
+      </h2>
       <Offers />
     </div>
   );
