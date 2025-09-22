@@ -12,7 +12,7 @@ function App() {
           alt="Logo for Kodera"
           className="h-32 transition-opacity duration-300 opacity-100 group-hover:opacity-0"
         />
-        <p>FrontEnd Development / nettsider kodet av Kvinner</p>
+        <p>FrontEnd Development / Nettsider kodet av Kvinner</p>
       </div>
     </div>
   );
