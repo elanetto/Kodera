@@ -15,6 +15,7 @@ const router = createHashRouter([
         element: <App />,
       },
     ],
+  
   },
 ]);
 
