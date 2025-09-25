@@ -1,6 +1,7 @@
 import "./index.css";
 import SortLogo from "./assets/branding/kodera-logo-01.svg";
 import Offers from "./components/offers";
+import ContactForm from "./Components/mail-form";
 
 function App() {
   return (
@@ -15,10 +16,16 @@ function App() {
         />
         <p>FrontEnd Development / Nettsider kodet av Kvinner</p>
       </div>
-      <h2 className="text-xl font-semibold text-coal p-4">
-        Dette kan vi tilby
+      <h2 className="text-xl font-semibold text-coal p-4">Pakker vi tilbyr</h2>
+      <div className="pb-4">
+        <Offers />
+      </div>
+      <h2 className="text-xl font-semibold text-coal pb-4 pt-8">
+        Interessert? Send oss en mail!
       </h2>
-      <Offers />
+      <div className="w-full">
+        <ContactForm />
+      </div>
     </div>
   );
 }
