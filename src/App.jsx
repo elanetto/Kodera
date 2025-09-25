@@ -1,6 +1,7 @@
 import "./index.css";
 import SortLogo from "./assets/branding/kodera-logo-01.svg";
 import Offers from "./components/offers";
+import ContactForm from "./Components/mail-form";
 import { CarouselComponent } from "./Components/Carousel";
 
 import carouselImage1 from "./assets/carousel/main/Karusellbilde1.jpg";
@@ -17,8 +18,6 @@ function App() {
   { src: carouselImage2, alt: "Second slide", caption: "Programmerer unike nettsider for ditt behov" },
   { src: carouselImage3, alt: "Third slide", caption: "Velkommen til Kodera: Kvinner i tech", Link: "/omOss" }
 ];
-
-
 
   const portfolioImages = [
   { src: portfolioImage1, alt: "Anette Therese Portfolio", caption: "Portfolioside: Anette Therese, FrontEnd", link: "https://anette-portfolio.onrender.com/" },
@@ -42,10 +41,16 @@ function App() {
         />
         <p>FrontEnd Development / Nettsider kodet av Kvinner</p>
       </div>
-      <h2 className="text-xl font-semibold text-coal p-4">
-        Dette kan vi tilby
+      <h2 className="text-xl font-semibold text-coal p-4">Pakker vi tilbyr</h2>
+      <div className="pb-4">
+        <Offers />
+      </div>
+      <h2 className="text-xl font-semibold text-coal pb-4 pt-8">
+        Interessert? Send oss en mail!
       </h2>
-      <Offers />
+      <div className="w-full">
+        <ContactForm />
+        <Offers />
       <div className="w-full pt-10">
         <CarouselComponent images={portfolioImages} title="Portfolio carousel" />
       </div>
