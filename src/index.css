@@ -7,4 +7,12 @@
   --color-cyan: #45a8c0;
   --color-lightpink: #ff8fb0;
   --color-paperwhite: #f2f2f2;
+  
+  --font-koulen: "Koulen", sans-serif;
+}
+
+.koulen {
+  font-family: "Koulen", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
