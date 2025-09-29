@@ -58,9 +58,9 @@ function App() {
       <div className="w-full">
         <CarouselComponent
           images={carouselImages}
-          title="Kodera main carousel"
-        />
+          title="Kodera main carousel"/>
       </div>
+
       <h2 className="text-2xl font-koulen text-coal p-4">Pakker vi tilbyr</h2>
       <div className="pb-4">
         <Offers />
@@ -70,6 +70,7 @@ function App() {
       </h2>
       <div className="w-full">
         <ContactForm />
+        
       </div>
 <h2 className="text-2xl font-koulen text-coal pb-2 pt-10">
         Se tidligere prosjekter skapt av oss
@@ -77,8 +78,7 @@ function App() {
       <div className="w-full pt-4">
         <CarouselComponent
           images={portfolioImages}
-          title="Portfolio carousel"
-        />
+          title="Portfolio carousel"/>
       </div>
     </div>
   );
