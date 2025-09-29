@@ -1,5 +1,4 @@
 import "./index.css";
-import SortLogo from "./assets/branding/kodera-logo-01.svg";
 import Offers from "./components/offers";
 import ContactForm from "./Components/mail-form";
 import { CarouselComponent } from "./Components/Carousel";
@@ -48,7 +47,7 @@ function App() {
     {
       src: portfolioImage3,
       alt: "Holidaze Booking: Exam Project",
-      caption: "Holidaze - En booking nettside",
+      caption: "Holidaze - En booking nettside. Eksamensprosjek.",
       link: "https://dev-holiday.onrender.com/",
     },
   ];
@@ -58,10 +57,11 @@ function App() {
       <div className="w-full">
         <CarouselComponent
           images={carouselImages}
-          title="Kodera main carousel"/>
+          title="Kodera main carousel"
+        />
       </div>
 
-      <h2 className="text-2xl font-koulen text-coal p-4">Pakker vi tilbyr</h2>
+      <h2 className="text-2xl font-koulen text-coal p-4" id="tjenester">Pakker vi tilbyr</h2>
       <div className="pb-4">
         <Offers />
       </div>
@@ -70,15 +70,15 @@ function App() {
       </h2>
       <div className="w-full">
         <ContactForm />
-        
       </div>
-<h2 className="text-2xl font-koulen text-coal pb-2 pt-10">
+      <h2 className="text-2xl font-koulen text-coal pb-2 pt-10" id="portfolio">
         Se tidligere prosjekter skapt av oss
       </h2>
       <div className="w-full pt-4">
         <CarouselComponent
           images={portfolioImages}
-          title="Portfolio carousel"/>
+          title="Portfolio carousel"
+        />
       </div>
     </div>
   );

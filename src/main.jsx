@@ -4,6 +4,8 @@ import { RouterProvider, createHashRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App.jsx";
 import Layout from "./Layout";
+import OmOss from "./Pages/OmOss/index.jsx";
+import NotFound from "./Pages/NotFound/index.jsx";
 
 const router = createHashRouter([
   {
@@ -14,8 +16,15 @@ const router = createHashRouter([
         path: "/",
         element: <App />,
       },
+      {
+        path: "omoss",
+        element: <OmOss />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
+      },
     ],
-  
   },
 ]);
 
