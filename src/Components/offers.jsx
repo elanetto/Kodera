@@ -15,7 +15,7 @@ export default function Offers() {
                 <FaCheckCircle className="w-4 h-4 shrink-0 text-[#ee4c7c] mr-3" />
 
                 <p className="text-sm text-[#2e3944] text-left">
-                  1-3 sider. For eksempel forside, kontakt, prosjekter.
+                  1-3 sider. For eksempel forside, kontakt, prosjekter
                 </p>
               </div>
             </div>
@@ -80,7 +80,7 @@ export default function Offers() {
 
                 <p className="text-sm text-[#2e3944] text-left">
                   4-7 sider. For eksempel forside, kontakt, om oss, produkter,
-                  produkt detaljer, kundeomtaler, cookie informasjon.
+                  produkt detaljer, kundeomtaler, cookie informasjon
                 </p>
               </div>
             </div>
