@@ -23,7 +23,7 @@ export default function Offers() {
               <div className="flex flex-row items-center">
                 <FaCheckCircle className="w-4 h-4 shrink-0 text-[#ee4c7c] mr-3" />
 
-                <p className="text-sm text-[#2e3944] ">2 dagers levering</p>
+                <p className="text-sm text-[#2e3944] ">1 uke</p>
               </div>
             </div>
 
@@ -88,7 +88,7 @@ export default function Offers() {
               <div className="flex flex-row items-center">
                 <FaCheckCircle className="w-4 h-4 shrink-0 text-[#ee4c7c] mr-3" />
 
-                <p className="text-sm text-[#2e3944] ">1 uke levering</p>
+                <p className="text-sm text-[#2e3944] ">2 uker</p>
               </div>
             </div>
 
