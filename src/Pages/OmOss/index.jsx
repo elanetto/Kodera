@@ -42,7 +42,7 @@ function OmOss() {
             Anette Therese Lindberg
           </h3>
           <p className="text-lg text-gray-700 mb-2 italic">
-            Frontend-utvikler og Art Director
+            Frontend-utvikler og Grafisk Designer
           </p>
           <p className="text-lg text-gray-700">
             Master i Digitale Medier, samt utdanning som FrontEnd Utvikler. Har
@@ -110,11 +110,11 @@ function OmOss() {
             Line Svensen
           </h3>
           <p className="text-lg text-gray-700 mb-2 italic">
-            Frontend-utvikler og Forettningsplanlegger
+            Front-End utvikler, UX-designer og forretningsstrateg
           </p>
           <p className="text-lg text-gray-700">
-            Opptatt av å bygge robuste systemer og liker å samarbeide om
-            prosjekter som gjør en forskjell.
+            Høyere fagskoleutdanning innen Front-End Development. Bachelor i
+            innovasjon og forretningsutvikling.
           </p>
           <div className="pt-5 flex gap-5">
             <a
