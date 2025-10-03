@@ -2,42 +2,89 @@ import AnetteImage from "../../assets/images/Anette-dark-bg.jpg";
 import LineImage from "../../assets/images/Line-dark-bg.jpg";
 import CurlyPinkSVG from "../../assets/images/curly-pink-to-the-right.svg";
 import DarkSVGbg from "../../assets/images/darl-bg-to-the-curly-bracket.svg";
+import CurlyPinkSVGbottom from "../../assets/images/curly-pink-to-bottom.svg";
+
+import bildeAvOss from "../../assets/carousel/main/Karusellbilde1.jpg";
 
 function OmOss() {
   return (
     <div className="flex flex-col items-center w-full">
-      <h2 className="text-3xl font-koulen text-coal p-8">
-        Dette er Om Oss-siden
-      </h2>
+      <div
+        className="relative w-full pb-8 bg-center bg-cover"
+        style={{ backgroundImage: `url(${bildeAvOss})` }}
+      >
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/80"></div>
+
+        {/* Content above overlay */}
+        <div className="relative text-coal w-full">
+          <h1 className="text-5xl font-koulen text-white pt-16 text-center">
+            Om Kodera
+          </h1>
+
+          <section className="flex justify-center items-center w-full p-6">
+            <div className="w-full md:w-1/2 flex justify-center flex-col text-center text-white">
+              <p className="pt-4">
+                Kodera leverer kode av kvinner. Vi hjelper små til mellomstore
+                bedrifter og kunder med å sette sammen skreddersydde nettsider
+                for deres behov.
+              </p>
+
+              <p className="py-4">
+                Ta uforpliktet kontakt med oss for å se om vi kan hjelpe:
+              </p>
+
+              <a
+                href="mailto:kontakt@kodera.no"
+                className="cursor-pointer text-lg text-pinky hover:italic hover:text-pink-900 text-center"
+              >
+                kontakt@kodera.no
+              </a>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <h2 className="text-3xl font-koulen text-coal py-8">Oss i Kodera</h2>
 
       {/* Section: Anette */}
-      <section className="flex flex-col md:flex-row items-center max-w-5xl w-full p-6 gap-8">
+      <section className="flex flex-col md:flex-row items-center max-w-5xl w-full p-6 gap-2 md:gap-8">
         {/* Image + SVGs container */}
-        <div className="relative flex-shrink-0 w-full md:w-1/3 flex justify-center">
+        <div className="relative flex-shrink-0 w-full md:w-1/3 flex flex-col items-center">
           {/* Image itself */}
           <img
             src={AnetteImage}
             alt="Anette"
-            className="relative z-10 w-full h-auto rounded-2xl shadow-md"
+            className="relative z-10 w-full h-auto rounded-b-[6rem] rounded-t-2xl md:rounded-2xl shadow-md"
           />
-          {/* Dark bg behind */}
+
+          {/* --- DESKTOP SVGs (to the right) --- */}
           <img
             src={DarkSVGbg}
             alt=""
             aria-hidden="true"
-            className="absolute right-[-80px] top-1/2 -translate-y-1/2 h-full z-0"
+            className="hidden md:block absolute right-[-80px] top-1/2 -translate-y-1/2 h-full z-0"
           />
-          {/* Curly pink bracket */}
           <img
             src={CurlyPinkSVG}
             alt=""
             aria-hidden="true"
-            className="absolute right-[-90px] top-1/2 -translate-y-1/2 h-full z-20"
+            className="hidden md:block absolute right-[-90px] top-1/2 -translate-y-1/2 h-full z-20"
           />
+
+          {/* --- MOBILE SVGs (under image) --- */}
+          <div className="flex flex-col items-center pt-4 w-full md:hidden">
+            <img
+              src={CurlyPinkSVGbottom}
+              alt=""
+              aria-hidden="true"
+              className="w-full h-full z-20 -translate-y-[110px] sm:-translate-y-[120px] md:-translate-y-[120px] lg:-translate-y-[150px]"
+            />
+          </div>
         </div>
 
         {/* Text right */}
-        <div className="flex flex-col text-left w-full md:w-2/3 pl-24">
+        <div className="flex flex-col text-center md:text-left w-full md:w-2/3 md:pl-24 -mt-16 sm:-mt-24 md:mt-0">
           <h3 className="text-2xl font-bold text-coal mb-2 font-koulen">
             Anette Therese Lindberg
           </h3>
@@ -49,10 +96,10 @@ function OmOss() {
             erfaring som Digital Markdsfører, Grafisk Designer, Art Director og
             Lærer.
           </p>
-          <div className="pt-5 flex gap-5">
+          <div className="pt-5 flex flex-row gap-5 items-center md:items-start justify-center md:justify-start w-full">
             <a
               href="mailto:anette@kodera.no"
-              className="flex items-center cursor-pointer "
+              className="flex items-center cursor-pointer"
             >
               <p className="text-lg text-pinky hover:italic hover:text-pink-900">
                 anette@kodera.no
@@ -60,7 +107,7 @@ function OmOss() {
             </a>
             <a
               href="https://www.linkedin.com/in/anettetherese/"
-              className="flex items-center cursor-pointer "
+              className="flex items-center cursor-pointer"
             >
               <p className="text-lg text-pinky hover:italic hover:text-pink-900">
                 LinkedIn
@@ -68,7 +115,7 @@ function OmOss() {
             </a>
             <a
               href="https://anette-portfolio.onrender.com/"
-              className="flex items-center cursor-pointer "
+              className="flex items-center cursor-pointer"
             >
               <p className="text-lg text-pinky hover:italic hover:text-pink-900">
                 Portfolio
@@ -79,33 +126,43 @@ function OmOss() {
       </section>
 
       {/* Section: Line */}
-      <section className="flex flex-col md:flex-row items-center max-w-5xl w-full p-6 gap-8">
+      <section className="flex flex-col md:flex-row items-center max-w-5xl w-full p-6 gap-2 md:gap-8">
         {/* Image + SVGs container */}
-        <div className="relative flex-shrink-0 w-full md:w-1/3 flex justify-center">
+        <div className="relative flex-shrink-0 w-full md:w-1/3 flex flex-col items-center">
           {/* Image itself */}
           <img
             src={LineImage}
             alt="Line"
-            className="relative z-10 w-full h-auto rounded-2xl shadow-md"
+            className="relative z-10 w-full h-auto rounded-b-[6rem] rounded-t-2xl md:rounded-2xl shadow-md"
           />
-          {/* Dark bg behind */}
+
+          {/* --- DESKTOP SVGs (to the right) --- */}
           <img
             src={DarkSVGbg}
             alt=""
             aria-hidden="true"
-            className="absolute right-[-80px] top-1/2 -translate-y-1/2 h-full z-0"
+            className="hidden md:block absolute right-[-80px] top-1/2 -translate-y-1/2 h-full z-0"
           />
-          {/* Curly pink bracket */}
           <img
             src={CurlyPinkSVG}
             alt=""
             aria-hidden="true"
-            className="absolute right-[-90px] top-1/2 -translate-y-1/2 h-full z-20"
+            className="hidden md:block absolute right-[-90px] top-1/2 -translate-y-1/2 h-full z-20"
           />
+
+          {/* --- MOBILE SVGs (under image) --- */}
+          <div className="flex flex-col items-center pt-4 w-full md:hidden">
+            <img
+              src={CurlyPinkSVGbottom}
+              alt=""
+              aria-hidden="true"
+              className="w-full h-full z-20 -translate-y-[110px] sm:-translate-y-[120px] md:-translate-y-[120px] lg:-translate-y-[150px]"
+            />
+          </div>
         </div>
 
         {/* Text right */}
-        <div className="flex flex-col text-left w-full md:w-2/3 pl-24">
+        <div className="flex flex-col text-center md:text-left w-full md:w-2/3 md:pl-24 -mt-16 sm:-mt-24 md:mt-0">
           <h3 className="text-2xl font-bold text-coal mb-2 font-koulen">
             Line Svensen
           </h3>
@@ -116,10 +173,10 @@ function OmOss() {
             Høyere fagskoleutdanning innen Front-End Development. Bachelor i
             innovasjon og forretningsutvikling.
           </p>
-          <div className="pt-5 flex gap-5">
+          <div className="pt-5 flex flex-row gap-5 items-center md:items-start justify-center md:justify-start w-full">
             <a
               href="mailto:line@kodera.no"
-              className="flex items-center cursor-pointer "
+              className="flex items-center cursor-pointer"
             >
               <p className="text-lg text-pinky hover:italic hover:text-pink-900">
                 line@kodera.no
@@ -127,7 +184,7 @@ function OmOss() {
             </a>
             <a
               href="https://www.linkedin.com/in/line-svensen-967131122/"
-              className="flex items-center cursor-pointer "
+              className="flex items-center cursor-pointer"
             >
               <p className="text-lg text-pinky hover:italic hover:text-pink-900">
                 LinkedIn
@@ -135,7 +192,7 @@ function OmOss() {
             </a>
             <a
               href="https://ls-dev.vercel.app/"
-              className="flex items-center cursor-pointer "
+              className="flex items-center cursor-pointer"
             >
               <p className="text-lg text-pinky hover:italic hover:text-pink-900">
                 Portfolio
