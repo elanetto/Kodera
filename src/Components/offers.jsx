@@ -2,7 +2,7 @@ import { FaCheckCircle } from "react-icons/fa";
 
 export default function Offers() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 max-w-7xl gap-4  items-start mt-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 max-w-7xl gap-10 items-start mt-4">
       <div className="flex flex-col justify-center items-center">
         <div className="flex w-42 justify-center py-2 bg-[#ee4c7c] rounded-t-lg">
           <h2 className="text-lg text-white  font-semibold">Enkel nettside</h2>
