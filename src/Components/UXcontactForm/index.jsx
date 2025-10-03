@@ -37,7 +37,7 @@ export default function UXcontactForm() {
             {/* Success message */}
             {state.succeeded ? (
               <p className="text-green-600 font-semibold text-center">
-                Takk for bestillingen! ✨
+                Epost er sendt ✨
               </p>
             ) : (
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -82,7 +82,7 @@ export default function UXcontactForm() {
                   </label>
                   <input
                     id="website"
-                    type="url"
+                    type="text"
                     name="website"
                     placeholder="https://"
                     className="border rounded-lg px-3 py-2"
