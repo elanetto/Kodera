@@ -2,6 +2,8 @@ import "./index.css";
 import Offers from "./components/offers";
 import ContactForm from "./Components/mail-form";
 import { CarouselComponent } from "./Components/Carousel";
+import UXcontactForm from "./Components/UXcontactForm";
+import UXbanner from "./Components/BannerUX"
 
 import carouselImage1 from "./assets/carousel/main/Karusellbilde1.jpg";
 import carouselImage2 from "./assets/carousel/main/Karusellbilde2.jpg";
@@ -70,6 +72,9 @@ function App() {
       </h2>
       <div className="w-full">
         <ContactForm />
+      </div>
+      <div className="py-8 w-full">
+        <UXbanner />
       </div>
       <h2 className="text-2xl font-koulen text-coal pb-2 pt-10" id="portfolio">
         Se tidligere prosjekter skapt av oss
