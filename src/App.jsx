@@ -12,6 +12,10 @@ import carouselImage3 from "./assets/carousel/main/Karusellbilde3.jpg";
 import portfolioImage1 from "./assets/carousel/portfolio/anettetherese.jpg";
 import portfolioImage2 from "./assets/carousel/portfolio/elanettoNO-anette.jpg";
 import portfolioImage3 from "./assets/carousel/portfolio/holidaze-anette.jpg";
+import portfolioImage4 from "./assets/carousel/portfolio/FlappyFlop.jpg"
+import portfolioImage5 from "./assets/carousel/portfolio/Airbnb-site.jpg"
+import portfolioImage6 from "./assets/carousel/portfolio/BidBuddy.jpg"
+import portfolioImage7 from "./assets/carousel/portfolio/ShopDrop.jpg"
 
 function App() {
   const carouselImages = [
@@ -51,6 +55,30 @@ function App() {
       alt: "Holidaze Booking: Exam Project",
       caption: "Holidaze - En booking nettside. Eksamensprosjek.",
       link: "https://dev-holiday.onrender.com/",
+    },
+    {
+      src: portfolioImage4,
+      alt: "Flappy Flop",
+      caption: "Flappy Flop - Et spill",
+      link: "https://floppy-flap.vercel.app/",
+    },
+    {
+      src: portfolioImage5,
+      alt: "Holidaze Booking: Exam Project",
+      caption: "Holidaze - En booking nettside som AirBnB. Eksamensprosjek.",
+      link: "https://pe2025.onrender.com/",
+    },
+    {
+      src: portfolioImage6,
+      alt: "Bid Buddy",
+      caption: "Bid Buddy - En Auksjonsnettside",
+      link: "https://js2-sp-auction-website.vercel.app/",
+    },
+    {
+      src: portfolioImage7,
+      alt: "Shop Drop",
+      caption: "Shop Drop - En fiktiv shoppingside",
+      link: "https://shopdrop-online-store-react.netlify.app/",
     },
   ];
 
