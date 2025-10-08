@@ -52,7 +52,7 @@ export default function Offers() {
                 <FaCheckCircle className="w-4 h-4 shrink-0 text-[#ee4c7c] mr-3" />
 
                 <p className="text-sm text-[#2e3944] ">
-                  30 dagers "bug-fri" garanti
+                  30 dagers støtte og vedlikehold
                 </p>
               </div>
             </div>
@@ -117,7 +117,7 @@ export default function Offers() {
                 <FaCheckCircle className="w-4 h-4 shrink-0 text-[#ee4c7c] mr-3" />
 
                 <p className="text-sm text-[#2e3944] ">
-                  30 dagers "bug-fri" garanti
+                  30 dagers støtte og vedlikehold
                 </p>
               </div>
             </div>
@@ -167,7 +167,7 @@ export default function Offers() {
                 <FaCheckCircle className="w-4 h-4 shrink-0 text-[#ee4c7c] mr-3" />
 
                 <p className="text-sm text-[#2e3944] ">
-                  30 dagers "bug-fri" garanti *
+                  30 dagers støtte og vedlikehold
                 </p>
               </div>
             </div>
