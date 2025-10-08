@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import HvitLogo from "./../../assets/branding/Kodera-logo-hvit.svg";
 import { scrollToId } from "./../../Components/ScrollToID";
+import ThemeToggle from "../../Components/ThemeToggle";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -97,6 +98,7 @@ export function Header() {
           </ul>
         </nav>
       </div>
+      {/* <ThemeToggle /> */}
     </header>
   );
 }
