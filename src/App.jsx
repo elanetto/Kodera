@@ -92,11 +92,11 @@ function App() {
         />
       </div>
 
-      <h2 className="text-2xl font-koulen text-coal p-4" id="tjenester">Pakker vi tilbyr</h2>
+      <h2 className="text-2xl font-koulen text-title p-4" id="tjenester">Pakker vi tilbyr</h2>
       <div className="pb-4">
         <Offers />
       </div>
-      <h2 className="text-2xl font-koulen text-coal pb-4 pt-8">
+      <h2 className="text-2xl font-koulen text-title pb-4 pt-8">
         Interessert? Send oss en mail!
       </h2>
       <div className="w-full">
@@ -105,7 +105,7 @@ function App() {
       <div className="py-8 w-full">
         <UXbanner />
       </div>
-      <h2 className="text-2xl font-koulen text-coal pb-2 pt-10" id="portfolio">
+      <h2 className="text-2xl font-koulen text-title pb-2 pt-10" id="portfolio">
         Se tidligere prosjekter skapt av oss
       </h2>
       <div className="w-full pt-4">

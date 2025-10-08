@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
+/* 🌞 Light theme (default) */
 @theme {
   --color-coal: #2e3944;
+  --color-title: #2e3944;
   --color-pinky: #ee4c7c;
+  --color-darkpink: #AC3559;
   --color-turkis: #17e9c9;
   --color-cyan: #45a8c0;
   --color-lightpink: #ff8fb0;
@@ -11,9 +14,24 @@
   --font-koulen: "Koulen", sans-serif;
 }
 
+/* Global font */
 .koulen {
   font-family: "Koulen", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
+/* 🌙 Dark theme overrides */
+.dark {
+  --color-coal: #2e3944;
+  --color-paperwhite: #161c22;
+  --color-pinky: #ff6392;
+  --color-cyan: #5fd3f3;
+  --color-white: #ffffff;
+  --color-title: #FFF;
+}
+
+/* Optional: Force light mode as default */
+:root {
+  color-scheme: light;
+}
