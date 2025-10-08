@@ -17,6 +17,7 @@ import portfolioImage5 from "./assets/carousel/portfolio/Airbnb-site.jpg"
 import portfolioImage6 from "./assets/carousel/portfolio/BidBuddy.jpg"
 import portfolioImage7 from "./assets/carousel/portfolio/ShopDrop.jpg"
 
+
 function App() {
   const carouselImages = [
     {
