@@ -14,7 +14,7 @@ export function CarouselComponent({ images = [], title }) {
           showStatus={false}
           infiniteLoop
           autoPlay
-          interval={5000}
+          interval={10000}
           className="mb-6 rounded-xl shadow"
         >
           {images.map((img, index) => {
