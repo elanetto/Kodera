@@ -14,15 +14,21 @@ export default function UXbanner() {
           style={{ backgroundImage: `url(${BgImage})` }}
         >
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/60" />
 
           {/* Content */}
           <div className="relative z-10 text-white">
-            <h2 className="text-3xl font-bold font-koulen">TILBUD:</h2>
-            <p className="mt-2 text-lg">Gratis UX konsultasjon</p>
-            <p className="text-sm text-gray-300 line-through">
-              Veil. pris: kr 10 000
-            </p>
+            <h2 className="text-3xl text-white font-bold font-koulen">TILBUD:</h2>
+            <p className="mt-2 font-bold text-2xl">Gratis UX-analyse</p>
+            <p className="text-sm text-white italic pt-3">
+                Hvordan er brukerens
+              </p>
+              <p className="text-sm text-white italic">
+                opplevelse av nettsiden?
+              </p>
+              <p className="text-sm text-white line-through pt-4">
+                Veil. pris: kr 10 000
+              </p>
             <div className="mt-6">
               <UXcontactForm />
             </div>
@@ -35,8 +41,14 @@ export default function UXbanner() {
           <div className="bg-coal text-white flex items-center justify-end px-8 w-1/4 relative z-10 rounded-l-xl">
             <div className="max-w-sm text-left mr-6">
               <h2 className="text-4xl font-bold font-koulen">TILBUD:</h2>
-              <p className="mt-2 text-xl">Gratis UX konsultasjon</p>
-              <p className="text-sm text-gray-400 line-through">
+              <p className="mt-2 text-xl">Gratis UX-analyse</p>
+              <p className="text-sm text-gray-400 italic">
+                Hvordan er brukerens
+              </p>
+              <p className="text-sm text-gray-400 italic">
+                opplevelse av nettsiden?
+              </p>
+              <p className="text-sm text-gray-400 line-through pt-3">
                 Veil. pris: kr 10 000
               </p>
             </div>

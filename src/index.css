@@ -5,7 +5,8 @@
   --color-coal: #2e3944;
   --color-title: #2e3944;
   --color-pinky: #ee4c7c;
-  --color-darkpink: #AC3559;
+  --color-darkpink: #e82e65;
+  --color-darkpinkhover: #bf0e43;
   --color-turkis: #17e9c9;
   --color-cyan: #45a8c0;
   --color-lightpink: #ff8fb0;
@@ -28,7 +29,7 @@
   --color-pinky: #ff6392;
   --color-cyan: #5fd3f3;
   --color-white: #ffffff;
-  --color-title: #FFF;
+  --color-title: #fff;
 }
 
 /* Optional: Force light mode as default */

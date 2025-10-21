@@ -1,5 +1,5 @@
 import "./index.css";
-import Offers from "./components/offers";
+import Offers from "./Components/offers.jsx";
 import ContactForm from "./Components/mail-form";
 import { CarouselComponent } from "./Components/Carousel";
 import UXcontactForm from "./Components/UXcontactForm";
