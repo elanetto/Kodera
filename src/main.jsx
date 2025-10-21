@@ -6,6 +6,7 @@ import App from "./App.jsx";
 import Layout from "./Layout";
 import OmOss from "./Pages/OmOss/index.jsx";
 import NotFound from "./Pages/NotFound/index.jsx";
+import KoderaPrivacyPolicy from "./Pages/Personvern/index.jsx"
 
 const router = createHashRouter([
   {
@@ -19,6 +20,10 @@ const router = createHashRouter([
       {
         path: "omoss",
         element: <OmOss />,
+      },
+            {
+        path: "personvern",
+        element: <KoderaPrivacyPolicy />,
       },
       {
         path: "*",

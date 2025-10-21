@@ -5,7 +5,7 @@ export default function Offers() {
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 max-w-7xl gap-10 items-start mt-4">
       <div className="flex flex-col justify-center items-center">
         <div className="flex w-42 justify-center py-2 bg-darkpink rounded-t-lg">
-          <h2 className="text-lg text-white  font-semibold">Enkel nettside</h2>
+          <h2 className="text-lg text-white  font-semibold">Liten nettside</h2>
         </div>
 
         <div className="flex flex-col shadow rounded-lg bg-white w-68 h-94">
@@ -69,7 +69,7 @@ export default function Offers() {
 
       <div className="flex flex-col justify-center items-center">
         <div className="flex w-48 justify-center py-2 bg-darkpink rounded-t-lg">
-          <h2 className="text-lg text-white  font-semibold">Medium nettside</h2>
+          <h2 className="text-lg text-white  font-semibold">Middels nettside</h2>
         </div>
 
         <div className="flex flex-col shadow rounded-lg bg-white w-68 h-94">
@@ -135,7 +135,7 @@ export default function Offers() {
       <div className="flex flex-col justify-center items-center">
         <div className="flex w-52 justify-center py-2 bg-darkpink rounded-t-lg">
           <h2 className="text-lg text-white  font-semibold">
-            Eksisterende nettside
+            Timebasert
           </h2>
         </div>
 

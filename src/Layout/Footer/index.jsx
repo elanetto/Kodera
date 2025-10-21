@@ -1,4 +1,5 @@
 import { FaFacebookF, FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
@@ -16,7 +17,13 @@ export function Footer() {
       {/* Bottom bar */}
       <div className="mt-10 pt-6 border-white text-sm text-center text-white">
         <p>© {new Date().getFullYear()} Kodera</p>
-        <p className="italic text-xs">Kode av Kvinner</p>
+        <p className="italic text-xs pb-2">Kode av Kvinner</p>
+        <Link
+          to="/personvern"
+          className="text-xs text-pinky hover:text-darkpink underline-offset-2 hover:underline"
+        >
+          Personvernerklæring
+        </Link>
       </div>
     </footer>
   );
