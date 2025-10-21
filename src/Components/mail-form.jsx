@@ -5,7 +5,7 @@ export default function ContactForm() {
 
   if (state.succeeded) {
     return (
-      <p className="text-white bg-[#ee4c7c] flex justify-center items-center w-md h-[52px] mx-auto rounded-lg">
+      <p className="text-white bg-darkpink flex justify-center items-center w-md h-[52px] mx-auto rounded-lg">
         Meldingen er sendt ✅ Vi svarer deg straks! 🙌
       </p>
     );
@@ -45,7 +45,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={state.submitting}
-        className="bg-[#ee4c7c] flex items-center justify-center text-white gap-2 text-lg p-2 rounded hover:bg-[#cf436d] w-full cursor-pointer disabled:opacity-70"
+        className="bg-darkpink flex items-center justify-center text-white gap-2 text-lg p-2 rounded hover:bg-darkpinkhover w-full cursor-pointer disabled:opacity-70"
       >
         {state.submitting && (
           <span className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
