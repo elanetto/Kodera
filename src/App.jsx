@@ -91,9 +91,7 @@ function App() {
         />
       </div>
 
-      <h2 className="text-2xl font-koulen text-title p-4" id="tjenester">
-        Pakker vi tilbyr
-      </h2>
+      
       <div className="pb-4">
         <Offers />
       </div>
