@@ -26,16 +26,33 @@
     />
     <script src="/cookie-banner/silktide-consent-manager.js"></script>
 
+    <!-- Google Analytics 4 – med samtykkestyring -->
     <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      // Standard: alt nektes inntil bruker samtykker
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        analytics_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+      });
+    </script>
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-53VKWM9BX6"
+    ></script>
+
+    <script>
+      // Initierer Silktide etter at siden er lastet
       window.addEventListener("load", function () {
-        // Initialize Silktide Consent Manager
         silktideCookieBannerManager.updateCookieBannerConfig({
-          background: {
-            showBackground: false,
-          },
-          cookieIcon: {
-            position: "bottomRight",
-          },
+          background: { showBackground: false },
+          cookieIcon: { position: "bottomRight" },
           cookieTypes: [
             {
               id: "noedvendige",
@@ -54,12 +71,12 @@
                 "<p>Hjelper oss å forbedre nettsiden ved å spore hvordan brukerne navigerer.</p>",
               required: false,
               onAccept: function () {
+                // Bruker har samtykket til analyse
                 gtag("consent", "update", {
                   analytics_storage: "granted",
                 });
-                dataLayer.push({
-                  event: "consent_accepted_google_analytics",
-                });
+                gtag("config", "G-53VKWM9BX6", { anonymize_ip: true });
+                dataLayer.push({ event: "consent_accepted_google_analytics" });
               },
               onReject: function () {
                 gtag("consent", "update", {
@@ -106,20 +123,6 @@
           },
         });
       });
-    </script>
-
-    <!-- Google Analytics (keep this after Silktide config) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-53VKWM9BX6"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-53VKWM9BX6", { anonymize_ip: true });
     </script>
 
     <!-- SEO og metadata -->
