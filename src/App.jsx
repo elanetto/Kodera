@@ -1,5 +1,5 @@
 import "./index.css";
-import Offers from "./Components/Offers";
+import PopularOffers from "./Components/Offers/PopularOffers";
 import ContactForm from "./Components/MailForm";
 import { CarouselComponent } from "./Components/Carousel";
 import UXcontactForm from "./Components/UXcontactForm";
@@ -83,7 +83,7 @@ function App() {
   ];
 
   return (
-    <div className="flex items-center flex-col">
+    <div className="flex items-center flex-col ">
       <div className="w-full">
         <CarouselComponent
           images={carouselImages}
@@ -91,9 +91,8 @@ function App() {
         />
       </div>
 
-      
-      <div className="pb-4">
-        <Offers />
+      <div className="pb-4 flex justify-center items-center bg-[#E6E6E6] w-full">
+        <PopularOffers />
       </div>
       <h2 className="text-2xl font-koulen text-title pb-4 pt-8">
         Interessert? Send oss en mail!
