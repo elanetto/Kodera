@@ -35,12 +35,12 @@ export function Header() {
               </Link>
             </li>
             <li>
-              <button
-                onClick={() => handleNavClick("tjenester")}
+              <Link
+                to="/tjenester"
                 className="hover:text-gray-300 transition-colors cursor-pointer"
               >
                 Tjenester
-              </button>
+              </Link>
             </li>
             <li>
               <button
