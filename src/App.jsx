@@ -17,6 +17,8 @@ import portfolioImage5 from "./assets/carousel/portfolio/Airbnb-site.jpg";
 import portfolioImage6 from "./assets/carousel/portfolio/BidBuddy.jpg";
 import portfolioImage7 from "./assets/carousel/portfolio/ShopDrop.jpg";
 
+import Hero from "./Components/AnimatedHero/Hero";
+
 function App() {
   const carouselImages = [
     {
@@ -84,14 +86,17 @@ function App() {
 
   return (
     <div className="flex items-center flex-col ">
-      <div className="w-full">
+      <Hero />
+      
+
+      {/* <div className="w-full">
         <CarouselComponent
           images={carouselImages}
           title="Kodera main carousel"
         />
-      </div>
+      </div> */}
 
-      <div className="pb-4 flex justify-center items-center bg-[#E6E6E6] w-full">
+      <div className=" pb-4 flex justify-center items-center bg-[#E6E6E6] w-full">
         <PopularOffers />
       </div>
       <h2 className="text-2xl font-koulen text-title pb-4 pt-8">
