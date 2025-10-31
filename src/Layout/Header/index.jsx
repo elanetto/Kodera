@@ -16,7 +16,7 @@ export function Header() {
   };
 
   return (
-    <header className="w-full bg-coal">
+    <header className="w-full bg-coal fixed z-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 py-4 sm:py-6 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center cursor-pointer">
@@ -35,12 +35,12 @@ export function Header() {
               </Link>
             </li>
             <li>
-              <button
-                onClick={() => handleNavClick("tjenester")}
+              <Link
+                to="/tjenester"
                 className="hover:text-gray-300 transition-colors cursor-pointer"
               >
                 Tjenester
-              </button>
+              </Link>
             </li>
             <li>
               <button

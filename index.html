@@ -18,19 +18,111 @@
 
     <!-- SEO -->
     <title>Kodera – FrontEnd av kvinner</title>
+    <!-- Silktide Consent Manager -->
+    <link
+      rel="stylesheet"
+      id="silktide-consent-manager-css"
+      href="/cookie-banner/silktide-consent-manager.css"
+    />
+    <script src="/cookie-banner/silktide-consent-manager.js"></script>
 
-    <!-- Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-53VKWM9BX6"
-    ></script>
+    <!-- Google Analytics 4 – med samtykkestyring -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
-      gtag("js", new Date());
-      gtag("config", "G-53VKWM9BX6");
+
+      // Standard: alt nektes inntil bruker samtykker
+      gtag("consent", "default", {
+        ad_storage: "denied",
+        analytics_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+      });
+    </script>
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-53VKWM9BX6"
+    ></script>
+
+    <script>
+      // Initierer Silktide etter at siden er lastet
+      window.addEventListener("load", function () {
+        silktideCookieBannerManager.updateCookieBannerConfig({
+          background: { showBackground: false },
+          cookieIcon: { position: "bottomRight" },
+          cookieTypes: [
+            {
+              id: "noedvendige",
+              name: "Nødvendige",
+              description:
+                "<p>Nødvendig for at siden skal fungere og at systemet får beskjed om at du ønsker å være privat.</p>",
+              required: true,
+              onAccept: function () {
+                console.log("Nødvendige tillatt");
+              },
+            },
+            {
+              id: "google_analytics",
+              name: "Google Analytics",
+              description:
+                "<p>Hjelper oss å forbedre nettsiden ved å spore hvordan brukerne navigerer.</p>",
+              required: false,
+              onAccept: function () {
+                // Bruker har samtykket til analyse
+                gtag("consent", "update", {
+                  analytics_storage: "granted",
+                });
+                gtag("config", "G-53VKWM9BX6", { anonymize_ip: true });
+                dataLayer.push({ event: "consent_accepted_google_analytics" });
+              },
+              onReject: function () {
+                gtag("consent", "update", {
+                  analytics_storage: "denied",
+                });
+              },
+            },
+            {
+              id: "markedsforing",
+              name: "Markedsføring",
+              description:
+                "<p>Brukes til digital markedsføring, som Meta og Instagram, for å vise relevante annonser.</p>",
+              required: false,
+              onAccept: function () {
+                gtag("consent", "update", {
+                  ad_storage: "granted",
+                  ad_user_data: "granted",
+                  ad_personalization: "granted",
+                });
+              },
+              onReject: function () {
+                gtag("consent", "update", {
+                  ad_storage: "denied",
+                  ad_user_data: "denied",
+                  ad_personalization: "denied",
+                });
+              },
+            },
+          ],
+          text: {
+            banner: {
+              description:
+                '<p>Vi bruker cookies for å forbedre brukeropplevelsen og analysere trafikk. <a href="/personvern" target="_blank">Les mer</a>.</p>',
+              acceptAllButtonText: "Aksepter alle",
+              rejectNonEssentialButtonText: "Kun nødvendige",
+              preferencesButtonText: "Vis preferanser",
+            },
+            preferences: {
+              title: "Velg dine cookie-preferanser",
+              description:
+                "<p>Vi respekterer din rett til å være privat. Velg fritt hvilke cookies som skal være tillatt.</p>",
+              creditLinkText: "Dette banneret er fra Silktide.com",
+            },
+          },
+        });
+      });
     </script>
 
     <!-- SEO og metadata -->

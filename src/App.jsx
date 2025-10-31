@@ -1,9 +1,9 @@
 import "./index.css";
-import Offers from "./Components/offers.jsx";
-import ContactForm from "./Components/mail-form";
+import PopularOffers from "./Components/Offers/PopularOffers";
+import ContactForm from "./Components/MailForm";
 import { CarouselComponent } from "./Components/Carousel";
 import UXcontactForm from "./Components/UXcontactForm";
-import UXbanner from "./Components/BannerUX"
+import UXbanner from "./Components/BannerUX";
 
 import carouselImage1 from "./assets/carousel/main/Karusellbilde1.jpg";
 import carouselImage2 from "./assets/carousel/main/Karusellbilde2.jpg";
@@ -12,11 +12,12 @@ import carouselImage3 from "./assets/carousel/main/Karusellbilde3.jpg";
 import portfolioImage1 from "./assets/carousel/portfolio/anettetherese.jpg";
 import portfolioImage2 from "./assets/carousel/portfolio/elanettoNO-anette.jpg";
 import portfolioImage3 from "./assets/carousel/portfolio/holidaze-anette.jpg";
-import portfolioImage4 from "./assets/carousel/portfolio/FlappyFlop.jpg"
-import portfolioImage5 from "./assets/carousel/portfolio/Airbnb-site.jpg"
-import portfolioImage6 from "./assets/carousel/portfolio/BidBuddy.jpg"
-import portfolioImage7 from "./assets/carousel/portfolio/ShopDrop.jpg"
+import portfolioImage4 from "./assets/carousel/portfolio/FlappyFlop.jpg";
+import portfolioImage5 from "./assets/carousel/portfolio/Airbnb-site.jpg";
+import portfolioImage6 from "./assets/carousel/portfolio/BidBuddy.jpg";
+import portfolioImage7 from "./assets/carousel/portfolio/ShopDrop.jpg";
 
+import Hero from "./Components/AnimatedHero/Hero";
 
 function App() {
   const carouselImages = [
@@ -84,17 +85,19 @@ function App() {
   ];
 
   return (
-    <div className="flex items-center flex-col">
-      <div className="w-full">
+    <div className="flex items-center flex-col ">
+      <Hero />
+      
+
+      {/* <div className="w-full">
         <CarouselComponent
           images={carouselImages}
           title="Kodera main carousel"
         />
-      </div>
+      </div> */}
 
-      <h2 className="text-2xl font-koulen text-title p-4" id="tjenester">Pakker vi tilbyr</h2>
-      <div className="pb-4">
-        <Offers />
+      <div className=" pb-4 flex justify-center items-center bg-[#E6E6E6] w-full">
+        <PopularOffers />
       </div>
       <h2 className="text-2xl font-koulen text-title pb-4 pt-8">
         Interessert? Send oss en mail!
