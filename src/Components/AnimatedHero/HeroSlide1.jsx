@@ -39,7 +39,7 @@ export default function HeroSlide1({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
-          className="bg-darkpink hover:bg-darkpinkhover cursor-pointer px-6 py-2 w-[170px] rounded-lg mx-auto md:mx-0"
+          className="bg-pinky text-lg text-white  hover:bg-darkpink shadow-lg cursor-pointer px-6 py-2 w-[170px] rounded-lg mx-auto md:mx-0"
         >
           Kontakt oss
         </motion.button>
