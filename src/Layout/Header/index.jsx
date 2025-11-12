@@ -16,7 +16,7 @@ export function Header() {
   };
 
   return (
-    <header className="w-full bg-coal fixed z-12">
+    <header className="w-full bg-coal fixed z-888">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 py-4 sm:py-6 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center cursor-pointer">
