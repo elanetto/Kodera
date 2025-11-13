@@ -38,3 +38,17 @@
 :root {
   color-scheme: light;
 }
+
+@keyframes loop-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-loop-left {
+  animation: loop-left 40s linear infinite;
+  will-change: transform;
+}

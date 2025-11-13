@@ -19,6 +19,8 @@ import portfolioImage7 from "./assets/carousel/portfolio/ShopDrop.jpg";
 
 import Hero from "./Components/AnimatedHero/Hero";
 
+import TechLogoLoop from "./Components/TechLogoLoop";
+
 function App() {
   const carouselImages = [
     {
@@ -87,7 +89,6 @@ function App() {
   return (
     <div className="flex items-center flex-col ">
       <Hero />
-      
 
       {/* <div className="w-full">
         <CarouselComponent
@@ -99,6 +100,7 @@ function App() {
       <div className=" pb-4 flex justify-center items-center bg-[#E6E6E6] w-full">
         <PopularOffers />
       </div>
+      <TechLogoLoop />
       <h2 className="text-2xl font-koulen text-title pb-4 pt-8">
         Interessert? Send oss en mail!
       </h2>
