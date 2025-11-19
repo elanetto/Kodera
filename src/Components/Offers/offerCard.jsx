@@ -24,7 +24,7 @@ export default function OfferCard({
   bodyClass = "",
 }) {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center h-full ">
       {/* Top pink label */}
       <div className="flex justify-center py-2 min-w-[180px] bg-darkpink rounded-t-lg">
         <h3 className="text-lg text-white font-semibold">{tag}</h3>

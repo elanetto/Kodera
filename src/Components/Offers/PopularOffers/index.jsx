@@ -18,7 +18,9 @@ export default function PopularOffers() {
                       max-w-7xl mx-auto"
       >
         {popular.map((pkg, i) => (
-          <OfferCard key={i} {...pkg} />
+          <Link key={pkg.id} to={`/tjenester/${pkg.id}`}>
+            <OfferCard key={i} {...pkg} />
+          </Link>
         ))}
       </div>
 

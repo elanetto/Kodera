@@ -21,6 +21,10 @@ import Hero from "./Components/AnimatedHero/Hero";
 
 import TechLogoLoop from "./Components/TechLogoLoop";
 
+import WhyUs from "./Components/WhyUsSection";
+
+
+
 function App() {
   const carouselImages = [
     {
@@ -107,6 +111,7 @@ function App() {
       <div className="w-full">
         <ContactForm />
       </div>
+      <WhyUs />
       <div className="py-8 w-full">
         <UXbanner />
       </div>

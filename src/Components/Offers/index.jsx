@@ -1,6 +1,7 @@
 import { FaCheckCircle } from "react-icons/fa";
 import OfferCard from "./OfferCard"; // or wherever your OfferCard component is
 import { packages, hourly } from "./offersData";
+import { Link } from "react-router-dom";
 
 export default function Offers() {
   return (
@@ -14,7 +15,13 @@ export default function Offers() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl gap-10 items-stretch">
         {packages.map((pkg, i) => (
-          <OfferCard key={i} {...pkg} />
+          <Link
+            key={pkg.id}
+            to={`/tjenester/${pkg.id}`}
+            className=""
+          >
+            <OfferCard key={i} {...pkg} />
+          </Link>
         ))}
       </div>
 

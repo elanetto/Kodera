@@ -2,6 +2,7 @@
 
 export const packages = [
   {
+    id: "one-pager",
     tag: "One pager",
     headline: "Nettside bestående av 1 side",
     features: [
@@ -11,10 +12,33 @@ export const packages = [
       "Mulighet for å ekspandere nettsiden",
       "30 dagers oppfølging og vedlikehold",
     ],
+    detailedFeatures: [
+      "Du forteller oss hva du ser for deg og ønsker. Vi danner et helhetlig bilde basert på ditt formål, produkt og merkeidentitet. Deretter mottar du en skisse av oss og kan si ifra dersom du ønsker endringer.",
+      "SEO-grunnoppsett vil bli lagt til inni nettsiden, slik at det er klart dersom du har planer om analyse og digital markedsføring.",
+      "Vi har satt en 5 dagers leveringstid. Det kan hende du mottar nettsiden før dette. ",
+      "Mange utviklere nedprioterer nettsidens skalering - noe som går utover mange brukere. Derfor vil vi ha fokus på at nettsiden din blir passende for alle skjermstørrelser over 360px, som er den vanligste størrelsen blant de minste mobilene. ",
+      "I 30 dager etter nettsiden er levert til deg, sørger vi for at alt fungerer som det skal på nettsiden. Selvfølgelig kostnadsfritt.",
+    ],
     price: "kr 5 990",
     crossed: "Veil. pris: kr 10 000",
+    heroImage: "/assets/projectImages/shopdrop-Tablet.png",
+    gallery: [
+      "/assets/projectImages/shopdrop-Tablet.png",
+      "/assets/projectImages/shopdrop-Tablet.png",
+    ],
+    faq: [
+      { q: "Kan siden være lang selvom det kun er 1 side?", a: "svar." },
+      {
+        q: "Hva om jeg finner ut at jeg vil ha en bildekarusell etter nettsiden er levert?",
+        a: "Det er ikke noe problem. Ta tar vi timespris. Mer om timespris kan du lese HER.",
+      },
+    ],
+    longDescription:
+      "Perfekt dersom du for eksempel ønsker online portfolio, meny til resturanten eller en enkel nettside for et arrangement. Fra bunnen bygger vi siden slik at det er mulig å utvide den etterhvert med flere sider dersom man ønsker.",
   },
+
   {
+    id: "simpel",
     tag: "Simpel",
     headline: "Liten nettside",
     features: [
@@ -31,6 +55,7 @@ export const packages = [
     crossed: "Veil. pris: kr 20 000",
   },
   {
+    id: "mega",
     tag: "Mega",
     headline: "Mellomstor nettside",
     features: [
@@ -47,6 +72,7 @@ export const packages = [
     crossed: "Veil. pris: kr 40 000",
   },
   {
+    id: "ux-design",
     tag: "UX Design",
     headline: "UX figma design for nettside/app",
     features: [
@@ -62,6 +88,7 @@ export const packages = [
     crossed: "Veil. pris: kr 20 000",
   },
   {
+    id: "ux-analyse",
     tag: "UX Analyse",
     headline: "Vi analyserer brukeropplevelsen av din nettside",
     features: [
@@ -87,6 +114,7 @@ export const packages = [
 
 export const hourly = [
   {
+    id: "timespris-ux-design",
     tag: "UX design",
     headline: "Pris per time UX Figma design",
     features: [
@@ -98,6 +126,7 @@ export const hourly = [
     crossed: "Veil. pris: 1300 kr/time",
   },
   {
+    id: "timespris-kode",
     tag: "Kode",
     headline: "Pris per time med utvikling",
     features: [
@@ -112,6 +141,7 @@ export const hourly = [
     crossed: "Veil. times-pris: 1500 kr/time",
   },
   {
+    id: "timespris-grafisk-design",
     tag: "Grafisk design",
     headline: "Pris per time med grafisk design",
     features: [
