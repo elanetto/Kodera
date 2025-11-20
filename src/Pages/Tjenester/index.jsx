@@ -1,11 +1,10 @@
 import Offers from "../../Components/Offers";
+import { packages, hourly } from "../../Components/Offers/offersData";
 
-function Tjenester() {
+export default function Tjenester() {
   return (
-    <div className="flex flex-col items-center w-full">
+    <div className="flex flex-col items-center w-full pt-32">
       <Offers />
     </div>
   );
 }
-
-export default Tjenester;

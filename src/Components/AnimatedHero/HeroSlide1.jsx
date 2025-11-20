@@ -39,7 +39,7 @@ export default function HeroSlide1({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
-          className="bg-darkpink hover:bg-darkpinkhover cursor-pointer px-6 py-2 w-[170px] rounded-lg mx-auto md:mx-0"
+          className="bg-pinky text-lg text-white  hover:bg-darkpink shadow-lg cursor-pointer px-6 py-2 w-[170px] rounded-lg mx-auto md:mx-0"
         >
           Kontakt oss
         </motion.button>
@@ -65,11 +65,11 @@ export default function HeroSlide1({
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 3, duration: 0.8 }}
-              className="absolute bottom-[180px] right-[79%] sm:bottom-[230px] sm:right-[71%] md:bottom-[410px] md:right-[360px] lg:bottom-[510px] lg:right-[530px] text-sm sm:text-base font-semibold text-lightpink drop-shadow-lg"
+              className="absolute bottom-[180px] right-[79%] sm:bottom-[230px] sm:right-[71%] md:bottom-[410px] md:right-[360px] lg:bottom-[510px] lg:right-[530px] text-sm sm:text-base font-semibold text-pinky drop-shadow-lg"
             >
               Line
               <motion.div
-                className="w-[2px] h-[20px] bg-lightpink mt-3 ml-6 rotate-160"
+                className="w-[2px] h-[20px] bg-pinky mt-3 ml-6 rotate-160"
                 initial={{ width: 0 }}
                 animate={{ width: 2 }}
                 transition={{ delay: 1, duration: 0.6 }}
@@ -80,11 +80,11 @@ export default function HeroSlide1({
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 2, duration: 0.8 }}
-              className="absolute bottom-[240px] left-[78%] md:left-[80%] lg:left-[82%] sm:bottom-[220px] sm:right-[17%] md:bottom-[410px] md:right-[130px] lg:bottom-[510px] lg:right-[164px] text-sm sm:text-base font-semibold text-lightpink drop-shadow-lg"
+              className="absolute bottom-[240px] left-[78%] md:left-[80%] lg:left-[82%] sm:bottom-[220px] sm:right-[17%] md:bottom-[410px] md:right-[130px] lg:bottom-[510px] lg:right-[164px] text-sm sm:text-base font-semibold text-pinky drop-shadow-lg"
             >
               Anette
               <motion.div
-                className="w-[2px] h-[20px] bg-lightpink mt-3 ml-3 rotate-16"
+                className="w-[2px] h-[20px] bg-pinky mt-3 ml-3 rotate-16"
                 initial={{ width: 0 }}
                 animate={{ width: 2 }}
                 transition={{ delay: 1.4, duration: 0.6 }}

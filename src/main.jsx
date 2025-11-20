@@ -8,6 +8,7 @@ import OmOss from "./Pages/OmOss/index.jsx";
 import Tjenester from "./Pages/Tjenester/index.jsx";
 import NotFound from "./Pages/NotFound/index.jsx";
 import KoderaPrivacyPolicy from "./Pages/Personvern/index.jsx";
+import SinglePage from "./Pages/SinglePage";
 
 const router = createHashRouter([
   {
@@ -23,9 +24,14 @@ const router = createHashRouter([
         element: <Tjenester />,
       },
       {
+        path: "tjenester/:id",
+        element: <SinglePage />,
+      },
+      {
         path: "omoss",
         element: <OmOss />,
       },
+
       {
         path: "personvern",
         element: <KoderaPrivacyPolicy />,

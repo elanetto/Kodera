@@ -2,10 +2,10 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 700px; /* was 220px — MUCH bigger now */
-  height: 400px; /* was 180px */
+  width: 600px; /* was 220px — MUCH bigger now */
+  height: 500px; /* was 180px */
   transform: translate(10%, 10%);
-  perspective: 1800px; /* increase 3D depth */
+  perspective: 2000px; /* increase 3D depth */
 }
 
 .icon-cards__content {
@@ -14,21 +14,31 @@
   height: 100%;
   transform-style: preserve-3d;
   transform: rotateX(10deg) translateZ(-500px) rotateY(0);
-  animation: carousel 10s infinite cubic-bezier(1, 0.015, 0.295, 1.225) forwards;
+  animation: carousel 12s infinite cubic-bezier(1, 0.015, 0.295, 1.225) forwards;
 }
 
 .icon-cards__item {
   position: absolute;
   top: 0;
   left: 0;
-  width: 700px;
-  height: 400px;
-
+  width: 600px;
+  height: 500px;
+  background: #fff;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
-  opacity: 0.95;
+  opacity: 0.98;
   transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.icon-cards {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 600px;
+  height: 500px;
+  perspective: 2000px;
+  z-index: 10; /* ensure behind the phone image */
 }
 
 /* Rotate each card around a larger 3D ring */
@@ -46,6 +56,36 @@
 }
 .icon-cards__item:nth-child(5) {
   transform: rotateY(288deg) translateZ(500px);
+}
+
+.still {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; /* full width of hero */
+  height: 100%; /* ensures we can crop within the hero height */
+  overflow: hidden; /* crop anything that overflows */
+  z-index: 10;
+  will-change: transform;
+  contain: paint;
+  isolation: isolate;
+  backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.still img {
+  position: absolute;
+  bottom: 0;
+  top: 50%; /* anchor image to bottom edge */
+  left: 50%; /* center horizontally */
+  transform: translateX(-50%);
+  width: 100%; /* fill width */
+  height: auto;
+  min-height: 100%; /* ensures it fills vertically */
+  object-fit: cover; /* crops gracefully */
+  object-position: bottom; /* crop from the bottom */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 /* Animation */
@@ -71,33 +111,60 @@
   }
 }
 
-/* Responsive scaling */
-@media (max-width: 1024px) {
-  .icon-cards {
-    width: 400px;
-    height: 300px;
-    transform: translate(0, 15%);
-  }
-  .icon-cards__item {
-    width: 400px;
-    height: 280px;
-  }
-  .icon-cards__content {
-    transform: translateZ(-350px);
+@media (max-width: 428px) {
+  .still img {
+    object-fit: contain;
+    object-position: center;
+    top: 28%;
   }
 }
 
-@media (max-width: 768px) {
+/* @media  (max-width: 768px)  {
+  .still img {
+    object-fit: cover;
+    object-position: center;
+    top: 28%;
+  }
+} */
+
+@media (max-width: 1190px) {
   .icon-cards {
-    width: 300px;
-    height: 220px;
-    transform: translate(-10%, 20%);
+    display: none;
   }
-  .icon-cards__item {
-    width: 300px;
-    height: 200px;
+  .phones {
+    display: none;
   }
-  .icon-cards__content {
-    transform: translateZ(-250px);
+  .still {
+    display: block;
+  }
+}
+
+@media (min-width: 1190px) {
+  .still {
+    display: none;
+  }
+  .text-hero-widt-lg {
+    max-width: 400px;
+  }
+  .text-hero-widt-p {
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 1023px) and (max-width: 1190px) {
+  .hero-text-wrapper {
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100%;
+  }
+  .items-in-hero {
+    width: 100%;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  .items-in-hero {
+    padding-bottom: 240px;
   }
 }
