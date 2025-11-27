@@ -1,0 +1,112 @@
+export const projects = [
+  {
+    id: "1",
+    slug: "AnetteTherese.no",
+    title: "Portfolioside: Anette Lindberg",
+    subtitle: "Portfolioside for FrontEnd utvikler",
+    description:
+      "En oversiktlig og levende nettside som viser frem både CV, erfaring og portføljen til Anette Lindberg",
+    tech: ["js", "react", "tailwind", "figma", "github", "html", "vite"],
+    liveUrl: "https://anettetherese.no/",
+    repoUrl: "https://github.com/elanetto/Portfolio-2",
+    images: [
+      "/portfolio/anettetherese/at-01.png",
+      "/portfolio/anettetherese/at-02.png",
+      "/portfolio/anettetherese/at-03.png",
+    ],
+  },
+  {
+    id: "2",
+    slug: "elanetto Design",
+    title: "elanetto Design",
+    subtitle: "Klistremerkebutikk",
+    description:
+      "En nettside som viser frem hjemmelagde klistremerker, og linker til Etsy.",
+    tech: ["js", "react", "tailwind", "figma", "github", "vite", "html"],
+    liveUrl: "https://www.elanetto.no/",
+    repoUrl: "https://github.com/elanetto/elanetto2",
+    images: [
+      "/portfolio/elanetto/elanetto-01.png",
+      "/portfolio/elanetto/elanetto-02.png",
+      "/portfolio/elanetto/elanetto-03.png",
+    ],
+  },
+  {
+    id: "3",
+    slug: "Holidaze",
+    title: "Holidaze av Anette",
+    subtitle: "Bookingnettside: Ferie",
+    description:
+      "Bookingnettside bygd med API gitt av Noroff. Eksamensprosjekt.",
+    tech: ["js", "react", "tailwind", "figma", "github", "vite", "html", "css"],
+    liveUrl: "https://dev-holiday.onrender.com/",
+    repoUrl: "https://github.com/elanetto/Holiday",
+    images: [
+      "/portfolio/holidaze-a/hol-01.png",
+      "/portfolio/holidaze-a/hol-02.png",
+      "/portfolio/holidaze-a/hol-03.png",
+    ],
+  },
+  {
+    id: "4",
+    slug: "Floppy Flap",
+    title: "Floppy Flap",
+    subtitle: "Spill",
+    description: "Et morsomt spill inspirert av Angry Birds",
+    tech: ["js", "react", "tailwind", "figma", "github", "vite", "html", "css"],
+    liveUrl: "https://floppy-flap.vercel.app/",
+    repoUrl: "https://github.com/LineSvensen/floppy-flap",
+    images: [
+      "/portfolio/floppyflap/floppy-01.png",
+      "/portfolio/floppyflap/floppy-02.png",
+      "/portfolio/floppyflap/floppy-03.png",
+    ],
+  },
+  {
+    id: "5",
+    slug: "Holidaze",
+    title: "Holidaze av Line",
+    subtitle: "Bookingnettide",
+    description:
+      "Bookingnettside - finn din neste feriedestinasjon! Nettsiden er byg på API gitt av Noroff. Eksamensprosjekt.",
+    tech: ["js", "react", "tailwind", "figma", "github", "vite", "html", "css"],
+    liveUrl: "https://pe2025.onrender.com/",
+    repoUrl: "https://github.com/LineSvensen/Project-exam-2",
+    images: [
+      "/portfolio/holidaze-l/hol-01.png",
+      "/portfolio/holidaze-l/hol-02.png",
+      "/portfolio/holidaze-l/hol-03.png",
+    ],
+  },
+  {
+    id: "6",
+    slug: "BidBuddy",
+    title: "BidBuddy",
+    subtitle: "Auksjonsnettside",
+    description:
+      "Auskjonsnettside bygd i JavaScript med API gitt av Noroff. Eksamensprosjekt.",
+    tech: ["js", "tailwind", "figma", "github", "vite", "html", "css"],
+    liveUrl: "https://js2-sp-auction-website.vercel.app/",
+    repoUrl: "https://github.com/LineSvensen/js2-sp-auction-website",
+    images: [
+      "/portfolio/bidbuddy/bidbuddy-01.png",
+      "/portfolio/bidbuddy/bidbuddy-02.png",
+      "/portfolio/bidbuddy/bidbuddy-03.png",
+    ],
+  },
+  {
+    id: "7",
+    slug: "ShopDrop",
+    title: "ShopDrop",
+    subtitle: "Nettsidehandel",
+    description: "eCommerce nettside bygd med API gitt av Noroff.",
+    tech: ["js", "tailwind", "figma", "github", "vite", "html", "css"],
+    liveUrl: "https://shopdrop-online-store-react.netlify.app/",
+    repoUrl: "https://github.com/LineSvensen/js2-sp-auction-website",
+    images: [
+      "/portfolio/shopdrop/shopdrop-01.png",
+      "/portfolio/shopdrop/shopdrop-02.png",
+      "/portfolio/shopdrop/shopdrop-03.png",
+    ],
+  },
+];

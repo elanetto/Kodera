@@ -43,12 +43,12 @@ export function Header() {
               </Link>
             </li>
             <li>
-              <button
-                onClick={() => handleNavClick("portfolio")}
+              <Link
+                to="/portfolio"
                 className="hover:text-gray-300 transition-colors cursor-pointer"
               >
                 Portfølje
-              </button>
+              </Link>
             </li>
           </ul>
         </nav>

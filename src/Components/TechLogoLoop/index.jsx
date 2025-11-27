@@ -1,28 +1,9 @@
 // src/Components/TechLogoLoop/index.jsx
-import css from "../../assets/devIcons/css3-02-svgrepo-com.svg";
-import typescript from "../../assets/devIcons/typescript-icon-svgrepo-com.svg";
-import js from "../../assets/devIcons/js-badge-svgrepo-com.svg";
-import react from "../../assets/devIcons/react-svgrepo-com.svg";
-import html from "../../assets/devIcons/html-124-svgrepo-com.svg";
-import tailwind from "../../assets/devIcons/tailwind-svgrepo-com.svg";
-import figma from "../../assets/devIcons/figma-svgrepo-com.svg";
-import canva from "../../assets/devIcons/canva-svgrepo-com.svg";
-import github from "../../assets/devIcons/github-142-svgrepo-com.svg";
-import postman from "../../assets/devIcons/postman-icon-svgrepo-com.svg";
+import { techIconMap } from "../TechIcons/iconMap";
 
 export default function TechLogoLoop() {
-  const icons = [
-    { src: js, alt: "JavaScript" },
-    { src: tailwind, alt: "Tailwind" },
-    { src: react, alt: "React" },
-    { src: css, alt: "CSS" },
-    { src: typescript, alt: "TypeScript" },
-    { src: figma, alt: "Figma" },
-    { src: canva, alt: "Canva" },
-    { src: html, alt: "HTML" },
-    { src: github, alt: "GitHub" },
-    { src: postman, alt: "Postman" },
-  ];
+  // convert the map to an array of { src, alt }
+  const icons = Object.values(techIconMap);
 
   return (
     <section className="w-full py-12 bg-paperwhite overflow-hidden">
@@ -34,7 +15,7 @@ export default function TechLogoLoop() {
                 key={`${i}-${icon.alt}`}
                 src={icon.src}
                 alt={icon.alt}
-                className="h-12 sm:h-12 w-auto opacity-90  transition duration-300 "
+                className="h-12 sm:h-12 w-auto opacity-90 transition duration-300"
               />
             ))
           )}
