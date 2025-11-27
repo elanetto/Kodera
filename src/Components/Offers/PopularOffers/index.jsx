@@ -1,4 +1,4 @@
-import { FaCheckCircle, FaArrowRight } from "react-icons/fa";
+import { TiArrowRightThick } from "react-icons/ti";
 import { Link } from "react-router-dom";
 import OfferCard from "../offerCard";
 import { packages } from "../offersData";
@@ -29,7 +29,7 @@ export default function PopularOffers() {
           to="/tjenester"
           className="flex items-center gap-2 text-lg text-darkpink font-semibold hover:text-darkpinkhover transition"
         >
-          Se flere pakker og tjenester →
+          Se flere pakker og tjenester <TiArrowRightThick />
         </Link>
       </div>
     </div>
