@@ -5,9 +5,9 @@ import { CarouselComponent } from "./Components/Carousel";
 import UXcontactForm from "./Components/UXcontactForm";
 import UXbanner from "./Components/BannerUX";
 
-import carouselImage1 from "./assets/carousel/main/Karusellbilde1.jpg";
-import carouselImage2 from "./assets/carousel/main/Karusellbilde2.jpg";
-import carouselImage3 from "./assets/carousel/main/Karusellbilde3.jpg";
+// import carouselImage1 from "./assets/carousel/main/Karusellbilde1.jpg";
+// import carouselImage2 from "./assets/carousel/main/Karusellbilde2.jpg";
+// import carouselImage3 from "./assets/carousel/main/Karusellbilde3.jpg";
 
 import portfolioImage1 from "./assets/carousel/portfolio/anettetherese.jpg";
 import portfolioImage2 from "./assets/carousel/portfolio/elanettoNO-anette.jpg";
@@ -26,24 +26,24 @@ import WhyUs from "./Components/WhyUsSection";
 
 
 function App() {
-  const carouselImages = [
-    {
-      src: carouselImage1,
-      alt: "First slide",
-      caption: "Vi designer nettsider for din bedrift",
-    },
-    {
-      src: carouselImage2,
-      alt: "Second slide",
-      caption: "Programmerer unike nettsider for ditt behov",
-    },
-    {
-      src: carouselImage3,
-      alt: "Third slide",
-      caption: "Velkommen til Kodera: Kvinner i tech",
-      Link: "/omOss",
-    },
-  ];
+  // const carouselImages = [
+  //   {
+  //     src: carouselImage1,
+  //     alt: "First slide",
+  //     caption: "Vi designer nettsider for din bedrift",
+  //   },
+  //   {
+  //     src: carouselImage2,
+  //     alt: "Second slide",
+  //     caption: "Programmerer unike nettsider for ditt behov",
+  //   },
+  //   {
+  //     src: carouselImage3,
+  //     alt: "Third slide",
+  //     caption: "Velkommen til Kodera: Kvinner i tech",
+  //     Link: "/omOss",
+  //   },
+  // ];
 
   const portfolioImages = [
     {
@@ -101,22 +101,22 @@ function App() {
         />
       </div> */}
 
-      <div className=" pb-4 flex justify-center items-center bg-[#E6E6E6] w-full">
+      <div className=" pb-4 flex justify-center items-center bg-lightgray w-full">
         <PopularOffers />
       </div>
       <TechLogoLoop />
-      <h2 className="text-2xl font-koulen text-title pb-4 pt-8">
-        Interessert? Send oss en mail!
+      <WhyUs />
+      <h2 className="text-2xl font-oswald font-bold text-title pb-4 pt-8">
+        INTERRISERT? SI HEI!
       </h2>
       <div className="w-full">
         <ContactForm />
       </div>
-      <WhyUs />
       <div className="py-8 w-full">
         <UXbanner />
       </div>
-      <h2 className="text-2xl font-koulen text-title pb-2 pt-10" id="portfolio">
-        Se tidligere prosjekter skapt av oss
+      <h2 className="text-2xl font-oswald font-bold text-title pb-2 pt-10" id="portfolio">
+        SE VÅRE TIDLIGERE PROSJEKTER
       </h2>
       <div className="w-full pt-4">
         <CarouselComponent

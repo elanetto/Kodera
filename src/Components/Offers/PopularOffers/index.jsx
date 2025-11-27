@@ -8,8 +8,8 @@ const popular = packages.slice(0, 3); // first 3 packages, or pick manually
 export default function PopularOffers() {
   return (
     <div>
-      <h2 className="text-2xl font-koulen text-center text-title py-4 pt-8">
-        Populære pakker
+      <h2 className="text-2xl font-oswald font-medium text-center text-title py-4 pt-8">
+        POPULÆRE PAKKER
       </h2>
 
       <div

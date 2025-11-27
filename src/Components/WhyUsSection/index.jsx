@@ -1,9 +1,11 @@
 import { useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
-import pricetag from "../../assets/whyUsImages/pricetag.png";
-import handshake from "../../assets/whyUsImages/handshake.png";
-import lightbulb from "../../assets/whyUsImages/lightbulb.png";
-import female from "../../assets/whyUsImages/female.png";
+import handshake from "../../assets/whyUsImages/agreement-stjerner.svg";
+import lightbulb from "../../assets/whyUsImages/lightbulb.svg";
+import female from "../../assets/whyUsImages/womenintech.svg";
+import myeforpengene from "../../assets/whyUsImages/merforpengene-stjerner.svg"
+
+const MotionDiv = motion.div;
 
 function RevealOnScroll({ children, delay = 0, duration = 0.8, yOffset = 40 }) {
   const ref = useRef(null);
@@ -44,16 +46,16 @@ function RevealOnScroll({ children, delay = 0, duration = 0.8, yOffset = 40 }) {
 
 export default function WhyUs() {
   return (
-    <section className="pt-40 pb-30 w-full text-center overflow-x-clip">
+    <section className="pt-10 pb-30 w-full text-center overflow-x-clip bg-lightgray">
       <div className="mx-auto max-w-screen-xl px-4">
         <RevealOnScroll delay={0.1}>
-          <h2 className="text-3xl font-koulen text-title mb-6">
-            Hvorfor velge Kodera?
+          <h2 className="text-3xl font-oswald font-medium text-title mb-6">
+            HVORFOR VELGE KODERA?
           </h2>
         </RevealOnScroll>
 
         <RevealOnScroll delay={0.2}>
-          <p className="mx-auto max-w-7xl text-gray-600 text-lg sm:text-2xl leading-relaxed">
+          <p className="mx-auto max-w-2xl text-gray-600 leading-relaxed">
             Lei av å vandre i mørket på leting etter de rette utviklerne?
             Kanskje du har sendt utallige e-poster frem og tilbake, bare for å
             oppdage at de ikke forstår hva du egentlig ønsker - og at prisen
@@ -68,10 +70,10 @@ export default function WhyUs() {
             <RevealOnScroll delay={0.1}>
               <div className="flex items-center flex-col text-center">
                 <div className="inline-flex items-center justify-center rounded-full bg-coal p-4 size-30  sm:size-40">
-                  <img src={pricetag} alt="Pris" className=" object-contain" />
+                  <img src={myeforpengene} alt="Pris" className=" object-contain" />
                 </div>
-                <h2 className="text-darkpink font-semibold text-lg pb-4 pt-6">
-                  Ekstremt gode priser - som ikke skjules
+                <h2 className="text-coal font-oswald font-bold text-2xl pb-4 pt-6">
+                  Mye for pengene
                 </h2>
                 <p className="pl-3 md:pl-0   text-center max-w-[500px] ">
                   Mange synes veien for å få en nettside utviklet er alt for
@@ -92,7 +94,7 @@ export default function WhyUs() {
                     className="object-contain"
                   />
                 </div>
-                <h2 className="text-darkpink font-semibold text-lg pb-4 pt-6">
+                <h2 className="text-coal font-oswald font-bold text-2xl pb-4 pt-6">
                   Lite team, tett sammarbeid
                 </h2>
                 <p className="pl-3 md:pl-0   text-center max-w-[500px]">
@@ -107,10 +109,10 @@ export default function WhyUs() {
             {/* 3. Idé → Løsning */}
             <RevealOnScroll delay={0.6}>
               <div className="flex items-center flex-col text-center">
-                <div className="inline-flex items-center justify-center rounded-full bg-coal p-4 size-30  sm:size-40">
+                <div className="inline-flex items-center justify-center rounded-full bg-coal p-8 size-30  sm:size-40">
                   <img src={lightbulb} alt="Idé" className="object-contain" />
                 </div>
-                <h2 className="text-darkpink font-semibold text-lg  pb-4 pt-6">
+                <h2 className="text-coal font-oswald font-bold text-2xl pb-4 pt-6">
                   Vi forstår deg og dine ønsker
                 </h2>
                 <p className="pl-3 md:pl-0  text-center max-w-[500px]">
@@ -124,10 +126,10 @@ export default function WhyUs() {
             {/* 4. Kundestøtte */}
             <RevealOnScroll delay={0.9}>
               <div className="flex items-center flex-col text-center">
-                <div className="inline-flex items-center justify-center rounded-full bg-coal p-4 size-30  sm:size-40">
+                <div className="inline-flex items-center justify-center rounded-full bg-coal p-8 size-30  sm:size-40">
                   <img src={female} alt="Støtte" className=" object-contain" />
                 </div>
-                <h2 className="text-darkpink font-semibold text-lg  pb-4 pt-6">
+                <h2 className="text-coal font-oswald font-bold text-2xl pb-4 pt-6">
                   Kvinner som koder
                 </h2>
                 <p className="pl-3 md:pl-0  text-center max-w-[500px]">
