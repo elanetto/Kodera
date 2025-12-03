@@ -4,10 +4,7 @@ import ContactForm from "./Components/MailForm";
 import { CarouselComponent } from "./Components/Carousel";
 import UXcontactForm from "./Components/UXcontactForm";
 import UXbanner from "./Components/BannerUX";
-
-// import carouselImage1 from "./assets/carousel/main/Karusellbilde1.jpg";
-// import carouselImage2 from "./assets/carousel/main/Karusellbilde2.jpg";
-// import carouselImage3 from "./assets/carousel/main/Karusellbilde3.jpg";
+import Portfolio from "./Pages/Portfolio";
 
 import portfolioImage1 from "./assets/carousel/portfolio/anettetherese.jpg";
 import portfolioImage2 from "./assets/carousel/portfolio/elanettoNO-anette.jpg";
@@ -18,75 +15,59 @@ import portfolioImage6 from "./assets/carousel/portfolio/BidBuddy.jpg";
 import portfolioImage7 from "./assets/carousel/portfolio/ShopDrop.jpg";
 
 import Hero from "./Components/AnimatedHero/Hero";
-
 import TechLogoLoop from "./Components/TechLogoLoop";
-
 import WhyUs from "./Components/WhyUsSection";
 
-
-
 function App() {
-  // const carouselImages = [
-  //   {
-  //     src: carouselImage1,
-  //     alt: "First slide",
-  //     caption: "Vi designer nettsider for din bedrift",
-  //   },
-  //   {
-  //     src: carouselImage2,
-  //     alt: "Second slide",
-  //     caption: "Programmerer unike nettsider for ditt behov",
-  //   },
-  //   {
-  //     src: carouselImage3,
-  //     alt: "Third slide",
-  //     caption: "Velkommen til Kodera: Kvinner i tech",
-  //     Link: "/omOss",
-  //   },
-  // ];
-
   const portfolioImages = [
     {
       src: portfolioImage1,
       alt: "Anette Therese Portfolio",
       caption: "Portfolioside: Anette Therese, FrontEnd",
       link: "https://anette-portfolio.onrender.com/",
+      projectId: "1",
     },
     {
       src: portfolioImage2,
       alt: "elanetto Stickers",
       caption: "elanetto Design - en liten klistremerkebedrift",
       link: "https://www.elanetto.no/",
+      projectId: "2",
     },
     {
       src: portfolioImage3,
       alt: "Holidaze Booking: Exam Project",
       caption: "Holidaze - En booking nettside. Eksamensprosjek.",
       link: "https://dev-holiday.onrender.com/",
+      projectId: "3",
     },
     {
       src: portfolioImage4,
       alt: "Flappy Flop",
       caption: "Flappy Flop - Et spill",
       link: "https://floppy-flap.vercel.app/",
+      projectId: "4",
     },
     {
       src: portfolioImage5,
       alt: "Holidaze Booking: Exam Project",
       caption: "Holidaze - En booking nettside som AirBnB. Eksamensprosjek.",
       link: "https://pe2025.onrender.com/",
+      projectId: "5",
     },
     {
       src: portfolioImage6,
       alt: "Bid Buddy",
       caption: "Bid Buddy - En Auksjonsnettside",
       link: "https://js2-sp-auction-website.vercel.app/",
+      projectId: "6",
     },
     {
       src: portfolioImage7,
       alt: "Shop Drop",
       caption: "Shop Drop - En fiktiv shoppingside",
       link: "https://shopdrop-online-store-react.netlify.app/",
+      projectId: "7",
     },
   ];
 
@@ -107,7 +88,7 @@ function App() {
       <TechLogoLoop />
       <WhyUs />
       <h2 className="text-2xl font-oswald font-bold text-title pb-4 pt-8">
-        INTERRISERT? SI HEI!
+        INTERESSERT? SI HEI!
       </h2>
       <div className="w-full">
         <ContactForm />
@@ -115,7 +96,10 @@ function App() {
       <div className="py-8 w-full">
         <UXbanner />
       </div>
-      <h2 className="text-2xl font-oswald font-bold text-title pb-2 pt-10" id="portfolio">
+      <h2
+        className="text-2xl font-oswald font-bold text-title pb-2 pt-10"
+        id="portfolio"
+      >
         SE VÅRE TIDLIGERE PROSJEKTER
       </h2>
       <div className="w-full pt-4">
@@ -123,6 +107,9 @@ function App() {
           images={portfolioImages}
           title="Portfolio carousel"
         />
+      </div>
+      <div className="w-full">
+        <Portfolio />
       </div>
     </div>
   );

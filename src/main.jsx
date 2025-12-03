@@ -9,6 +9,8 @@ import Tjenester from "./Pages/Tjenester/index.jsx";
 import NotFound from "./Pages/NotFound/index.jsx";
 import KoderaPrivacyPolicy from "./Pages/Personvern/index.jsx";
 import SinglePage from "./Pages/SinglePage";
+import Portfolio from "./Pages/Portfolio";
+import Project from "./Pages/Portfolio/SinglePortfolioPage";
 
 const router = createHashRouter([
   {
@@ -16,7 +18,7 @@ const router = createHashRouter([
     element: <Layout />,
     children: [
       {
-        path: "/",
+        index: true,
         element: <App />,
       },
       {
@@ -31,7 +33,14 @@ const router = createHashRouter([
         path: "omoss",
         element: <OmOss />,
       },
-
+      {
+        path: "portfolio",
+        element: <Portfolio />,
+      },
+      {
+        path: "portfolio/:id",
+        element: <Project />,
+      },
       {
         path: "personvern",
         element: <KoderaPrivacyPolicy />,
