@@ -109,4 +109,21 @@ export const projects = [
       "/portfolio/shopdrop/shopdrop-03.png",
     ],
   },
+  {
+    id: "8",
+    slug: "GameHub",
+    title: "GameHub",
+    subtitle: "Design: Nettsidehandel for spill",
+    description:
+      "eCommerce nettside bygd i ren HTML og CSS. Ikke funksjonell, fokuset her er kun design.",
+    tech: ["figma", "github", "html", "css"],
+    liveUrl: "https://game-hub-lake-one.vercel.app/index.html",
+    repoUrl: "https://github.com/elanetto/game-hub",
+    images: [
+      "/portfolio/gamehub/gamehub-1.png",
+      "/portfolio/gamehub/gamehub-2.png",
+      "/portfolio/gamehub/gamehub-3.png",
+      "/portfolio/gamehub/gamehub-4.png",
+    ],
+  },
 ];
