@@ -47,7 +47,7 @@ export function Header() {
                 to="/portfolio"
                 className="hover:text-gray-300 transition-colors cursor-pointer"
               >
-                Portfølje
+                Portefølje
               </Link>
             </li>
           </ul>

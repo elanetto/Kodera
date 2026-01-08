@@ -26,12 +26,15 @@ export default function HeroSlide1({
     >
       {/* LEFT: TEXT */}
       <div className="z-10 flex mb-80 mt-8 sm:mb-80 md:mb-0 md:mt-10 lg:mt-50 flex-col justify-center text-center md:text-left md:w-1/2 space-y-6">
-        <AnimatedText text={title || "Vi bygger digitale opplevelser"} />
+        <AnimatedText
+          className="font-oswald font-normal"
+          text={title || "Vi bygger digitale opplevelser"}
+        />
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
-          className="text-lg text-gray-300"
+          className="text-lg text-gray-300 "
         >
           {subtitle || "Kodera – utvikling gjort enkelt."}
         </motion.p>
@@ -39,7 +42,24 @@ export default function HeroSlide1({
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2 }}
-          className="bg-pinky text-lg text-white  hover:bg-darkpink shadow-lg cursor-pointer px-6 py-2 w-[170px] rounded-lg mx-auto md:mx-0"
+          onClick={() => {
+            const el = document.getElementById("contact");
+            if (!el) return;
+
+            const elementTop = el.getBoundingClientRect().top + window.scrollY;
+            const elementHeight = el.offsetHeight;
+            const viewportHeight = window.innerHeight;
+
+            const offset = -40; // try -40 or +40
+            const scrollTo =
+              elementTop - viewportHeight / 2 + elementHeight / 2 + offset;
+
+            window.scrollTo({
+              top: scrollTo,
+              behavior: "smooth",
+            });
+          }}
+          className="cta-btn mx-auto md:mx-0"
         >
           Kontakt oss
         </motion.button>

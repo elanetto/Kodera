@@ -1,5 +1,7 @@
-import example1 from "../../assets/projectImages/example-1pager.png";
-import example2 from "../../assets/projectImages/line-holiday-tablet.png";
+import example1 from "../../assets/projectImages/fotokurs.png";
+import example2 from "../../assets/projectImages/kimis2.png";
+import onepagerdemo from "../../assets/projectImages/onepager-demo.mp4";
+import smalldemo from "../../assets/projectImages/small-demo.mp4";
 
 // src/data/offersData.js
 
@@ -29,8 +31,8 @@ export const packages = [
     ],
     price: "kr 5 990",
     crossed: "Veil. pris: kr 10 000",
-    heroImage: example1,
-    gallery: [example1, example2, example1],
+    videos: [onepagerdemo],
+    link: "https://dittprosjekt.com",
 
     faq: [
       {
@@ -83,11 +85,8 @@ export const packages = [
     ],
     price: "kr 11 990",
     crossed: "Veil. pris: kr 20 000",
-    heroImage: "/assets/projectImages/shopdrop-Tablet.png",
-    gallery: [
-      "/assets/projectImages/shopdrop-Tablet.png",
-      "/assets/projectImages/shopdrop-Tablet.png",
-    ],
+    videos: [smalldemo],
+    link: "https://dittprosjekt.com",
     faq: [
       {
         q: "Hvor lang kan 1 side være?",

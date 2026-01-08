@@ -3,6 +3,8 @@ import { packages } from "../offersData.js";
 import { TiArrowLeftThick } from "react-icons/ti";
 import { FaCheckCircle } from "react-icons/fa";
 import ImageCarousel from "./imageCarousel.jsx";
+import { HiExternalLink } from "react-icons/hi";
+import VideoShowcase from "./animated.jsx";
 
 export default function SingleOffer() {
   const { id } = useParams();
@@ -31,19 +33,22 @@ export default function SingleOffer() {
   }
 
   return (
-    <section className="max-w-6xl mx-auto py-20 mt-12 px-4">
+    <section className="max-w-7xl  lg:mx-auto py-8  px-8 ">
       {/* Header */}
-      <div className="flex flex-col md:flex-row gap-10 items-start">
-        <div className="flex-1">
-          <span className="inline-block bg-darkpink text-white px-3 py-1 rounded-md text-sm mb-8">
-            {offer.tag}
-          </span>
+      <span
+        className="block w-max bg-coal text-white px-5 py-3 rounded-full 
+                 text-center text-sm mb-4 mx-auto lg:mx-0"
+      >
+        {offer.tag}
+      </span>
 
-          <h1 className="text-3xl font-koulen text-title  mb-4">
+      <div className="flex flex-col  justify-center items-center  text-center lg:text-left rounded-tr-xl rounded-br-xl rounded-bl-xl bg-white  lg:flex-row  sm:text-center   lg:items-start">
+        <div className="flex-1">
+          <h1 className="text-3xl font-koulen text-title mt-4  mb-4">
             {offer.headline}
           </h1>
 
-          <p className="text-gray-700 leading-relaxed mb-6">
+          <p className="text-gray-700 leading-relaxed mb-6 lg:max-w-xl">
             {offer.longDescription}
           </p>
 
@@ -53,16 +58,32 @@ export default function SingleOffer() {
               {offer.crossed}
             </p>
           )}
+          <span className="flex items-center justify-center lg:justify-start">
+            {offer.link && (
+              <a
+                href={offer.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="discrete-btn gap-2 mt-8"
+              >
+                Se nettside eksempel
+                <HiExternalLink />
+              </a>
+            )}
+          </span>
         </div>
-        
-        {offer.gallery && offer.gallery.length > 0 && (
+
+        {/* {offer.gallery && offer.gallery.length > 0 && (
           <ImageCarousel images={offer.gallery} />
+        )} */}
+        {offer.videos && offer.videos.length > 0 && (
+          <VideoShowcase videos={offer.videos} />
         )}
       </div>
 
       {/* Detailed features */}
       {offer.detailedFeatures?.length > 0 && (
-        <div className="mt-12">
+        <div className=" rounded-xl   ">
           <h2 className="text-xl text-title font-semibold mb-4">
             Dette får du
           </h2>
@@ -77,25 +98,23 @@ export default function SingleOffer() {
         </div>
       )}
 
-      <div className="mt-12 flex gap-4 flex-wrap">
-        <Link
-          to="/kontakt"
-          className="px-6 py-2 text-lg bg-darkpink text-white rounded-lg hover:bg-darkpinkhover"
-        >
-          Kontakt oss
-        </Link>
-        <Link
-          to="/tjenester"
-          className="flex flex-row text-md items-center gap-2 px-6 py-2 border text-coal border-gray-300 rounded-lg hover:bg-gray-50"
-        >
-          <TiArrowLeftThick />
-          Tilbake til pakker og tjenester
-        </Link>
+      <div className="mt-12 flex gap-4 flex-wrap flex-col ">
+        <span>
+          <Link to="/kontakt" className="cta-btn">
+            Kontakt oss
+          </Link>
+        </span>
+        <span>
+          <Link to="/tjenester" className="links  gap-2 mt-4 ">
+            <TiArrowLeftThick />
+            Tilbake til pakker og tjenester
+          </Link>
+        </span>
       </div>
 
       {/* FAQ spørsmål og svar */}
       {offer.faq?.length > 0 && (
-        <div className="mt-12">
+        <div className="mt-12 ">
           <h2 className="text-xl font-semibold mb-4 text-title">
             Ofte stilte spørsmål
           </h2>
