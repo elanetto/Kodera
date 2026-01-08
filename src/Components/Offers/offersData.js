@@ -55,8 +55,8 @@ export const packages = [
   },
 
   {
-    id: "simpel",
-    tag: "Simpel",
+    id: "three-pager",
+    tag: "Three pager",
     headline: "Liten nettside",
     features: [
       {

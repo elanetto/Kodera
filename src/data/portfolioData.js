@@ -126,4 +126,20 @@ export const projects = [
       "/portfolio/gamehub/gamehub-4.png",
     ],
   },
+  {
+    id: "9",
+    slug: "Bryllup",
+    title: "Bryllup",
+    subtitle: "Bryllupsnettside",
+    description:
+      "Bryllupsnettside med link til bilder som gjester har fått passord til. Denne siden var tidligere en infomrasjonsside om bryllupet som skulle skje: Med tid, sted, kart og klesskode.",
+    tech: ["react", "github", "js", "tailwind"],
+    liveUrl: "https://www.elanetto.no/gift/",
+    repoUrl: "https://github.com/elanetto/wedding-onepager",
+    images: [
+      "/portfolio/bryllup/bryllup-01.jpg",
+      "/portfolio/bryllup/bryllup-02.jpg",
+      "/portfolio/bryllup/bryllup-03.jpg",
+    ],
+  },
 ];
