@@ -36,6 +36,14 @@ export function Header() {
             </li>
             <li>
               <Link
+                to="/contact"
+                className="hover:text-gray-300 transition-colors cursor-pointer"
+              >
+                Kontakt
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="/tjenester"
                 className="hover:text-gray-300 transition-colors cursor-pointer"
               >
@@ -77,6 +85,15 @@ export function Header() {
                 onClick={() => setIsOpen(false)}
               >
                 Om oss
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contact"
+                className="hover:text-gray-300 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Kontakt
               </Link>
             </li>
             <li>
