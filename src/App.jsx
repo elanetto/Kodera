@@ -90,7 +90,7 @@ function App() {
       <h2 className="text-2xl font-oswald font-bold text-title pb-4 pt-8">
         INTERESSERT? SI HEI!
       </h2>
-      <div className="w-full">
+      <div id="contact" className="w-full">
         <ContactForm />
       </div>
       <div className="py-8 w-full">

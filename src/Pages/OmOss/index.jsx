@@ -18,7 +18,7 @@ function OmOss() {
 
         {/* Content above overlay */}
         <div className="relative text-coal w-full">
-          <h1 className="text-5xl font-koulen text-white pt-16 text-center">
+          <h1 className="text-5xl font-oswald text-white pt-16 text-center">
             Om Kodera
           </h1>
 
@@ -45,7 +45,12 @@ function OmOss() {
         </div>
       </div>
 
-      <h2 className="text-3xl font-koulen text-coal py-8">Oss i Kodera</h2>
+      <h2
+        className="text-3xl font-oswald
+       text-coal py-8"
+      >
+        Oss i Kodera
+      </h2>
 
       {/* Section: Anette */}
       <section className="flex flex-col md:flex-row items-center max-w-5xl w-full p-6 gap-2 md:gap-8">
@@ -85,7 +90,7 @@ function OmOss() {
 
         {/* Text right */}
         <div className="flex flex-col text-center md:text-left w-full md:w-2/3 md:pl-24 -mt-16 sm:-mt-24 md:mt-0">
-          <h3 className="text-2xl font-bold text-coal mb-2 font-koulen">
+          <h3 className="text-2xl font-bold text-coal mb-2 font-oswald">
             Anette Therese Lindberg
           </h3>
           <p className="text-lg text-gray-700 mb-2 italic">
@@ -163,7 +168,7 @@ function OmOss() {
 
         {/* Text right */}
         <div className="flex flex-col text-center md:text-left w-full md:w-2/3 md:pl-24 -mt-16 sm:-mt-24 md:mt-0">
-          <h3 className="text-2xl font-bold text-coal mb-2 font-koulen">
+          <h3 className="text-2xl font-bold text-coal mb-2 font-oswald">
             Line Svensen
           </h3>
           <p className="text-lg text-gray-700 mb-2 italic">

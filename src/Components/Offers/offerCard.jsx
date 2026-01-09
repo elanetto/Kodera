@@ -24,10 +24,10 @@ export default function OfferCard({
   bodyClass = "",
 }) {
   return (
-    <div className="flex flex-col justify-center items-center h-full ">
+    <div className="cardstyle flex flex-col justify-center items-center h-full ">
       {/* Top pink label */}
       <div className="flex justify-center py-2 min-w-[180px] bg-darkpink rounded-t-lg">
-        <h3 className="text-lg text-white font-semibold">{tag}</h3>
+        <h3 className="text-xl text-white font-semibold font-oswald">{tag}</h3>
       </div>
 
       {/* Card container */}
@@ -36,7 +36,7 @@ export default function OfferCard({
       >
         {/* Green headline bar */}
         <div className="flex items-center justify-center text-center bg-[#81CABF] rounded-t-lg px-4 py-2">
-          <p className="text-md text-title">{headline}</p>
+          <p className="text-md text-title font-oswald">{headline}</p>
         </div>
 
         {/* Features */}
@@ -44,7 +44,7 @@ export default function OfferCard({
           {features.map((f, i) => {
             const text = typeof f === "string" ? f : f.text;
             const extra = typeof f === "string" ? "" : f.className || "";
-            const isLong = typeof f === "object" && f.long; // 👈 check for long flag
+            const isLong = typeof f === "object" && f.long; // for å se om teksten er lang
 
             return (
               <li

@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "motion/react";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./HeroSlide2.css";
 
 import pcImg from "../../assets/heroImages/xbidbuddy.png";
@@ -18,6 +19,7 @@ export default function HeroSlide2() {
   // --- cycle the "hand with mobile" images ---
   const phoneImages = [etcImg, etc2Img, etc3Img, etc4Img];
   const [index, setIndex] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -33,7 +35,7 @@ export default function HeroSlide2() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl md:text-6xl font-bold w-full text-hero-widt-lg  "
+          className="text-4xl md:text-6xl  font-oswald w-full text-hero-widt-lg  "
         >
           Fra idé til ferdig produkt
         </motion.h1>
@@ -48,10 +50,11 @@ export default function HeroSlide2() {
         </motion.p>
 
         <motion.button
+          onClick={() => navigate("/portfolio")}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
-          className="bg-pinky text-lg z-40 text-white  hover:bg-darkpink px-6 py-2 rounded-lg shadow-lg cursor-pointer mb-8 flex text-center justify-center items-center"
+          className="cta-btn"
         >
           Se prosjekter
         </motion.button>

@@ -11,6 +11,7 @@ import KoderaPrivacyPolicy from "./Pages/Personvern/index.jsx";
 import SinglePage from "./Pages/SinglePage";
 import Portfolio from "./Pages/Portfolio";
 import Project from "./Pages/Portfolio/SinglePortfolioPage";
+import Contact from "./Pages/Contact/index.jsx";
 
 const router = createHashRouter([
   {
@@ -32,6 +33,10 @@ const router = createHashRouter([
       {
         path: "omoss",
         element: <OmOss />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
       },
       {
         path: "portfolio",

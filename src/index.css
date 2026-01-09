@@ -5,15 +5,20 @@
   --color-coal: #2e3944;
   --color-title: #2e3944;
   --color-pinky: #ee4c7c;
+  --color-main: #d72d60;
+  --color-main-hover: #bf0e43;
+  /* old button colors: */
   --color-darkpink: #e82e65;
-  /* darkpink #D72D60 på cookie window */
   --color-darkpinkhover: #bf0e43;
+  /* - */
   --color-turkis: #17e9c9;
+  /* color on price cards: */
   --color-maldive: #15b6a3;
   --color-cyan: #45a8c0;
   --color-lightpink: #ff8fb0;
   --color-paperwhite: #f2f2f2;
-  --color-lightgray: #E6E6E6;
+  --color-lightgray: #e6e6e6;
+  --color-white-hover: #c5c5c5;
 
   --font-oswald: "Oswald", sans-serif;
   --font-gothisk: "Special Gothic Expanded One", sans-serif;
@@ -32,7 +37,6 @@
   font-style: normal;
 }
 
-
 /* 🌙 Dark theme overrides */
 .dark {
   --color-coal: #2e3944;
@@ -46,6 +50,73 @@
 /* Optional: Force light mode as default */
 :root {
   color-scheme: light;
+}
+
+.cta-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--color-main);
+  cursor: pointer;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-size: 16px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  width: fit-content;
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+
+.cta-btn:hover {
+  background: var(--color-main-hover);
+}
+
+.discrete-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 2px solid var(--color-main);
+  background: transparent;
+  color: var(--color-main);
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-size: 16px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  width: fit-content;
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+
+.discrete-btn:hover {
+  background-color: var(--color-main);
+  color: white;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--color-main);
+  font-size: 16px;
+  transition: color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+
+.links:hover {
+  color: var(--color-main-hover);
+}
+
+.cardstyle {
+  transition: all 0.4s ease;
+}
+
+.cardstyle:hover {
+  transform: translate3D(0, -1px, 0) scale(1.03);
+
+  transition: all 0.4s ease;
+  cursor: pointer;
 }
 
 @keyframes loop-left {
