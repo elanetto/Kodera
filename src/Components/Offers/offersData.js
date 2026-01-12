@@ -1,5 +1,3 @@
-import example1 from "../../assets/projectImages/fotokurs.png";
-import example2 from "../../assets/projectImages/kimis2.png";
 import onepagerdemo from "../../assets/projectImages/onepager-demo.mp4";
 import smalldemo from "../../assets/projectImages/small-demo.mp4";
 
