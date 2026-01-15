@@ -1,14 +1,14 @@
-// src/pages/Portfolio.jsx
 import { projects } from "../../data/portfolioData";
 import PortfolioCard from "../../Components/PortfolioCard";
+import Space from "../../Layout/Space"
 
 export default function Portfolio() {
   return (
-    <main className="min-h-screen bg-paperwhite text-title">
-      <div className="max-w-6xl mx-auto px-4 py-12">
-        <h1 className="text-3xl md:text-2xl font-bold mb-6 oswald text-center">
-          PORTEFØLJE
-        </h1>
+    <main className="min-h-screen bg-lightgray text-title">
+      <div className="max-w-6xl mx-auto px-4 py-8">
+        <h1 className="font-oswald font-bold text-2xl text-title lg:text-2xl text-center py-5">
+        PORTFØLJE
+      </h1>
 
         <div className="grid gap-6 md:grid-cols-2">
           {projects.map((project) => (
@@ -16,6 +16,7 @@ export default function Portfolio() {
           ))}
         </div>
       </div>
+      <Space size="xl" type="pad" />
     </main>
   );
 }

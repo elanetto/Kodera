@@ -3,6 +3,7 @@ import LineImage from "../../assets/images/Line-dark-bg.jpg";
 import CurlyPinkSVG from "../../assets/images/curly-pink-to-the-right.svg";
 import DarkSVGbg from "../../assets/images/darl-bg-to-the-curly-bracket.svg";
 import CurlyPinkSVGbottom from "../../assets/images/curly-pink-to-bottom.svg";
+import Space from "../../Layout/Space"
 
 import bildeAvOss from "../../assets/carousel/main/Karusellbilde1.jpg";
 
@@ -45,12 +46,9 @@ function OmOss() {
         </div>
       </div>
 
-      <h2
-        className="text-3xl font-oswald
-       text-coal py-8"
-      >
-        Oss i Kodera
-      </h2>
+      <h1 className="font-oswald font-bold text-2xl text-title lg:text-2xl text-center pb-5 pt-15">
+        OM OSS I KODERA
+      </h1>
 
       {/* Section: Anette */}
       <section className="flex flex-col md:flex-row items-center max-w-5xl w-full p-6 gap-2 md:gap-8">
@@ -94,11 +92,11 @@ function OmOss() {
             Anette Therese Lindberg
           </h3>
           <p className="text-lg text-gray-700 mb-2 italic">
-            Frontend-utvikler og Grafisk Designer
+            FrontEnd Utvikler, Digital Markedsfører og Grafisk Designer
           </p>
           <p className="text-lg text-gray-700">
             Master i Digitale Medier, samt utdanning som FrontEnd Utvikler. Har
-            erfaring som Digital Markdsfører, Grafisk Designer, Art Director og
+            erfaring som Digital Markdsfører, Grafisk Designer, Art Director og som
             Lærer.
           </p>
           <div className="pt-5 flex flex-row gap-5 items-center md:items-start justify-center md:justify-start w-full">
@@ -172,7 +170,7 @@ function OmOss() {
             Line Svensen
           </h3>
           <p className="text-lg text-gray-700 mb-2 italic">
-            Front-End utvikler, UX-designer og forretningsstrateg
+            FrontEnd Utvikler, UX-Designer og Forretningsstrateg
           </p>
           <p className="text-lg text-gray-700">
             Høyere fagskoleutdanning innen Front-End Development. Bachelor i
@@ -206,6 +204,7 @@ function OmOss() {
           </div>
         </div>
       </section>
+      <Space size="xl" type="pad" />
     </div>
   );
 }

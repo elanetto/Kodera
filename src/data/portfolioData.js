@@ -1,7 +1,7 @@
 export const projects = [
   {
     id: "1",
-    slug: "AnetteTherese.no",
+    slug: "anette-therese-no",
     title: "Portfolioside: Anette Lindberg",
     subtitle: "Portfolioside for FrontEnd utvikler",
     description:
@@ -17,7 +17,7 @@ export const projects = [
   },
   {
     id: "2",
-    slug: "elanetto Design",
+    slug: "elanetto-design",
     title: "elanetto Design",
     subtitle: "Klistremerkebutikk",
     description:
@@ -33,7 +33,7 @@ export const projects = [
   },
   {
     id: "3",
-    slug: "Holidaze",
+    slug: "holidaze-anette",
     title: "Holidaze av Anette",
     subtitle: "Bookingnettside: Ferie",
     description:
@@ -49,7 +49,7 @@ export const projects = [
   },
   {
     id: "4",
-    slug: "Floppy Flap",
+    slug: "floppy-flap",
     title: "Floppy Flap",
     subtitle: "Spill",
     description: "Et morsomt spill inspirert av Angry Birds",
@@ -64,7 +64,7 @@ export const projects = [
   },
   {
     id: "5",
-    slug: "Holidaze",
+    slug: "holidaze-line",
     title: "Holidaze av Line",
     subtitle: "Bookingnettide",
     description:
@@ -80,7 +80,7 @@ export const projects = [
   },
   {
     id: "6",
-    slug: "BidBuddy",
+    slug: "bid-buddy",
     title: "BidBuddy",
     subtitle: "Auksjonsnettside",
     description:
@@ -96,7 +96,7 @@ export const projects = [
   },
   {
     id: "7",
-    slug: "ShopDrop",
+    slug: "shop-drop",
     title: "ShopDrop",
     subtitle: "Nettsidehandel",
     description: "eCommerce nettside bygd med API gitt av Noroff.",
@@ -111,7 +111,7 @@ export const projects = [
   },
   {
     id: "8",
-    slug: "GameHub",
+    slug: "game-hub",
     title: "GameHub",
     subtitle: "Design: Nettsidehandel for spill",
     description:
@@ -128,7 +128,7 @@ export const projects = [
   },
   {
     id: "9",
-    slug: "Bryllup",
+    slug: "bryllup",
     title: "Bryllup",
     subtitle: "Bryllupsnettside",
     description:

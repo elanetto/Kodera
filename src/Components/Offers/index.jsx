@@ -1,16 +1,15 @@
 import { FaCheckCircle } from "react-icons/fa";
-import OfferCard from "./OfferCard"; // or wherever your OfferCard component is
+import OfferCard from "./offerCard";
 import { packages, hourly } from "./offersData";
 import { Link } from "react-router-dom";
 
 export default function Offers() {
   return (
     <div className="flex flex-col items-center w-full">
-      <h2
-        className="text-3xl font-oswald text-center text-title p-4 mb-4"
-        id="tjenester"
+       <h2
+        className="text-2xl font-oswald font-bold text-title py-5"
       >
-        Pakker
+        PAKKER
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl gap-10 items-stretch">
@@ -21,8 +20,10 @@ export default function Offers() {
         ))}
       </div>
 
-      <h2 className="text-3xl font-oswald text-center text-title pt-10 pb-4 mb-4">
-        Timespriser
+       <h2
+        className="text-2xl font-oswald font-bold text-title pb-5 pt-15"
+      >
+        TIMEPRISER
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl gap-10 items-stretch mb-8">

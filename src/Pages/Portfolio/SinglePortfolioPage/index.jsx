@@ -3,6 +3,7 @@ import TechIcons from "../../../Components/TechIcons";
 import { CarouselComponent } from "../../../Components/Carousel";
 import { projects } from "../../../data/portfolioData";
 import PortfolioCard from "../../../Components/PortfolioCard";
+import Space from "../../../Layout/Space"
 
 export default function Project() {
   const { id } = useParams();
@@ -41,7 +42,7 @@ export default function Project() {
   const otherProjects = projects.filter((p) => String(p.id) !== String(id));
 
   return (
-  <div className="min-h-screen bg-paperwhite text-title dark:bg-coal dark:text-paperwhite">
+  <div className="min-h-screen bg-lightgray text-title dark:bg-coal dark:text-paperwhite">
     {/* Main content container */}
     <div className="max-w-6xl mx-auto px-4 py-10 md:py-16">
       {/* Back link */}
@@ -115,7 +116,7 @@ export default function Project() {
     {otherProjects.length > 0 && (
       <section className="bg-lightgray py-14">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 oswald text-title dark:text-coal">
+          <h2 className="text-2xl text-center font-bold mb-8 oswald text-title dark:text-coal">
             ANDRE PROSJEKTER
           </h2>
 
@@ -124,6 +125,7 @@ export default function Project() {
               <PortfolioCard key={p.id} project={p} />
             ))}
           </div>
+          <Space size="xl" type="pad" />
         </div>
       </section>
     )}

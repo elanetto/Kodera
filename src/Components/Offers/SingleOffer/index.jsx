@@ -5,6 +5,8 @@ import { FaCheckCircle } from "react-icons/fa";
 import ImageCarousel from "./imageCarousel.jsx";
 import { HiExternalLink } from "react-icons/hi";
 import VideoShowcase from "./animated.jsx";
+import PortfolioExamples from "../../PortfolioExamples";
+import Space from "../../../Layout/Space";
 
 export default function SingleOffer() {
   const { id } = useParams();
@@ -81,6 +83,14 @@ export default function SingleOffer() {
         )}
       </div>
 
+      <PortfolioExamples
+        slugs={offer.exampleProjectSlugs}
+        title="Prosjekt i denne størrelsen"
+        className="mt-12"
+      />
+
+      <Space size="xl" type="pad" />
+
       {/* Detailed features */}
       {offer.detailedFeatures?.length > 0 && (
         <div className=" rounded-xl   ">
@@ -130,6 +140,7 @@ export default function SingleOffer() {
           </div>
         </div>
       )}
+      <Space size="xl" type="pad" />
     </section>
   );
 }
