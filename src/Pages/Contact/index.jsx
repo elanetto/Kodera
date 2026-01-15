@@ -1,12 +1,14 @@
 import ContactForm from "../../Components/MailForm";
+import Space from "../../Layout/Space"
 
 function Contact() {
   return (
-    <div className="pt-8 pb-8 bg-lightgray  ">
-      <h1 className="font-oswald text-3xl lg:text-4xl text-center pb-8">
-        Kontakt oss
+    <div className="py-10 bg-lightgray  ">
+      <h1 className="font-oswald font-bold text-2xl text-title lg:text-2xl text-center py-5">
+        KONTAKT OSS
       </h1>
       <ContactForm />
+      <Space size="xl" type="pad" />
     </div>
   );
 }

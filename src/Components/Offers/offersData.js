@@ -7,6 +7,7 @@ export const packages = [
   {
     id: "one-pager",
     tag: "One pager",
+    exampleProjectSlugs: ["bryllup"],
     headline: "Nettside bestående av 1 side",
     features: [
       "1 side. For eksempel portfolio, restaurantmeny eller festinfo",
@@ -30,7 +31,7 @@ export const packages = [
     price: "kr 5 990",
     crossed: "Veil. pris: kr 10 000",
     videos: [onepagerdemo],
-    link: "https://dittprosjekt.com",
+    link: "https://www.elanetto.no/gift/",
 
     faq: [
       {
@@ -57,6 +58,7 @@ export const packages = [
   {
     id: "three-pager",
     tag: "Three pager",
+    exampleProjectSlugs: ["elanetto-design", "anette-therese-no"],
     headline: "Liten nettside",
     features: [
       {
@@ -84,7 +86,7 @@ export const packages = [
     price: "kr 11 990",
     crossed: "Veil. pris: kr 20 000",
     videos: [smalldemo],
-    link: "https://dittprosjekt.com",
+    link: "https://www.elanetto.no/",
     faq: [
       {
         q: "Hvor lang kan 1 side være?",
@@ -110,6 +112,7 @@ export const packages = [
   {
     id: "mega",
     tag: "Mega",
+    exampleProjectSlugs: ["holidaze-anette", "holidaze-line"],
     headline: "Mellomstor nettside",
     beforeBying: [
       "Du forteller oss hva du ser for deg og ønsker. Vi danner et helhetlig bilde basert på ditt formål, produkt og merkeidentitet. Deretter mottar du en skisse av oss og gir beskjed om det er ok.",
@@ -136,6 +139,7 @@ export const packages = [
     ],
     price: "kr 19 990",
     crossed: "Veil. pris: kr 40 000",
+    link: "https://dev-holiday.onrender.com/",
     heroImage: "/assets/projectImages/shopdrop-Tablet.png",
     gallery: [
       "/assets/projectImages/shopdrop-Tablet.png",
