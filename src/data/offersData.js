@@ -1,6 +1,6 @@
-import onePagerDemo from "./../assets/projectImages/onepager-demo.mp4";
+import onePagerDemo from "./../assets/projectImages/onepager-demo-600kb.mp4";
 import lazyOnePager from "./../assets/projectImages/lazyload-one-pager.png";
-import threePagerDemo from "./../assets/projectImages/small-demo.mp4";
+import threePagerDemo from "./../assets/projectImages/small-demo-600kb.mp4";
 import lazyThreePager from "./../assets/projectImages/lazyload-3-pager.png";
 import sevenPagerDemo from "./../assets/projectImages/sevenpager-500kb.mp4";
 import sevenPagerLazy from "./../assets/projectImages/lazyload-7-pager.png";
@@ -19,6 +19,7 @@ export const packages = [
   {
     id: "one-pager",
     tag: "One pager",
+    exampleProjectSlugs: ["bryllup"],
     headline: "Nettside bestående av 1 side",
     features: [
       "1 side. For eksempel portfolio, restaurantmeny eller festinfo",
@@ -41,11 +42,12 @@ export const packages = [
     ],
     price: "kr 5 990",
     crossed: "Veil. pris: kr 10 000",
+
     video: {
       poster: lazyOnePager,
-      play: onePagerDemo, // 800kb
+      play: onePagerDemo,
     },
-    link: "https://dittprosjekt.com",
+    link: "https://www.elanetto.no/gift/",
 
     faq: [
       {
@@ -72,6 +74,7 @@ export const packages = [
   {
     id: "three-pager",
     tag: "Three pager",
+    exampleProjectSlugs: ["elanetto-design", "anette-therese-no"],
     headline: "Liten nettside",
     features: [
       {
@@ -98,11 +101,13 @@ export const packages = [
     ],
     price: "kr 11 990",
     crossed: "Veil. pris: kr 20 000",
+
     video: {
       poster: lazyThreePager,
-      play: threePagerDemo, // 800kb
+      play: threePagerDemo,
     },
-    link: "https://dittprosjekt.com",
+    link: "https://www.elanetto.no/",
+
     faq: [
       {
         q: "Hvor lang kan 1 side være?",
@@ -128,6 +133,7 @@ export const packages = [
   {
     id: "mega",
     tag: "Mega",
+    exampleProjectSlugs: ["holidaze-anette", "holidaze-line"],
     headline: "Mellomstor nettside",
     beforeBying: [
       "Du forteller oss hva du ser for deg og ønsker. Vi danner et helhetlig bilde basert på ditt formål, produkt og merkeidentitet. Deretter mottar du en skisse av oss og gir beskjed om det er ok.",
@@ -154,11 +160,13 @@ export const packages = [
     ],
     price: "kr 19 990",
     crossed: "Veil. pris: kr 40 000",
+
     video: {
       poster: sevenPagerLazy,
-      play: sevenPagerDemo, // 800kb
+      play: sevenPagerDemo,
     },
-    link: "https://dittprosjekt.com",
+    link: "https://dev-holiday.onrender.com/",
+
     faq: [
       {
         q: "Hvor lang kan 1 side være?",
@@ -209,7 +217,7 @@ export const packages = [
     crossed: "Veil. pris: kr 20 000",
     video: {
       poster: figmaLazy,
-      play: figmaDemo, // 800kb
+      play: figmaDemo,
     },
 
     faq: [
@@ -258,7 +266,7 @@ export const packages = [
     crossed: "Veil. pris: kr 10 000",
     video: {
       poster: analyseLazy,
-      play: analyseDemo, // 800kb
+      play: analyseDemo,
     },
 
     beforeBying: [
@@ -307,7 +315,7 @@ export const hourly = [
     crossed: "Veil. pris: 1300 kr/time",
     video: {
       poster: figmaTimeLazy,
-      play: figmaTimeDemo, // 800kb
+      play: figmaTimeDemo,
     },
 
     faq: [
@@ -363,7 +371,7 @@ export const hourly = [
     crossed: "Veil. pris: 1500 kr/time",
     video: {
       poster: kodeTimeLazy,
-      play: kodeTimeDemo, // 800kb
+      play: kodeTimeDemo,
     },
 
     faq: [
