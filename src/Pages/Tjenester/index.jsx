@@ -1,5 +1,5 @@
 import Offers from "../../Components/Offers";
-import { packages, hourly } from "../../Components/Offers/offersData";
+import { packages, hourly } from "../../data/offersData";
 
 export default function Tjenester() {
   return (

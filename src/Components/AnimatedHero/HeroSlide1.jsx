@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import AnimatedText from "./AnimatedText";
-import anetteOgLine from "../../assets/images/anette-og-line.png";
+import anetteOgLine from "../../assets/images/anette-og-line-196kb.webp";
 
 export default function HeroSlide1({
   title,

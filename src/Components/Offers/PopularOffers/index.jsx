@@ -1,7 +1,7 @@
 import { TiArrowRightThick } from "react-icons/ti";
 import { Link } from "react-router-dom";
 import OfferCard from "../offerCard";
-import { packages } from "../offersData";
+import { packages } from "../../../data/offersData";
 
 const popular = packages.slice(0, 3); // first 3 packages, or pick manually
 

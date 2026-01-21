@@ -1,5 +1,17 @@
-import onepagerdemo from "../../assets/projectImages/onepager-demo.mp4";
-import smalldemo from "../../assets/projectImages/small-demo.mp4";
+import onePagerDemo from "./../assets/projectImages/onepager-demo.mp4";
+import lazyOnePager from "./../assets/projectImages/lazyload-one-pager.png";
+import threePagerDemo from "./../assets/projectImages/small-demo.mp4";
+import lazyThreePager from "./../assets/projectImages/lazyload-3-pager.png";
+import sevenPagerDemo from "./../assets/projectImages/sevenpager-500kb.mp4";
+import sevenPagerLazy from "./../assets/projectImages/lazyload-7-pager.png";
+import figmaDemo from "./../assets/projectImages/figma-pakke-837kb.mp4";
+import figmaLazy from "./../assets/projectImages/lazyload-ux-pakke.png";
+import analyseDemo from "./../assets/projectImages/ux-analyse-pakke-800kb.mp4";
+import analyseLazy from "./../assets/projectImages/lazyload-analyse.png";
+import kodeTimeDemo from "./../assets/projectImages/kode-timespris-754kb.mp4";
+import kodeTimeLazy from "./../assets/projectImages/lazyload-timespris-kode.png";
+import figmaTimeDemo from "./../assets/projectImages/figma-timespris-800kb.mp4";
+import figmaTimeLazy from "./../assets/projectImages/lazyload-ux-timespris.png";
 
 // src/data/offersData.js
 
@@ -29,7 +41,10 @@ export const packages = [
     ],
     price: "kr 5 990",
     crossed: "Veil. pris: kr 10 000",
-    videos: [onepagerdemo],
+    video: {
+      poster: lazyOnePager,
+      play: onePagerDemo, // 800kb
+    },
     link: "https://dittprosjekt.com",
 
     faq: [
@@ -83,7 +98,10 @@ export const packages = [
     ],
     price: "kr 11 990",
     crossed: "Veil. pris: kr 20 000",
-    videos: [smalldemo],
+    video: {
+      poster: lazyThreePager,
+      play: threePagerDemo, // 800kb
+    },
     link: "https://dittprosjekt.com",
     faq: [
       {
@@ -136,11 +154,11 @@ export const packages = [
     ],
     price: "kr 19 990",
     crossed: "Veil. pris: kr 40 000",
-    heroImage: "/assets/projectImages/shopdrop-Tablet.png",
-    gallery: [
-      "/assets/projectImages/shopdrop-Tablet.png",
-      "/assets/projectImages/shopdrop-Tablet.png",
-    ],
+    video: {
+      poster: sevenPagerLazy,
+      play: sevenPagerDemo, // 800kb
+    },
+    link: "https://dittprosjekt.com",
     faq: [
       {
         q: "Hvor lang kan 1 side være?",
@@ -189,11 +207,11 @@ export const packages = [
     ],
     price: "kr 14 990",
     crossed: "Veil. pris: kr 20 000",
-    heroImage: "/assets/projectImages/shopdrop-Tablet.png",
-    gallery: [
-      "/assets/projectImages/shopdrop-Tablet.png",
-      "/assets/projectImages/shopdrop-Tablet.png",
-    ],
+    video: {
+      poster: figmaLazy,
+      play: figmaDemo, // 800kb
+    },
+
     faq: [
       {
         q: "Hvor mye kan endres i en revisjonsrunde?",
@@ -238,6 +256,11 @@ export const packages = [
     ],
     price: "Gratis",
     crossed: "Veil. pris: kr 10 000",
+    video: {
+      poster: analyseLazy,
+      play: analyseDemo, // 800kb
+    },
+
     beforeBying: [
       "Du sender oss eventuelle filer og forteller oss hva du ser for deg og ønsker. Vi danner et helhetlig bilde basert på ditt formål, produkt og merkeidentitet. Deretter mottar du en skisse av oss og gir beskjed om det er ok.",
     ],
@@ -249,11 +272,7 @@ export const packages = [
       "Vi har satt en 24-timers leveringstid. Det kan hende du mottar tilbakemeldingen tidligere.",
       "Du mottar tilbakemelding i form av en dokumentfil og forslag til eventuelle forbedringer.",
     ],
-    heroImage: "/assets/projectImages/shopdrop-Tablet.png",
-    gallery: [
-      "/assets/projectImages/shopdrop-Tablet.png",
-      "/assets/projectImages/shopdrop-Tablet.png",
-    ],
+
     faq: [
       {
         q: "Jeg har fått analysen og mye må fikses. Hva gjør vi nå?",
@@ -286,11 +305,11 @@ export const hourly = [
     ],
     price: "890 kr/time",
     crossed: "Veil. pris: 1300 kr/time",
-    heroImage: "/assets/projectImages/shopdrop-Tablet.png",
-    gallery: [
-      "/assets/projectImages/shopdrop-Tablet.png",
-      "/assets/projectImages/shopdrop-Tablet.png",
-    ],
+    video: {
+      poster: figmaTimeLazy,
+      play: figmaTimeDemo, // 800kb
+    },
+
     faq: [
       {
         q: "Må jeg ha deres UX-pakke fra før?",
@@ -342,11 +361,11 @@ export const hourly = [
     ],
     price: "990 kr/time",
     crossed: "Veil. pris: 1500 kr/time",
-    heroImage: "/assets/projectImages/shopdrop-Tablet.png",
-    gallery: [
-      "/assets/projectImages/shopdrop-Tablet.png",
-      "/assets/projectImages/shopdrop-Tablet.png",
-    ],
+    video: {
+      poster: kodeTimeLazy,
+      play: kodeTimeDemo, // 800kb
+    },
+
     faq: [
       {
         q: "Må jeg ha nettsiden av dere fra før?",
