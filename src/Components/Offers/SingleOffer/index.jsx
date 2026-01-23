@@ -35,7 +35,7 @@ export default function SingleOffer() {
   }
 
   return (
-    <section className="max-w-7xl  lg:mx-auto py-8  px-8 ">
+    <section className="max-w-7xl  lg:mx-auto py-8  px-8">
       {/* Header */}
       <span
         className="block w-max bg-coal text-white px-5 py-3 rounded-full 
