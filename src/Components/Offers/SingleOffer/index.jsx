@@ -1,8 +1,8 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { packages } from "../offersData.js";
+import { packages, hourly } from "../../../data/offersData.js";
 import { TiArrowLeftThick } from "react-icons/ti";
 import { FaCheckCircle } from "react-icons/fa";
-import ImageCarousel from "./imageCarousel.jsx";
+// import ImageCarousel from "./imageCarousel.jsx";
 import { HiExternalLink } from "react-icons/hi";
 import VideoShowcase from "./animated.jsx";
 import PortfolioExamples from "../../PortfolioExamples";
@@ -12,8 +12,8 @@ export default function SingleOffer() {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  // find matching offer by id
-  const offer = packages.find((o) => o.id === id);
+  const offer =
+    packages.find((o) => o.id === id) || hourly.find((o) => o.id === id);
 
   if (!offer) {
     return (
@@ -75,23 +75,30 @@ export default function SingleOffer() {
           </span>
         </div>
 
-        {/* {offer.gallery && offer.gallery.length > 0 && (
-          <ImageCarousel images={offer.gallery} />
-        )} */}
-        {offer.videos && offer.videos.length > 0 && (
-          <VideoShowcase videos={offer.videos} />
-        )}
+        {offer.video?.poster && <VideoShowcase video={offer.video} />}
       </div>
 
-      <PortfolioExamples
+      {/* <PortfolioExamples
         slugs={offer.exampleProjectSlugs}
         title="Prosjekt i denne størrelsen"
         className="mt-12"
       />
 
-      <Space size="xl" type="pad" />
+      <Space size="xl" type="pad" /> */}
+
+      {offer.exampleProjectSlugs?.length > 0 && (
+        <>
+          <PortfolioExamples
+            slugs={offer.exampleProjectSlugs}
+            title="Prosjekt i denne størrelsen"
+            className="mt-12"
+          />
+          <Space size="xl" type="pad" />
+        </>
+      )}
 
       {/* Detailed features */}
+
       {offer.detailedFeatures?.length > 0 && (
         <div className=" rounded-xl   ">
           <h2 className="text-xl text-title font-semibold mb-4">
@@ -122,7 +129,6 @@ export default function SingleOffer() {
         </span>
       </div>
 
-      {/* FAQ spørsmål og svar */}
       {offer.faq?.length > 0 && (
         <div className="mt-12 ">
           <h2 className="text-xl font-semibold mb-4 text-title">
