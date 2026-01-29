@@ -84,7 +84,7 @@ export default function VideoShowcase({ video }) {
   }, [shouldLoad, video.play]);
 
   return (
-    <div className="max-w-[450px] flex flex-col">
+    <div className="max-w-[405px] flex flex-col">
       <video
         ref={videoRef}
         className="w-full rounded-xl"

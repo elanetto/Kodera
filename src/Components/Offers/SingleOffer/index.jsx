@@ -1,3 +1,5 @@
+import { useState } from "react";
+import ProductContactModal from "../../ProductContactForm";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { packages, hourly } from "../../../data/offersData.js";
 import { TiArrowLeftThick } from "react-icons/ti";
@@ -11,6 +13,9 @@ import Space from "../../../Layout/Space";
 export default function SingleOffer() {
   const { id } = useParams();
   const navigate = useNavigate();
+  const [isContactOpen, setIsContactOpen] = useState(false);
+  const handleOpen = () => setIsContactOpen(true);
+  const handleClose = () => setIsContactOpen(false);
 
   const offer =
     packages.find((o) => o.id === id) || hourly.find((o) => o.id === id);
@@ -18,11 +23,10 @@ export default function SingleOffer() {
   if (!offer) {
     return (
       <section className="py-20 text-center">
-        <h1 className="text-2xl font-koulen text-title mb-4">
-          Fant ikke denne pakken
-        </h1>
+        <h1 className="text-2xl font-koulen text-title mb-4">Oisann! :/</h1>
         <p className="text-gray-600 mb-6">
-          Beklager! Vi finner ikke denne tjenesten.
+          Vi finner ikke tjenesten. Prøv igjen senere eller gjerne kontakt oss
+          om problemet.
         </p>
         <button
           onClick={() => navigate(-1)}
@@ -37,16 +41,16 @@ export default function SingleOffer() {
   return (
     <section className="max-w-7xl  lg:mx-auto py-8  px-8">
       {/* Header */}
-      <span
-        className="block w-max bg-coal text-white px-5 py-3 rounded-full 
-                 text-center text-sm mb-4 mx-auto lg:mx-0"
-      >
-        {offer.tag}
-      </span>
 
-      <div className="flex flex-col  justify-center items-center  text-center lg:text-left rounded-tr-xl rounded-br-xl rounded-bl-xl bg-white  lg:flex-row  sm:text-center   lg:items-start">
-        <div className="flex-1">
-          <h1 className="text-3xl font-koulen text-title mt-4  mb-4">
+      <div className="flex flex-col  justify-center items-center  text-center lg:text-left rounded-tr-xl rounded-br-xl rounded-bl-xl bg-white  lg:flex-row  sm:text-center  ">
+        <div className="flex-1 lg:mb-8">
+          <span
+            className="block font-oswald uppercase tracking-widest w-max  bg-coal text-white px-8 py-2 rounded-full 
+                 text-center text-sm mb-8.5  mx-auto lg:mx-0"
+          >
+            {offer.tag}
+          </span>
+          <h1 className="text-3xl font-oswald uppercase font-medium text-title mb-6">
             {offer.headline}
           </h1>
 
@@ -60,18 +64,13 @@ export default function SingleOffer() {
               {offer.crossed}
             </p>
           )}
-          <span className="flex items-center justify-center lg:justify-start">
-            {offer.link && (
-              <a
-                href={offer.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="discrete-btn gap-2 mt-8"
-              >
-                Se nettside eksempel
-                <HiExternalLink />
-              </a>
-            )}
+          <span>
+            <button
+              onClick={handleOpen}
+              className="cta-btn mt-8 mx-auto lg:mx-0 mb-4 lg:mb-0"
+            >
+              Send forespørsel
+            </button>
           </span>
         </div>
 
@@ -91,20 +90,32 @@ export default function SingleOffer() {
           <PortfolioExamples
             slugs={offer.exampleProjectSlugs}
             title="Prosjekt i denne størrelsen"
-            className="mt-12"
+            className="mt-4 mb-8 "
           />
-          <Space size="xl" type="pad" />
+          {/* <Space size="xl" type="pad" /> */}
         </>
+      )}
+
+      {offer.link && (
+        <a
+          href={offer.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="discrete-btn mb-8 mt-4 "
+        >
+          Se nettside eksempel
+          <HiExternalLink />
+        </a>
       )}
 
       {/* Detailed features */}
 
       {offer.detailedFeatures?.length > 0 && (
         <div className=" rounded-xl   ">
-          <h2 className="text-xl text-title font-semibold mb-4">
+          <h2 className="text-xl font-oswald uppercase font-medium mb-4 mt-4 pt-2 pb-2">
             Dette får du
           </h2>
-          <ul className="grid sm:grid-cols-2 gap-8 text-gray-700">
+          <ul className="grid sm:grid-cols-2 gap-6 text-gray-700">
             {offer.detailedFeatures.map((f, i) => (
               <li key={i} className="flex items-start gap-2">
                 <FaCheckCircle className="w-5 h-5 shrink-0 mt-2 mr-1 text-darkpink" />
@@ -115,23 +126,9 @@ export default function SingleOffer() {
         </div>
       )}
 
-      <div className="mt-12 flex gap-4 flex-wrap flex-col ">
-        <span>
-          <Link to="/kontakt" className="cta-btn">
-            Kontakt oss
-          </Link>
-        </span>
-        <span>
-          <Link to="/tjenester" className="links  gap-2 mt-4 ">
-            <TiArrowLeftThick />
-            Tilbake til pakker og tjenester
-          </Link>
-        </span>
-      </div>
-
       {offer.faq?.length > 0 && (
         <div className="mt-12 ">
-          <h2 className="text-xl font-semibold mb-4 text-title">
+          <h2 className="text-xl font-oswald uppercase font-medium mb-4 mt-4 pt-2 pb-2 ">
             Ofte stilte spørsmål
           </h2>
           <div className="space-y-3">
@@ -146,6 +143,19 @@ export default function SingleOffer() {
           </div>
         </div>
       )}
+      <ProductContactModal
+        isOpen={isContactOpen}
+        onClose={handleClose}
+        product={offer}
+      />
+      <div className="mt-12 flex gap-4 flex-wrap flex-col ">
+        <span>
+          <Link to="/tjenester" className="links  gap-2 mt-4 ">
+            <TiArrowLeftThick />
+            Tilbake til pakker og tjenester
+          </Link>
+        </span>
+      </div>
       <Space size="xl" type="pad" />
     </section>
   );

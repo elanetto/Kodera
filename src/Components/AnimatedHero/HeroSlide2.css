@@ -147,6 +147,18 @@
     max-width: 400px;
   }
   .text-hero-widt-p {
+    max-width: 380px;
+  }
+}
+
+@media (min-width: 1190px) and (max-width: 1300px) {
+  .still {
+    display: none;
+  }
+  .text-hero-widt-lg {
+    max-width: 300px;
+  }
+  .text-hero-widt-p {
     max-width: 300px;
   }
 }
