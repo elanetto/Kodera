@@ -1,13 +1,12 @@
 import BgImage from "../../assets/carousel/main/Karusellbilde1.jpg";
 import CurlyPinkSVG from "../../assets/images/curly-pink-to-the-right.svg";
 import DarkSVGbg from "../../assets/images/darl-bg-to-the-curly-bracket.svg";
-import UXcontactForm from "../UXcontactForm";
+import { Link } from "react-router-dom";
 
 export default function UXbanner() {
   return (
     <section className="w-full">
       <div className="relative w-full max-w-7xl mx-auto overflow-hidden">
-        
         {/* ---------- MOBILE LAYOUT ---------- */}
         <div
           className="flex md:hidden relative w-full h-[400px] bg-cover bg-center items-center justify-center text-center px-6 rounded-xl overflow-hidden"
@@ -18,19 +17,26 @@ export default function UXbanner() {
 
           {/* Content */}
           <div className="relative z-10 text-white">
-            <h2 className="text-3xl text-white font-bold font-koulen">TILBUD:</h2>
+            <h2 className="text-3xl text-white font-bold font-koulen">
+              TILBUD:
+            </h2>
             <p className="mt-2 font-bold text-2xl">Gratis UX-analyse</p>
             <p className="text-sm text-white italic pt-3">
-                Hvordan er brukerens
-              </p>
-              <p className="text-sm text-white italic">
-                opplevelse av nettsiden?
-              </p>
-              <p className="text-sm text-white line-through pt-4">
-                Veil. pris: kr 10 000
-              </p>
+              Hvordan er brukerens
+            </p>
+            <p className="text-sm text-white italic">
+              opplevelse av nettsiden?
+            </p>
+            <p className="text-sm text-white line-through pt-4">
+              Veil. pris: kr 10 000
+            </p>
             <div className="mt-6">
-              <UXcontactForm />
+              <Link
+                to="/tjenester/ux-analyse"
+                className="inline-block bg-[var(--color-main)] hover:bg-[var(--color-main-hover)] text-white font-semibold py-3 px-6 rounded-lg transition"
+              >
+                Les mer
+              </Link>
             </div>
           </div>
         </div>
@@ -61,7 +67,12 @@ export default function UXbanner() {
           >
             <div className="absolute inset-0 bg-black/50 rounded-r-xl" />
             <div className="relative z-10">
-              <UXcontactForm />
+              <Link
+                to="/tjenester/ux-analyse"
+                className="inline-block bg-[var(--color-main)] hover:bg-[var(--color-main-hover)] text-white font-semibold py-3 px-6 rounded-lg transition"
+              >
+                Les mer
+              </Link>
             </div>
           </div>
 
