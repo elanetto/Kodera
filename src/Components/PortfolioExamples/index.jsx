@@ -2,7 +2,9 @@ import PortfolioCard from "../PortfolioCard";
 import { projects } from "../../data/portfolioData";
 
 function normalizeSlug(s) {
-  return String(s || "").trim().toLowerCase();
+  return String(s || "")
+    .trim()
+    .toLowerCase();
 }
 
 export default function PortfolioExamples({

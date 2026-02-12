@@ -3,17 +3,17 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./HeroSlide2.css";
 
-import pcImg from "../../assets/heroImages/xbidbuddy.png";
-import tabletImg from "../../assets/heroImages/yxholiday.png";
-import mobileImg from "../../assets/heroImages/xwholiday.png";
-import somethingImg from "../../assets/heroImages/xgame.png";
+import pcImg from "../../assets/heroImages/xbidbuddy.webp";
+import tabletImg from "../../assets/heroImages/yxholiday.webp";
+import mobileImg from "../../assets/heroImages/xwholiday.webp";
+import somethingImg from "../../assets/heroImages/xgame.webp";
 import someImg from "../../assets/heroImages/xmuseum.png";
 import etcImg from "../../assets/heroImages/xmbid.png";
 import etc2Img from "../../assets/heroImages/xmholiday.png";
 import etc3Img from "../../assets/heroImages/xmhol.png";
 import etc4Img from "../../assets/heroImages/xmgamee.png";
 
-import showcaseImg from "../../assets/heroImages/showcase.png";
+import showcaseImg from "../../assets/heroImages/showcase.webp";
 
 export default function HeroSlide2() {
   // --- cycle the "hand with mobile" images ---

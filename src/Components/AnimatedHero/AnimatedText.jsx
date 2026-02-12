@@ -16,7 +16,7 @@ export default function AnimatedText({ text, className = "" }) {
 
   return (
     <motion.h1
-      className={`text-4xl md:text-6xl font-bold ${className}`}
+      className={`text-4xl md:text-6xl font-bold pt-0 sm:pt-20 lg:pt-0 ${className}`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
