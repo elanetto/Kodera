@@ -26,7 +26,7 @@ export default function HeroSlide1({
       "
     >
       {/* tekst til venstre */}
-      <div className="z-10 flex mb-80 mt-8 sm:mb-80 md:mb-0 md:mt-10 lg:mt-50 flex-col justify-center text-center md:text-left md:w-1/2 space-y-8">
+      <div className="z-10 flex mb-80 mt-8 sm:mb-80 md:mb-0 md:mt-10 lg:mt-50 flex-col justify-center text-center md:text-left md:w-1/2 space-y-5 lg:space-y-8">
         <AnimatedText
           className="custom-padding font-oswald font-normal"
           text={title || "Vi bygger digitale opplevelser"}
@@ -60,7 +60,7 @@ export default function HeroSlide1({
               behavior: "smooth",
             });
           }}
-          className="cta-btn mx-auto md:mx-0"
+          className="cta-btn w-[160px]  mx-auto md:mx-0"
         >
           Kontakt oss
         </motion.button>
@@ -76,7 +76,7 @@ export default function HeroSlide1({
         <img
           src={image}
           alt="Anette og Line"
-          className="h-[270px] sm:h-[340px] md:h-[400px] lg:h-[520px] w-auto object-contain drop-shadow-2xl md:mr-8"
+          className="h-[270px] sm:h-[340px] md:h-[380px] lg:h-[520px] w-auto object-contain drop-shadow-2xl md:mr-8"
         />
 
         {showNames && (
@@ -86,7 +86,7 @@ export default function HeroSlide1({
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 3, duration: 0.8 }}
-              className="absolute bottom-[180px] right-[79%] sm:bottom-[230px] sm:right-[71%] md:bottom-[410px] md:right-[360px] lg:bottom-[510px] lg:right-[530px] text-sm sm:text-base font-semibold text-pinky drop-shadow-lg"
+              className="absolute bottom-[180px] right-[78%] sm:bottom-[230px] sm:right-[71%] md:bottom-[410px] md:right-[360px] lg:bottom-[510px] lg:right-[530px] text-sm sm:text-base font-semibold text-pinky drop-shadow-lg"
             >
               Line
               <motion.div
@@ -101,7 +101,7 @@ export default function HeroSlide1({
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 2, duration: 0.8 }}
-              className="absolute bottom-[240px] left-[78%] md:left-[80%] lg:left-[82%] sm:bottom-[220px] sm:right-[17%] md:bottom-[410px] md:right-[130px] lg:bottom-[510px] lg:right-[164px] text-sm sm:text-base font-semibold text-pinky drop-shadow-lg"
+              className="absolute bottom-[240px] left-[78%] sm:left-[75%] md:left-[80%] lg:left-[82%] sm:bottom-[220px] sm:right-[17%] md:bottom-[410px] md:right-[130px] lg:bottom-[510px] lg:right-[164px] text-sm sm:text-base font-semibold text-pinky drop-shadow-lg"
             >
               Anette
               <motion.div

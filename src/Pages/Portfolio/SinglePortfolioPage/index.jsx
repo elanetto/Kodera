@@ -3,7 +3,8 @@ import TechIcons from "../../../Components/TechIcons";
 import { CarouselComponent } from "../../../Components/Carousel";
 import { projects } from "../../../data/portfolioData";
 import PortfolioCard from "../../../Components/PortfolioCard";
-import Space from "../../../Layout/Space"
+import Space from "../../../Layout/Space";
+import BackButton from "../../../Components/BackButton";
 
 export default function Project() {
   const { id } = useParams();
@@ -35,100 +36,102 @@ export default function Project() {
           alt: img.alt || project.title,
           caption: img.caption,
           link: img.link,
-        }
+        },
   );
 
   // 👇 All other projects except the one we’re currently viewing
   const otherProjects = projects.filter((p) => String(p.id) !== String(id));
 
   return (
-  <div className="min-h-screen bg-lightgray text-title dark:bg-coal dark:text-paperwhite">
-    {/* Main content container */}
-    <div className="max-w-6xl mx-auto px-4 py-10 md:py-16">
-      {/* Back link */}
-      <Link
-        to="/portfolio"
-        className="inline-flex items-center text-sm text-pinky hover:text-darkpink mb-6"
-      >
-        ← Tilbake til portefølje
-      </Link>
-
-      <div className="grid gap-10 lg:grid-cols-[minmax(0,2fr)_minmax(0,1.3fr)] items-start">
-        {/* LEFT: Carousel */}
-        <div>
-          <CarouselComponent images={carouselImages} title={project.title} />
+    <div className="min-h-screen bg-lightgray text-title dark:bg-coal dark:text-paperwhite ">
+      <div className="relative flex items-center justify-center bg-paperwhite pb-4 pt-4 ">
+        <div className="back-btn absolute left-8">
+          <BackButton fallbackTo="/" />
         </div>
-
-        {/* RIGHT: Info panel */}
-        <div className="bg-coal text-paperwhite border border-white rounded-2xl p-6 md:p-8 shadow-xl">
-          <h1 className="text-3xl md:text-4xl font-bold mb-2 oswald">
-            {project.title}
-          </h1>
-
-          {project.subtitle && (
-            <p className="text-pinky text-sm md:text-base mb-4">
-              {project.subtitle}
-            </p>
-          )}
-
-          {project.description && (
-            <p className="text-sm md:text-base text-lightgray leading-relaxed mb-4 whitespace-pre-line">
-              {project.description}
-            </p>
-          )}
-
-          <div className="mt-4">
-            <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-lightgray mb-1">
-              Tech &amp; verktøy
-            </h2>
-
-            <TechIcons techKeys={project.tech || []} size="md" />
+        <h1 className="font-oswald font-medium text-4xl md:text-5xl text-title text-center ">
+          Prosjekt-detaljer
+        </h1>
+      </div>
+      {/* Main content container */}
+      <div className="max-w-7xl mx-auto  px-4 md:px-8  lg:px-20 xl:px-4 pt-8 lg:pt-12">
+        <div className="grid gap-8 xl:grid-cols-[minmax(0,2fr)_minmax(0,1.3fr)]  xl:h-[420px] 2xl:h-[580px]">
+          {/* LEFT: Carousel */}
+          <div className="h-full min-h-0">
+            <CarouselComponent images={carouselImages} title={project.title} />
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-3">
-            {project.liveUrl && (
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full bg-pinky px-5 py-2.5 text-sm font-semibold text-paperwhite hover:bg-darkpink transition shadow-md"
-              >
-                Besøk nettsiden
-              </a>
-            )}
+          {/* RIGHT: Info panel */}
+          <div className="h-full min-h-0  ">
+            <div className="bg-coal text-paperwhite border border-white rounded-2xl p-6 md:p-7 shadow-xl h-full flex flex-col items-center sm:items-start text-center sm:text-left min-h-0">
+              <h2 className="text-2xl  lg:text-3xl font-medium   font-oswald">
+                {project.title}
+              </h2>
 
-            {project.repoUrl && (
-              <a
-                href={project.repoUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-full border border-lightgray px-5 py-2.5 text-sm font-semibold text-paperwhite hover:bg-coal/80 transition"
-              >
-                Se koden
-              </a>
-            )}
+              {project.subtitle && (
+                <p className="text-pinky uppercase font-oswald font-medium text-base  pt-2 pb-2 tracking-widest">
+                  {project.subtitle}
+                </p>
+              )}
+
+              {project.description && (
+                <p className="text-base text-lightgray leading-relaxed mb-2 whitespace-pre-line">
+                  {project.description}
+                </p>
+              )}
+
+              <div className="mt-2 flex-1 min-h-0 overflow-y-auto pr-2">
+                <h2 className=" text-base lg:text-lg uppercase font-medium  font-oswald text-lightgray mb-1">
+                  Tech &amp; verktøy
+                </h2>
+                <TechIcons techKeys={project.tech || []} size="md" />
+              </div>
+
+              {/* Push buttons to bottom if you want */}
+              <div className="mt-auto pt-8 flex flex-wrap gap-3">
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cta-btn"
+                  >
+                    Besøk nettsiden
+                  </a>
+                )}
+
+                {project.repoUrl && (
+                  <a
+                    href={project.repoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="discrete-btn"
+                  >
+                    Se koden
+                  </a>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    {/* 👇 Full-width “Se andre prosjekter” section */}
-    {otherProjects.length > 0 && (
-      <section className="bg-lightgray py-14">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl text-center font-bold mb-8 oswald text-title dark:text-coal">
-            ANDRE PROSJEKTER
-          </h2>
+      {/* 👇 Full-width “Se andre prosjekter” section */}
+      {otherProjects.length > 0 && (
+        <section className="bg-lightgray py-14">
+          <div className="max-w-6xl mx-auto px-4">
+            <h2 className="text-xl lg:text-2xl text-center font-bold mb-8 oswald text-title dark:text-coal">
+              ANDRE PROSJEKTER
+            </h2>
 
-          <div className="grid gap-6 md:grid-cols-2">
-            {otherProjects.map((p) => (
-              <PortfolioCard key={p.id} project={p} />
-            ))}
+            <div className="grid gap-6 md:grid-cols-2">
+              {otherProjects.map((p) => (
+                <PortfolioCard key={p.id} project={p} />
+              ))}
+            </div>
+            <Space size="xl" type="pad" />
           </div>
-          <Space size="xl" type="pad" />
-        </div>
-      </section>
-    )}
-  </div>
-);
+        </section>
+      )}
+    </div>
+  );
 }

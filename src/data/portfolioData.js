@@ -10,9 +10,9 @@ export const projects = [
     liveUrl: "https://anettetherese.no/",
     repoUrl: "https://github.com/elanetto/Portfolio-2",
     images: [
-      "/portfolio/anettetherese/at-01.png",
-      "/portfolio/anettetherese/at-02.png",
-      "/portfolio/anettetherese/at-03.png",
+      "/portfolio/anettetherese/at-01.webp",
+      "/portfolio/anettetherese/at-02.webp",
+      "/portfolio/anettetherese/at-03.webp",
     ],
   },
   {
@@ -26,9 +26,9 @@ export const projects = [
     liveUrl: "https://www.elanetto.no/",
     repoUrl: "https://github.com/elanetto/elanetto2",
     images: [
-      "/portfolio/elanetto/elanetto-01.png",
-      "/portfolio/elanetto/elanetto-02.png",
-      "/portfolio/elanetto/elanetto-03.png",
+      "/portfolio/elanetto/elanetto-01.webp",
+      "/portfolio/elanetto/elanetto-02.webp",
+      "/portfolio/elanetto/elanetto-03.webp",
     ],
   },
   {
@@ -42,9 +42,9 @@ export const projects = [
     liveUrl: "https://dev-holiday.onrender.com/",
     repoUrl: "https://github.com/elanetto/Holiday",
     images: [
-      "/portfolio/holidaze-a/hol-01.png",
-      "/portfolio/holidaze-a/hol-02.png",
-      "/portfolio/holidaze-a/hol-03.png",
+      "/portfolio/holidaze-a/hol-01.webp",
+      "/portfolio/holidaze-a/hol-02.webp",
+      "/portfolio/holidaze-a/hol-03.webp",
     ],
   },
   {
@@ -57,9 +57,9 @@ export const projects = [
     liveUrl: "https://floppy-flap.vercel.app/",
     repoUrl: "https://github.com/LineSvensen/floppy-flap",
     images: [
-      "/portfolio/floppyflap/floppy-01.png",
-      "/portfolio/floppyflap/floppy-02.png",
-      "/portfolio/floppyflap/floppy-03.png",
+      "/portfolio/floppyflap/floppy-01.webp",
+      "/portfolio/floppyflap/floppy-02.webp",
+      "/portfolio/floppyflap/floppy-03.webp",
     ],
   },
   {
@@ -73,9 +73,9 @@ export const projects = [
     liveUrl: "https://pe2025.onrender.com/",
     repoUrl: "https://github.com/LineSvensen/Project-exam-2",
     images: [
-      "/portfolio/holidaze-l/hol-01.png",
-      "/portfolio/holidaze-l/hol-02.png",
-      "/portfolio/holidaze-l/hol-03.png",
+      "/portfolio/holidaze-l/hol-01.webp",
+      "/portfolio/holidaze-l/hol-02.webp",
+      "/portfolio/holidaze-l/hol-03.webp",
     ],
   },
   {
@@ -89,9 +89,9 @@ export const projects = [
     liveUrl: "https://js2-sp-auction-website.vercel.app/",
     repoUrl: "https://github.com/LineSvensen/js2-sp-auction-website",
     images: [
-      "/portfolio/bidbuddy/bidbuddy-01.png",
-      "/portfolio/bidbuddy/bidbuddy-02.png",
-      "/portfolio/bidbuddy/bidbuddy-03.png",
+      "/portfolio/bidbuddy/bidbuddy-01.webp",
+      "/portfolio/bidbuddy/bidbuddy-02.webp",
+      "/portfolio/bidbuddy/bidbuddy-03.webp",
     ],
   },
   {
@@ -104,9 +104,9 @@ export const projects = [
     liveUrl: "https://shopdrop-online-store-react.netlify.app/",
     repoUrl: "https://github.com/LineSvensen/js2-sp-auction-website",
     images: [
-      "/portfolio/shopdrop/shopdrop-01.png",
-      "/portfolio/shopdrop/shopdrop-02.png",
-      "/portfolio/shopdrop/shopdrop-03.png",
+      "/portfolio/shopdrop/shopdrop-01.webp",
+      "/portfolio/shopdrop/shopdrop-02.webp",
+      "/portfolio/shopdrop/shopdrop-03.webp",
     ],
   },
   {
@@ -120,10 +120,10 @@ export const projects = [
     liveUrl: "https://game-hub-lake-one.vercel.app/index.html",
     repoUrl: "https://github.com/elanetto/game-hub",
     images: [
-      "/portfolio/gamehub/gamehub-1.png",
-      "/portfolio/gamehub/gamehub-2.png",
-      "/portfolio/gamehub/gamehub-3.png",
-      "/portfolio/gamehub/gamehub-4.png",
+      "/portfolio/gamehub/gamehub-1.webp",
+      "/portfolio/gamehub/gamehub-2.webp",
+      "/portfolio/gamehub/gamehub-3.webp",
+      "/portfolio/gamehub/gamehub-4.webp",
     ],
   },
   {
@@ -137,9 +137,9 @@ export const projects = [
     liveUrl: "https://www.elanetto.no/gift/",
     repoUrl: "https://github.com/elanetto/wedding-onepager",
     images: [
-      "/portfolio/bryllup/bryllup-01.jpg",
-      "/portfolio/bryllup/bryllup-02.jpg",
-      "/portfolio/bryllup/bryllup-03.jpg",
+      "/portfolio/bryllup/bryllup-01.webp",
+      "/portfolio/bryllup/bryllup-02.webp",
+      "/portfolio/bryllup/bryllup-03.webp",
     ],
   },
 ];

@@ -109,7 +109,7 @@ export default function UXcontactForm() {
             <button
               type="submit"
               disabled={state.submitting}
-              className="px-6 py-2 bg-pinky text-white font-bold rounded-lg hover:bg-darkpinkhover transition"
+              className="cta-btn"
             >
               Send inn
             </button>
@@ -122,10 +122,7 @@ export default function UXcontactForm() {
   return (
     <>
       {/* Button to open modal */}
-      <button
-        onClick={() => setIsOpen(true)}
-        className="px-6 py-3 cursor-pointer bg-darkpinkhover text-white font-semiboldbold rounded-xl hover:bg-darkpink transition"
-      >
+      <button onClick={() => setIsOpen(true)} className="cta-btn">
         Send forespørsel
       </button>
 

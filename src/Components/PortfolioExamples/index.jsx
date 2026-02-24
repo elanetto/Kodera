@@ -25,9 +25,9 @@ export default function PortfolioExamples({
 
   return (
     <section className={className}>
-      <h2 className="text-xl text-title font-semibold mb-4">{title}</h2>
+      <h2 className="text-2xl uppercase text-title font-oswald font-medium mb-4   pb-4">{title}</h2>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid  gap-6 md:grid-cols-2">
         {exampleProjects.map((project) => (
           <PortfolioCard key={project.id} project={project} />
         ))}

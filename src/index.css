@@ -5,6 +5,7 @@
   --color-coal: #2e3944;
   --color-title: #2e3944;
   --color-pinky: #ee4c7c;
+
   --color-main: #d72d60;
   --color-main-hover: #bf0e43;
   /* old button colors: */
@@ -55,18 +56,24 @@
 .cta-btn {
   display: flex;
   justify-content: center;
+  justify-items: center;
   align-items: center;
   text-align: center;
   background: var(--color-main);
   cursor: pointer;
   color: white;
+  height: 44px;
   border-radius: 8px;
-  padding: 8px 20px;
+  padding: 12px 32px;
   font-size: 16px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+  font-weight: 600;
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-  width: fit-content;
-  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+
+  transition:
+    background-color 0.1s ease-in-out,
+    color 0.1s ease-in-out;
 }
 
 .cta-btn:hover {
@@ -78,30 +85,139 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  border: 2px solid var(--color-main);
+  border: 1px solid var(--color-main);
   background: transparent;
   color: var(--color-main);
-  border-radius: 50px;
-  padding: 8px 20px;
+  height: 44px;
+  border-radius: 8px;
+  padding: 12px 32px;
   font-size: 16px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+  font-weight: 500;
+  box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+  transition: 0.15s ease-in-out;
   width: fit-content;
-  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
 }
 
 .discrete-btn:hover {
-  background-color: var(--color-main);
+  border: 1px solid var(--color-coal);
+  color: var(--color-coal);
+  background-color: var(--color-lightgray);
+}
+
+.back-btn {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  font-family: oswald;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  color: var(--color-coal);
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  max-width: fit-content;
+}
+
+.back-btn:hover {
+  color: var(--color-main-hover);
+  font-size: 16px;
+}
+
+.back-btn-dark {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  font-family: oswald;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  cursor: pointer;
   color: white;
+  text-align: center;
+  transition: 0.15s ease-in-out;
+  max-width: fit-content;
+}
+
+.back-btn-dark:hover {
+  color: var(--color-pinky);
+  font-size: 16px;
+}
+
+/* .glow-on-hover {
+  position: relative;
+  z-index: 0;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff8fb0,
+    #ff8fb0,
+    #ff8fb0,
+    #ee4c7c,
+    #ee4c7c,
+    #ff8fb0,
+    #ee4c7c,
+    #ee4c7c,
+    #ff8fb0
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--color-lightgray);
+  border: none;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+} */
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 .links {
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: var(--color-main);
+  color: var(--color-main-hover);
   font-size: 16px;
-  transition: color 0.1s ease-in-out, color 0.1s ease-in-out;
+  transition:
+    color 0.1s ease-in-out,
+    color 0.1s ease-in-out;
 }
 
 .links:hover {
@@ -131,4 +247,54 @@
 .animate-loop-left {
   animation: loop-left 40s linear infinite;
   will-change: transform;
+}
+
+.nav-link {
+  position: relative;
+  display: inline-flex; /* IMPORTANT */
+  align-items: center;
+  line-height: 1; /* IMPORTANT */
+  text-decoration: none;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -16px; /* tweak this slightly if needed */
+  width: 0%;
+  height: 2px;
+  background-color: var(--color-main);
+  transform: translateX(-50%);
+  transition: width 0.25s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.grecaptcha-badge {
+  bottom: 100px !important;
+  background: var(--color-coal) !important;
+}
+
+/* Force react-responsive-carousel to fill container height */
+.project-carousel,
+.project-carousel .carousel,
+.project-carousel .carousel-root,
+.project-carousel .carousel .slider-wrapper,
+.project-carousel .carousel .slider,
+.project-carousel .carousel .slide {
+  height: 100%;
+}
+
+.project-carousel .carousel .slide > div {
+  height: 100%;
+}
+
+/* Make images fill slide area consistently */
+.project-carousel .carousel .slide img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }

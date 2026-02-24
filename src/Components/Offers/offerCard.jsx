@@ -27,7 +27,7 @@ export default function OfferCard({
     <div className="cardstyle flex flex-col justify-center items-center h-full ">
       {/* Top pink label */}
       <div className="flex justify-center py-2 min-w-[180px] bg-darkpink rounded-t-lg">
-        <h3 className="text-xl text-white font-semibold font-oswald">{tag}</h3>
+        <h3 className="text-xl md:text-2xl text-white font-semibold font-oswald">{tag}</h3>
       </div>
 
       {/* Card container */}
@@ -36,7 +36,9 @@ export default function OfferCard({
       >
         {/* Green headline bar */}
         <div className="flex items-center justify-center text-center bg-[#81CABF] rounded-t-lg px-4 py-2">
-          <p className="text-md text-title font-oswald">{headline}</p>
+          <p className="text-base font-medium tracking-widest uppercase text-title font-oswald">
+            {headline}
+          </p>
         </div>
 
         {/* Features */}

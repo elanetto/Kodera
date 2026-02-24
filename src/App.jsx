@@ -14,6 +14,8 @@ import portfolioImage5 from "./assets/carousel/portfolio/Airbnb-site.jpg";
 import portfolioImage6 from "./assets/carousel/portfolio/BidBuddy.jpg";
 import portfolioImage7 from "./assets/carousel/portfolio/ShopDrop.jpg";
 
+import PortfolioAllCards from "./Components/PortfolioAllCards";
+
 import Hero from "./Components/AnimatedHero/Hero";
 import TechLogoLoop from "./Components/TechLogoLoop";
 import WhyUs from "./Components/WhyUsSection";
@@ -86,21 +88,23 @@ function App() {
         <PopularOffers />
       </div>
       <TechLogoLoop />
+
       <WhyUs />
-      <h2 className="text-2xl font-oswald font-bold text-title pb-4 pt-8">
-        INTERESSERT? SI HEI!
-      </h2>
-      <div id="contact" className="w-full">
+
+      <div id="contact" className="w-full bg-paperwhite  pb-8 text-center">
+        <h2 className="text-2xl uppercase font-oswald font-medium text-title  pb-8 pt-8">
+          Interessert? Si Hei!
+        </h2>
         <ContactForm />
       </div>
-      <div className="py-8 w-full">
+      <div className="py-12 bg-gradient-to-t from-white to-paperwhite w-full ">
         <UXbanner />
       </div>
       <h2
-        className="text-2xl font-oswald font-bold text-title pb-2 pt-10"
+        className="text-2xl font-oswald font-medium uppercase text-title pb-2 pt-10"
         id="portfolio"
       >
-        SE VÅRE TIDLIGERE PROSJEKTER
+        Se våre tidligere prosjekter
       </h2>
       <div className="w-full pt-4">
         <CarouselComponent
@@ -109,7 +113,7 @@ function App() {
         />
       </div>
       <div className="w-full">
-        <Portfolio />
+        <PortfolioAllCards />
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ export const packages = [
     id: "one-pager",
     tag: "One pager",
     exampleProjectSlugs: ["bryllup"],
-    headline: "Nettside bestående av 1 side",
+    headline: "1 sides nettside",
     features: [
       "1 side. For eksempel portfolio, restaurantmeny eller festinfo",
       "1 revisjonsrunde der du kan foreslå endringer",
