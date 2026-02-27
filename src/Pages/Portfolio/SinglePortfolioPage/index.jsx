@@ -39,7 +39,6 @@ export default function Project() {
         },
   );
 
-  // 👇 All other projects except the one we’re currently viewing
   const otherProjects = projects.filter((p) => String(p.id) !== String(id));
 
   return (
@@ -79,7 +78,7 @@ export default function Project() {
                 </p>
               )}
 
-              <div className="mt-2 flex-1 min-h-0 overflow-y-auto pr-2">
+              <div className="custom-scroll mt-2 flex-1 min-h-0 overflow-y-auto pr-2">
                 <h2 className=" text-base lg:text-lg uppercase font-medium  font-oswald text-lightgray mb-1">
                   Tech &amp; verktøy
                 </h2>
