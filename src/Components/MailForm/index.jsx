@@ -16,7 +16,7 @@ export default function ContactForm() {
       onSubmit={handleSubmit}
       className="flex flex-col gap-4 
              min-w-[360px] 
-             max-w-md sm:max-w-lg md:max-w-2xl xl:max-w-[800px] 
+             max-w-md sm:max-w-lg md:max-w-2xl sm:min-w-xl lg:min-w-3xl xl:max-w-[800px] 
              mx-auto p-6 shadow rounded-lg bg-white"
     >
       <input
@@ -45,7 +45,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={state.submitting}
-        className="bg-darkpink flex items-center justify-center text-white gap-2 text-lg p-2 rounded hover:bg-darkpinkhover w-full cursor-pointer disabled:opacity-70"
+        className="cta-btn"
       >
         {state.submitting && (
           <span className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></span>

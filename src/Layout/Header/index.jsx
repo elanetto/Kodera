@@ -16,7 +16,7 @@ export function Header() {
   };
 
   return (
-    <header className="w-full bg-coal fixed z-888">
+    <header className="w-full bg-coal fixed z-888 font-oswald text-lg font-normal tracking-widest uppercase  ">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 py-4 sm:py-6 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center cursor-pointer">
@@ -25,11 +25,20 @@ export function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex">
-          <ul className="flex space-x-8 text-white text-lg font-medium">
+          <ul className="flex space-x-8 text-white ">
+            <li>
+              <Link
+                to="/"
+                className="nav-link"
+                onClick={() => setIsOpen(false)}
+              >
+                Hjem
+              </Link>
+            </li>
             <li>
               <Link
                 to="/omoss"
-                className="hover:text-gray-300 transition-colors cursor-pointer"
+                className="nav-link"
               >
                 Om oss
               </Link>
@@ -37,7 +46,7 @@ export function Header() {
             <li>
               <Link
                 to="/contact"
-                className="hover:text-gray-300 transition-colors cursor-pointer"
+                className="nav-link"
               >
                 Kontakt
               </Link>
@@ -45,7 +54,7 @@ export function Header() {
             <li>
               <Link
                 to="/tjenester"
-                className="hover:text-gray-300 transition-colors cursor-pointer"
+                className="nav-link"
               >
                 Tjenester
               </Link>
@@ -53,7 +62,7 @@ export function Header() {
             <li>
               <Link
                 to="/portfolio"
-                className="hover:text-gray-300 transition-colors cursor-pointer"
+                className="nav-link"
               >
                 Portefølje
               </Link>
@@ -77,7 +86,16 @@ export function Header() {
         }`}
       >
         <nav className="bg-coal border-t border-gray-700">
-          <ul className="flex flex-col space-y-4 px-6 py-4 text-white text-lg font-medium">
+          <ul className="flex flex-col space-y-4 px-6 py-4 text-white ">
+            <li>
+              <Link
+                to="/"
+                className="hover:text-gray-300 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Hjem
+              </Link>
+            </li>
             <li>
               <Link
                 to="/omoss"
@@ -97,21 +115,39 @@ export function Header() {
               </Link>
             </li>
             <li>
+              <Link
+                to="/tjenester"
+                className="hover:text-gray-300 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Tjenester
+              </Link>
+            </li>
+            {/* <li>
               <button
                 onClick={() => handleNavClick("tjenester")}
                 className="hover:text-gray-300 transition-colors text-left"
               >
                 Tjenester
               </button>
-            </li>
+            </li> */}
             <li>
+              <Link
+                to="/portfolio"
+                className="hover:text-gray-300 transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                Portefølje
+              </Link>
+            </li>
+            {/* <li>
               <button
                 onClick={() => handleNavClick("portfolio")}
                 className="hover:text-gray-300 transition-colors text-left"
               >
                 Portfølje
               </button>
-            </li>
+            </li> */}
           </ul>
         </nav>
       </div>

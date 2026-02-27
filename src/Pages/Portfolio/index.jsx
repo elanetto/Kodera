@@ -1,22 +1,21 @@
 import { projects } from "../../data/portfolioData";
 import PortfolioCard from "../../Components/PortfolioCard";
-import Space from "../../Layout/Space"
+import Space from "../../Layout/Space";
+import BackButton from "../../Components/BackButton";
+import PortfolioAllCards from "../../Components/PortfolioAllCards";
 
 export default function Portfolio() {
   return (
     <main className="min-h-screen bg-lightgray text-title">
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        <h1 className="font-oswald font-bold text-2xl text-title lg:text-2xl text-center py-5">
-        PORTFØLJE
-      </h1>
-
-        <div className="grid gap-6 md:grid-cols-2">
-          {projects.map((project) => (
-            <PortfolioCard key={project.id} project={project} />
-          ))}
+      <div className="relative flex items-center justify-center bg-paperwhite pb-4 pt-4 ">
+        <div className="back-btn absolute left-8">
+          <BackButton fallbackTo="/" />
         </div>
+        <h1 className="font-oswald font-medium text-4xl md:text-5xl text-title text-center ">
+          Portefølje
+        </h1>
       </div>
-      <Space size="xl" type="pad" />
+      <PortfolioAllCards />
     </main>
   );
 }

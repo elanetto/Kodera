@@ -3,7 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 import handshake from "../../assets/whyUsImages/agreement-stjerner.svg";
 import lightbulb from "../../assets/whyUsImages/lightbulb.svg";
 import female from "../../assets/whyUsImages/womenintech.svg";
-import myeforpengene from "../../assets/whyUsImages/merforpengene-stjerner.svg"
+import myeforpengene from "../../assets/whyUsImages/merforpengene-stjerner.svg";
 
 const MotionDiv = motion.div;
 
@@ -26,7 +26,7 @@ function RevealOnScroll({ children, delay = 0, duration = 0.8, yOffset = 40 }) {
           observer.unobserve(element);
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
 
     observer.observe(element);
@@ -46,36 +46,40 @@ function RevealOnScroll({ children, delay = 0, duration = 0.8, yOffset = 40 }) {
 
 export default function WhyUs() {
   return (
-    <section className="pt-10 pb-30 w-full text-center overflow-x-clip bg-lightgray">
+    <section className="pt-16 pb-12 lg:pb-30 w-full text-center overflow-x-clip bg-lightgray">
       <div className="mx-auto max-w-screen-xl px-4">
         <RevealOnScroll delay={0.1}>
-          <h2 className="text-3xl font-oswald font-medium text-title mb-6">
-            HVORFOR VELGE KODERA?
-          </h2>
+          <h3 className="text-2xl lg:text-3xl font-oswald uppercase font-medium text-title mb-6">
+            Hvorfor velge Kodera?
+          </h3>
         </RevealOnScroll>
 
         <RevealOnScroll delay={0.2}>
-          <p className="mx-auto max-w-2xl text-gray-600 leading-relaxed">
+          <h4 className="mx-auto max-w-2xl font-inter text-lg text-title leading-relaxed pb-4 lg:pb-0">
             Lei av å vandre i mørket på leting etter de rette utviklerne?
             Kanskje du har sendt utallige e-poster frem og tilbake, bare for å
             oppdage at de ikke forstår hva du egentlig ønsker - og at prisen
             ender opp langt over det du hadde sett for deg? We got you!
-          </p>
+          </h4>
         </RevealOnScroll>
 
         {/* Icons + text */}
         <RevealOnScroll delay={0.3}>
-          <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-16">
+          <div className="mt-8 lg:mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
             {/* 1. Pris */}
             <RevealOnScroll delay={0.1}>
               <div className="flex items-center flex-col text-center">
                 <div className="inline-flex items-center justify-center rounded-full bg-coal p-4 size-30  sm:size-40">
-                  <img src={myeforpengene} alt="Pris" className=" object-contain" />
+                  <img
+                    src={myeforpengene}
+                    alt="Pris"
+                    className=" object-contain"
+                  />
                 </div>
-                <h2 className="text-coal font-oswald font-bold text-2xl pb-4 pt-6">
+                <h2 className="text-title font-oswald font-bold text-2xl pb-4 pt-6">
                   Mye for pengene
                 </h2>
-                <p className="pl-3 md:pl-0   text-center max-w-[500px] ">
+                <p className="pl-3 md:pl-0  text-title text-center max-w-[500px] ">
                   Mange synes veien for å få en nettside utviklet er alt for
                   kronglete. Derfor velger vi å ikke skjule prisene våre. Vi
                   leverer nettsider og løsninger av høy kvalitet til svært
@@ -94,10 +98,10 @@ export default function WhyUs() {
                     className="object-contain"
                   />
                 </div>
-                <h2 className="text-coal font-oswald font-bold text-2xl pb-4 pt-6">
+                <h2 className="text-title font-oswald font-bold text-2xl pb-4 pt-6">
                   Lite team, tett sammarbeid
                 </h2>
-                <p className="pl-3 md:pl-0   text-center max-w-[500px]">
+                <p className="pl-3 md:pl-0  text-title text-center max-w-[500px]">
                   Som et lite team betyr dette fleksibilitet, rask og tett
                   kommunikasjon. Jo flere kokker, des mere søl. Her på kjøkkenet
                   er vi to personer. Kommunikasjon går raskt dersom det slipper
@@ -112,10 +116,10 @@ export default function WhyUs() {
                 <div className="inline-flex items-center justify-center rounded-full bg-coal p-8 size-30  sm:size-40">
                   <img src={lightbulb} alt="Idé" className="object-contain" />
                 </div>
-                <h2 className="text-coal font-oswald font-bold text-2xl pb-4 pt-6">
+                <h2 className="text-title font-oswald font-bold text-2xl pb-4 pt-6">
                   Vi forstår deg og dine ønsker
                 </h2>
-                <p className="pl-3 md:pl-0  text-center max-w-[500px]">
+                <p className="pl-3 md:pl-0  text-center max-w-[500px] text-title">
                   Programmerere som kan mer enn "bare" koding. Vi har en
                   fargerik bakrunn innen diverse yrker og utdanninger. Derfor
                   snakker vi ditt språk og forstår dine behov.
@@ -129,10 +133,10 @@ export default function WhyUs() {
                 <div className="inline-flex items-center justify-center rounded-full bg-coal p-8 size-30  sm:size-40">
                   <img src={female} alt="Støtte" className=" object-contain" />
                 </div>
-                <h2 className="text-coal font-oswald font-bold text-2xl pb-4 pt-6">
+                <h2 className="text-title font-oswald font-bold text-2xl pb-4 pt-6">
                   Kvinner som koder
                 </h2>
-                <p className="pl-3 md:pl-0  text-center max-w-[500px]">
+                <p className="pl-3 md:pl-0 text-title  text-center max-w-[500px]">
                   I Norge er det kun rundt 20% av alle utviklere som er kvinner.
                   Ved å velge oss, støtter du kvinnlige utviklere!
                 </p>
