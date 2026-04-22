@@ -39,7 +39,6 @@ export default function Project() {
         },
   );
 
-  // 👇 All other projects except the one we’re currently viewing
   const otherProjects = projects.filter((p) => String(p.id) !== String(id));
 
   return (
@@ -56,12 +55,13 @@ export default function Project() {
       <div className="max-w-7xl mx-auto  px-4 md:px-8  lg:px-20 xl:px-4 pt-8 lg:pt-12">
         <div className="grid gap-8 xl:grid-cols-[minmax(0,2fr)_minmax(0,1.3fr)]  xl:h-[420px] 2xl:h-[580px]">
           {/* LEFT: Carousel */}
-          <div className="h-full min-h-0">
+          <div className="h-full ">
             <CarouselComponent images={carouselImages} title={project.title} />
           </div>
 
           {/* RIGHT: Info panel */}
-          <div className="h-full min-h-0  ">
+          <div className="h-full  ">
+            {/* min-h-0  hvis man ønsker scroll*/}
             <div className="bg-coal text-paperwhite border border-white rounded-2xl p-6 md:p-7 shadow-xl h-full flex flex-col items-center sm:items-start text-center sm:text-left min-h-0">
               <h2 className="text-2xl  lg:text-3xl font-medium   font-oswald">
                 {project.title}
@@ -79,7 +79,7 @@ export default function Project() {
                 </p>
               )}
 
-              <div className="mt-2 flex-1 min-h-0 overflow-y-auto pr-2">
+              <div className="custom-scroll mt-2 flex-1 min-h-0 overflow-y-auto pr-2">
                 <h2 className=" text-base lg:text-lg uppercase font-medium  font-oswald text-lightgray mb-1">
                   Tech &amp; verktøy
                 </h2>
