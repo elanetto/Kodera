@@ -1,4 +1,5 @@
 import { useForm, ValidationError } from "@formspree/react";
+import { FaCircleCheck } from "react-icons/fa6";
 
 export default function ContactForm() {
   const [state, handleSubmit] = useForm("xzzjzvjg");
@@ -6,7 +7,8 @@ export default function ContactForm() {
   if (state.succeeded) {
     return (
       <p className="text-white bg-darkpink flex justify-center items-center w-md h-[52px] mx-auto rounded-lg">
-        Meldingen er sendt ✅ Vi svarer deg straks! 🙌
+        Meldingen er sendt <FaCircleCheck className="m-2 text-lg" /> Vi svarer
+        deg straks!
       </p>
     );
   }
@@ -42,11 +44,7 @@ export default function ContactForm() {
         required
       />
       <ValidationError prefix="Message" field="message" errors={state.errors} />
-      <button
-        type="submit"
-        disabled={state.submitting}
-        className="cta-btn"
-      >
+      <button type="submit" disabled={state.submitting} className="cta-btn">
         {state.submitting && (
           <span className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
         )}
