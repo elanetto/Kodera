@@ -52,8 +52,8 @@ export default function Project() {
         </h1>
       </div>
       {/* Main content container */}
-      <div className="max-w-7xl mx-auto  px-4 md:px-8  lg:px-20 xl:px-4 pt-8 lg:pt-12">
-        <div className="grid gap-8 xl:grid-cols-[minmax(0,2fr)_minmax(0,1.3fr)]  xl:h-[420px] 2xl:h-[580px]">
+      <div className="max-w-7xl mx-auto  px-4 md:px-8  lg:px-20 xl:px-4 pb-10 pt-8 lg:pt-12">
+        <div className="grid gap-8 xl:grid-cols-[minmax(0,2fr)_minmax(0,1.3fr)]">
           {/* LEFT: Carousel */}
           <div className="h-full ">
             <CarouselComponent images={carouselImages} title={project.title} />
