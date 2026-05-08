@@ -3,7 +3,12 @@ import { createPortal } from "react-dom";
 import { useForm, ValidationError } from "@formspree/react";
 import { FaCheckCircle } from "react-icons/fa";
 
-export default function ProductContactModal({ isOpen, onClose, product }) {
+export default function ProductContactModal({
+  isOpen,
+  onClose,
+  product,
+  onSubmitted,
+}) {
   // Kodera contact form
   const [state, handleSubmit] = useForm("xzzjzvjg");
 
@@ -34,6 +39,12 @@ export default function ProductContactModal({ isOpen, onClose, product }) {
 
     return () => clearTimeout(t);
   }, [isOpen, state.succeeded, onClose]);
+
+  useEffect(() => {
+    if (state.succeeded) {
+      onSubmitted?.();
+    }
+  }, [state.succeeded, onSubmitted]);
 
   if (!isOpen) return null;
 

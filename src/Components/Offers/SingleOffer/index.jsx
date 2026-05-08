@@ -11,6 +11,7 @@ import PortfolioExamples from "../../PortfolioExamples";
 import Space from "../../../Layout/Space";
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import BackButton from "../../BackButton/index.jsx";
+import { FaCircleCheck } from "react-icons/fa6";
 
 export default function SingleOffer() {
   const { id } = useParams();
@@ -18,6 +19,7 @@ export default function SingleOffer() {
   const [isContactOpen, setIsContactOpen] = useState(false);
   const handleOpen = () => setIsContactOpen(true);
   const handleClose = () => setIsContactOpen(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const offer =
     packages.find((o) => o.id === id) || hourly.find((o) => o.id === id);
@@ -84,9 +86,19 @@ export default function SingleOffer() {
           <span>
             <button
               onClick={handleOpen}
-              className="cta-btn mt-8 mx-auto lg:mx-0 mb-4 lg:mb-0"
+              className={
+                isSubmitted
+                  ? "mt-8 mx-auto lg:mx-0 mb-4 lg:mb-0 flex items-center gap-2 bg-darkpink/60 text-white px-6 py-3 rounded-lg"
+                  : "cta-btn mt-8 mx-auto lg:mx-0 mb-4 lg:mb-0"
+              }
             >
-              Send forespørsel
+              {isSubmitted ? (
+                <>
+                  Sendt <FaCheckCircle className="text-lg " />
+                </>
+              ) : (
+                "Send forespørsel"
+              )}
             </button>
           </span>
         </div>
@@ -183,6 +195,7 @@ export default function SingleOffer() {
         isOpen={isContactOpen}
         onClose={handleClose}
         product={offer}
+        onSubmitted={() => setIsSubmitted(true)}
       />
       <div className=" flex gap-4 mt-4 flex-wrap flex-col font-medium ">
         <span>

@@ -18,7 +18,7 @@ import figmaTimeLazy from "./../assets/projectImages/lazyload-ux-timespris.png";
 export const packages = [
   {
     id: "one-pager",
-    tag: "One pager",
+    tag: "Hopper",
     exampleProjectSlugs: ["bryllup"],
     headline: "1 sides nettside",
     features: [
@@ -73,7 +73,7 @@ export const packages = [
 
   {
     id: "three-pager",
-    tag: "Three pager",
+    tag: "Lovelace",
     exampleProjectSlugs: ["elanetto-design", "anette-therese-no"],
     headline: "Liten nettside",
     features: [
@@ -132,7 +132,7 @@ export const packages = [
 
   {
     id: "mega",
-    tag: "Mega",
+    tag: "Hamilton",
     exampleProjectSlugs: ["holidaze-anette", "holidaze-line"],
     headline: "Mellomstor nettside",
     beforeBying: [
