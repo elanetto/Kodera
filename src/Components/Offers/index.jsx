@@ -35,7 +35,7 @@ export default function Offers() {
         <div className="bg-paperwhite"></div>
 
         <h2 className="text-2xl md:text-3xl uppercase font-oswald font-medium text-title pt-8 mt-8 pb-10 w-full text-center bg-lightgray bg-gradient-to-b from-lightgray to-paperwhite">
-          Timespriser
+          Fleksible tjenester
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl gap-10 items-stretch mb-8">

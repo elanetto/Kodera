@@ -403,4 +403,18 @@ export const hourly = [
     longDescription:
       "Dette er løsningen for deg som har en nettside fra før og ønsker at den skal forbedres. Det kan være alt fra små ting som en knapp som ikke fungerer, til en total oppussing av hele nettsiden.",
   },
+  {
+  id: "vedlikehold",
+  tag: "Abonnement",
+  headline: "Vedlikehold av nettside",
+  features: [
+    "Små oppdateringer hver måned",
+    "Teknisk vedlikehold og feilretting",
+    "Rask hjelp når du trenger det",
+    "Fra kr 390 / mnd",
+  ],
+  price: "Fra kr 390 / mnd",
+  crossed: null,
+  isMaintenance: true,
+},
 ];
