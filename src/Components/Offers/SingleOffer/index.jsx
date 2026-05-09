@@ -18,8 +18,6 @@ export default function SingleOffer() {
 
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [selectedPackage, setSelectedPackage] = useState(null);
-
-  // 🔧 FIX: denne manglet (ESLint-error)
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleClose = () => setIsContactOpen(false);
@@ -77,7 +75,7 @@ export default function SingleOffer() {
           </div>
         </div>
 
-        {/* 🔥 NY: Dette får du (oppgradert versjon) */}
+        {/* Dette får du */}
         <div className="mt-20 rounded-xl p-8">
           <h2 className="text-2xl font-oswald text-title uppercase font-medium mb-6">
             Dette får du
@@ -207,6 +205,32 @@ export default function SingleOffer() {
                   </li>
                 ))}
               </ul>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* 🔥 FAQ SECTION */}
+      {offer.faq?.length > 0 && (
+        <div className="mt-12">
+          <h2 className="text-2xl text-title font-oswald uppercase font-medium mb-6">
+            Ofte stilte spørsmål
+          </h2>
+
+          <div className="space-y-3">
+            {offer.faq.map((item, i) => (
+              <details
+                key={i}
+                className="group border border-coal/20 rounded-lg p-4 bg-white hover:shadow-sm transition"
+              >
+                <summary className="cursor-pointer font-medium text-coal flex justify-between items-center">
+                  {item.q}
+                  <span className="group-open:rotate-180 transition">⌄</span>
+                </summary>
+                <p className="mt-2 text-gray-700 leading-relaxed">
+                  {item.a}
+                </p>
+              </details>
             ))}
           </div>
         </div>
