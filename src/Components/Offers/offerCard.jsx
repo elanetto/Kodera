@@ -14,7 +14,7 @@ export default function OfferCard({
   return (
     <div className="cardstyle flex flex-col items-center h-full">
       {/* Pink top label */}
-      <div className="flex justify-center py-2 min-w-[180px] bg-darkpink rounded-t-lg">
+      <div className="flex justify-center py-2 min-w-45 bg-darkpink rounded-t-lg">
         <h3 className="text-xl md:text-2xl text-white font-semibold font-oswald">
           {tag}
         </h3>
@@ -22,7 +22,7 @@ export default function OfferCard({
 
       {/* Card */}
       <div
-        className={`relative overflow-visible flex flex-col shadow rounded-lg bg-white ${widthClass} h-full} ${
+        className={`relative overflow-visible flex flex-col shadow rounded-lg bg-white ${widthClass} h-full ${
           recommended
             ? "border-2 border-darkpink scale-[1.02]"
             : "border border-gray-200 hover:border-gray-300"
