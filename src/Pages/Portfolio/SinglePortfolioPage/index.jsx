@@ -87,7 +87,7 @@ export default function Project() {
               </div>
 
               {/* Push buttons to bottom if you want */}
-              <div className="mt-auto pt-8 flex flex-wrap gap-3">
+              <div className="mt-auto pt-8 flex flex-wrap gap-3 justify-center sm:justify-start">
                 {project.liveUrl && (
                   <a
                     href={project.liveUrl}
