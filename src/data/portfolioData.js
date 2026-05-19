@@ -1,3 +1,19 @@
+//ID1 Anette portfolio
+import anettePort1 from "../assets/projectImages/anette-port.webp";
+import anetteMob1 from "../assets/projectImages/anetteport1.webp";
+import anetteMob2 from "../assets/projectImages/anetteport2.webp";
+import anetteMob3 from "../assets/projectImages/anetteport3.webp";
+
+//ID 10 Marit dikt bøker
+import maritProsjekt1 from "../assets/projectImages/maritprosjekt.webp";
+import maritProsjekt2 from "../assets/projectImages/mabooks.webp";
+import maritProsjekt3 from "../assets/projectImages/marev.webp";
+import maritProsjekt4 from "../assets/projectImages/masingle.webp";
+import maritMobile1 from "../assets/projectImages/screen-hjem.webp";
+import maritMobile2 from "../assets/projectImages/screen-single-home.webp";
+import maritMobile3 from "../assets/projectImages/screen-singlepage.webp";
+import maritMobile4 from "../assets/projectImages/screen-cus.webp";
+
 export const projects = [
   {
     id: "1",
@@ -11,9 +27,10 @@ export const projects = [
     repoUrl: "https://github.com/elanetto/Portfolio-2",
     images: [
       "/portfolio/anettetherese/at-01.webp",
-      "/portfolio/anettetherese/at-02.webp",
+      anettePort1,
       "/portfolio/anettetherese/at-03.webp",
     ],
+    mobileImages: [anetteMob1, anetteMob2, anetteMob3],
   },
   {
     id: "2",
@@ -141,5 +158,19 @@ export const projects = [
       "/portfolio/bryllup/bryllup-02.webp",
       "/portfolio/bryllup/bryllup-03.webp",
     ],
+  },
+  {
+    id: "10",
+    slug: "diktboker",
+    title: "Showcase: Diktbøker",
+    subtitle: "Showcase av produkter",
+    description: "En showcase av Marits diktbøker",
+    longDescription:
+      "Denne nettsiden er en showcase av Marits diktbøker. Hun har tilgang til å kunne poste produkter på egenhånd (Sanity CMS). Marit selv ønsket ikke betalingstjeneste på hennes nettside, men at kunder kunne kontakte henne direkte via mail. Etter eget ønske, er det ikke koblet til et domene.",
+    tech: ["react", "github", "js", "tailwind", "sanity"],
+    liveUrl: "https://diktglede.vercel.app/",
+    repoUrl: "https://github.com/linesvensen/diktglede",
+    images: [maritProsjekt1, maritProsjekt2, maritProsjekt3, maritProsjekt4],
+    mobileImages: [maritMobile1, maritMobile2, maritMobile3, maritMobile4],
   },
 ];

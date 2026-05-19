@@ -11,6 +11,7 @@ import Space from "../../../Layout/Space";
 import BackButton from "../../BackButton/index.jsx";
 import { maintenancePackages } from "../../../data/maintenancePackages";
 import OfferCard from "../offerCard.jsx";
+import { IoChevronDown } from "react-icons/io5";
 
 export default function SingleOffer() {
   const { id } = useParams();
@@ -27,7 +28,7 @@ export default function SingleOffer() {
 
   const isMaintenance = id === "vedlikehold";
 
-  // ✅ MAINTENANCE PAGE
+  //  MAINTENANCE PAGE
   if (isMaintenance) {
     return (
       <section className="max-w-7xl mx-auto px-8">
@@ -174,7 +175,7 @@ export default function SingleOffer() {
 
           <button
             onClick={() => setIsContactOpen(true)}
-            className="cta-btn mt-8 hover:scale-[1.02] active:scale-[0.98]"
+            className="cta-btn mt-8 mb-4 lg:mb-0 mx-auto lg:mx-0 hover:scale-[1.02] active:scale-[0.98]"
           >
             {isSubmitted ? "Sendt ✓" : "Send forespørsel"}
           </button>
@@ -185,51 +186,71 @@ export default function SingleOffer() {
         </div>
       </div>
 
-      {/* Features */}
       {offer.detailedFeatures?.length > 0 && (
-        <div>
-          <h2 className="text-2xl font-oswald uppercase font-medium text-title mb-4 mt-8">
+        <div className=" rounded-xl   ">
+          <h2 className="text-2xl font-oswald text-center sm:text-left uppercase font-medium text-title mb-4 mt-8 lg:pt-8 pb-4">
             Dette får du
           </h2>
-
           <div className="grid lg:grid-cols-2 gap-x-12">
-            {[left, right].map((col, idx) => (
-              <ul key={idx} className="flex flex-col gap-6 text-gray-700">
-                {col.map((f, i) => (
-                  <li
-                    key={i}
-                    className="grid grid-cols-[auto_1fr] gap-3 items-start"
-                  >
-                    <FaCheckCircle className="w-5 h-5 text-darkpink" />
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
-            ))}
+            <ul className="flex flex-col gap-6 text-gray-700">
+              {left.map((f, i) => (
+                <li
+                  key={`l-${i}`}
+                  className="grid grid-cols-[auto_1fr] gap-3 items-start"
+                >
+                  <FaCheckCircle className="w-5 h-5 text-darkpink translate-y-[0.125em]" />
+                  <span className="leading-relaxed">{f}</span>
+                </li>
+              ))}
+            </ul>
+
+            <ul className="mt-6 lg:mt-0 flex flex-col gap-6 text-gray-700">
+              {right.map((f, i) => (
+                <li
+                  key={`r-${i}`}
+                  className="grid grid-cols-[auto_1fr] gap-3 items-start"
+                >
+                  <FaCheckCircle className="w-5 h-5 text-darkpink translate-y-[0.125em]" />
+                  <span className="leading-relaxed">{f}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       )}
 
-      {/* 🔥 FAQ SECTION */}
+      <Space size="sm" type="pad" />
+
+      {offer.exampleProjectSlugs?.length > 0 && (
+        <>
+          <PortfolioExamples
+            slugs={offer.exampleProjectSlugs}
+            title={`Eksempel på ${offer.headline.toLowerCase()}`}
+            className="mb-2 mt-4 pt-8 pb-4 text-center lg:text-left "
+          />
+          <Space size="sm" type="pad" />
+        </>
+      )}
+
       {offer.faq?.length > 0 && (
-        <div className="mt-12">
-          <h2 className="text-2xl text-title font-oswald uppercase font-medium mb-6">
+        <div>
+          <h2 className="text-2xl text-title font-oswald uppercase font-medium mb-4 mt-4 pt-2 pb-2">
             Ofte stilte spørsmål
           </h2>
 
-          <div className="space-y-3">
+          <div className="space-y-3 max-w-2xl">
             {offer.faq.map((item, i) => (
               <details
                 key={i}
-                className="group border border-coal/20 rounded-lg p-4 bg-white hover:shadow-sm transition"
+                className="group border border-coal/20 shadow rounded-lg p-4"
               >
-                <summary className="cursor-pointer font-medium text-coal flex justify-between items-center">
-                  {item.q}
-                  <span className="group-open:rotate-180 transition">⌄</span>
+                <summary className="flex items-center justify-between gap-4 cursor-pointer font-medium text-coal list-none">
+                  <span>{item.q}</span>
+
+                  <IoChevronDown className="h-5 w-5 shrink-0 transition-transform duration-300 group-open:rotate-180" />
                 </summary>
-                <p className="mt-2 text-gray-700 leading-relaxed">
-                  {item.a}
-                </p>
+
+                <p className="mt-3 text-coal">{item.a}</p>
               </details>
             ))}
           </div>

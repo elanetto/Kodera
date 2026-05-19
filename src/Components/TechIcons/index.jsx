@@ -11,7 +11,7 @@ export default function TechIcons({
   const sizeClasses = size === "sm" ? "h-6" : size === "lg" ? "h-10" : "h-8";
 
   const alignClasses = {
-    left: "justify-center sm:justify-start",
+    left: "justify-center ",
     center: "justify-center",
     right: "justify-center sm:justify-end",
   }[align];
