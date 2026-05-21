@@ -38,7 +38,7 @@ export function CarouselComponent({ images = [], title }) {
     <>
       {images.length > 0 && (
         <div
-          className="project-carousel h-full max-h-140 w-full overflow-hidden rounded-xl shadow transition-colors duration-500"
+          className="project-carousel h-full max-h-100 max-w-60 sm:max-h-300 sm:max-w-full w-full overflow-hidden rounded-xl shadow transition-colors duration-500"
           style={{ backgroundColor: bgColor }}
         >
           <Carousel
@@ -131,22 +131,24 @@ export function CarouselComponent({ images = [], title }) {
 
       {selectedImage && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-[9999] p-4"
           onClick={() => setSelectedImage(null)}
-          onKeyDown={(e) => e.key === "Escape" && setSelectedImage(null)}
-          tabIndex={-1}
         >
-          <div className="relative">
+          <div
+            className="relative w-full h-full flex items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-2 right-2 text-white text-2xl"
+              className="fixed top-4 right-4 text-white text-3xl z-[10000] cursor-pointer"
             >
               ✕
             </button>
+
             <img
               src={selectedImage}
               alt="Selected"
-              className="max-h-[90vh] max-w-[90vw] rounded-lg"
+              className="max-w-[95vw] max-h-[90vh] object-contain rounded-lg"
             />
           </div>
         </div>

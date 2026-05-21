@@ -61,8 +61,8 @@ export default function Project() {
       {/* Main content container */}
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-20 xl:px-4 pb-10 pt-8  ">
         {/* MOBILE ONLY - keep current card layout */}
-        <div className="sm:hidden   flex flex-col items-center justify-center  gap-8">
-          <div className="h-full  shadow rounded-xl shadow-coal max-w-xs  ">
+        <div className="sm:hidden   flex flex-col items-center justify-center  gap-4 ">
+          <div className="h-full   rounded-xl  shadow-lg max-w-xs  ">
             <CarouselComponent
               images={mobileCarouselImages}
               title={project.title}

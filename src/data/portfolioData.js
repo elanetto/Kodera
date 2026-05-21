@@ -1,10 +1,53 @@
 //ID1 Anette portfolio
 import anettePort1 from "../assets/projectImages/anette-port.webp";
+
 import anetteMob1 from "../assets/projectImages/anetteport1.webp";
 import anetteMob2 from "../assets/projectImages/anetteport2.webp";
 import anetteMob3 from "../assets/projectImages/anetteport3.webp";
 
-//ID 10 Marit dikt bøker
+//ID2 Anette portfolio
+import elanettoMob1 from "../assets/projectImages/elanettoMob1.webp";
+import elanettoMob2 from "../assets/projectImages/elanettoMob2.webp";
+import elanettoMob3 from "../assets/projectImages/elanettoMob3.webp";
+
+//ID3 Anette Holidaze
+import anHolMob1 from "../assets/projectImages/anHolMob1.webp";
+import anHolMob2 from "../assets/projectImages/anHolMob2.webp";
+import anHolMob3 from "../assets/projectImages/anHolMob3.webp";
+
+//ID4 FloppyFlap line
+import ffMob1 from "../assets/projectImages/ffMob1.webp";
+import ffMob2 from "../assets/projectImages/ffMob2.webp";
+import ffMob3 from "../assets/projectImages/ffMob3.webp";
+
+//ID5 Line Holidaze
+import linHolMob1 from "../assets/projectImages/linHolMob1.webp";
+import linHolMob2 from "../assets/projectImages/linHolMob2.webp";
+import linHolMob3 from "../assets/projectImages/linHolMob3.webp";
+
+//ID 6 bidbuddy line
+import bbMob1 from "../assets/projectImages/bbMob1.webp";
+import bbMob2 from "../assets/projectImages/bbMob2.webp";
+import bbMob3 from "../assets/projectImages/bbMob3.webp";
+
+//ID 7  dropshop line
+
+import lidrop1 from "../assets/projectImages/lidrop1.webp";
+import lidrop2 from "../assets/projectImages/lidrop2.webp";
+import lidrop3 from "../assets/projectImages/lidrop3.webp";
+
+//ID 8  gamehub anette
+
+import anspill1 from "../assets/projectImages/angame11.png";
+import anspill2 from "../assets/projectImages/anspill2.webp";
+import anspill3 from "../assets/projectImages/anspill3.webp";
+
+//ID 8  bryllup anette
+import bryllupMob1 from "../assets/projectImages/bryllupMob1.webp";
+import bryllupMob2 from "../assets/projectImages/bryllupMob2.webp";
+import bryllupMob3 from "../assets/projectImages/bryllupMob3.webp";
+
+//ID 10 diktglede
 import maritProsjekt1 from "../assets/projectImages/maritprosjekt.webp";
 import maritProsjekt2 from "../assets/projectImages/mabooks.webp";
 import maritProsjekt3 from "../assets/projectImages/marev.webp";
@@ -47,6 +90,7 @@ export const projects = [
       "/portfolio/elanetto/elanetto-02.webp",
       "/portfolio/elanetto/elanetto-03.webp",
     ],
+    mobileImages: [elanettoMob1, elanettoMob2, elanettoMob3],
   },
   {
     id: "3",
@@ -63,6 +107,7 @@ export const projects = [
       "/portfolio/holidaze-a/hol-02.webp",
       "/portfolio/holidaze-a/hol-03.webp",
     ],
+    mobileImages: [anHolMob1, anHolMob2, anHolMob3],
   },
   {
     id: "4",
@@ -78,6 +123,7 @@ export const projects = [
       "/portfolio/floppyflap/floppy-02.webp",
       "/portfolio/floppyflap/floppy-03.webp",
     ],
+    mobileImages: [ffMob1, ffMob2, ffMob3],
   },
   {
     id: "5",
@@ -94,6 +140,7 @@ export const projects = [
       "/portfolio/holidaze-l/hol-02.webp",
       "/portfolio/holidaze-l/hol-03.webp",
     ],
+    mobileImages: [linHolMob1, linHolMob2, linHolMob3],
   },
   {
     id: "6",
@@ -110,6 +157,7 @@ export const projects = [
       "/portfolio/bidbuddy/bidbuddy-02.webp",
       "/portfolio/bidbuddy/bidbuddy-03.webp",
     ],
+    mobileImages: [bbMob1, bbMob2, bbMob3],
   },
   {
     id: "7",
@@ -125,6 +173,7 @@ export const projects = [
       "/portfolio/shopdrop/shopdrop-02.webp",
       "/portfolio/shopdrop/shopdrop-03.webp",
     ],
+    mobileImages: [lidrop1, lidrop2, lidrop3],
   },
   {
     id: "8",
@@ -142,6 +191,7 @@ export const projects = [
       "/portfolio/gamehub/gamehub-3.webp",
       "/portfolio/gamehub/gamehub-4.webp",
     ],
+    mobileImages: [anspill1, anspill2, anspill3],
   },
   {
     id: "9",
@@ -158,6 +208,7 @@ export const projects = [
       "/portfolio/bryllup/bryllup-02.webp",
       "/portfolio/bryllup/bryllup-03.webp",
     ],
+    mobileImages: [bryllupMob1, bryllupMob2, bryllupMob3],
   },
   {
     id: "10",
