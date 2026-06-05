@@ -1,16 +1,46 @@
+import { useEffect, useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import { useState } from "react";
+import { FastAverageColor } from "fast-average-color";
 import { FiExternalLink } from "react-icons/fi";
 import { Link } from "react-router-dom";
+
+const fac = new FastAverageColor();
 
 export function CarouselComponent({ images = [], title }) {
   const [selectedImage, setSelectedImage] = useState(null);
 
+  const [bgColor, setBgColor] = useState("#ffffff");
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const img = document.querySelector(".carousel .slide.selected img");
+
+    if (!img) return;
+
+    if (img.complete) {
+      updateColor(img);
+    } else {
+      img.onload = () => updateColor(img);
+    }
+  }, [currentIndex]);
+
+  const updateColor = async (img) => {
+    try {
+      const color = await fac.getColorAsync(img);
+      setBgColor(color.hex);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   return (
     <>
       {images.length > 0 && (
-        <div className="project-carousel h-full w-full overflow-hidden rounded-xl shadow">
+        <div
+          className="project-carousel h-full max-h-100 max-w-60 sm:max-h-300 sm:max-w-full w-full overflow-hidden rounded-xl shadow transition-colors duration-500"
+          style={{ backgroundColor: bgColor }}
+        >
           <Carousel
             showThumbs={false}
             showStatus={false}
@@ -20,6 +50,7 @@ export function CarouselComponent({ images = [], title }) {
             // IMPORTANT: prevent library from forcing its own height from image
             dynamicHeight={false}
             className="h-full  "
+            onChange={(index) => setCurrentIndex(index)}
           >
             {images.map((img, index) => {
               const hasProjectLink = Boolean(img.projectId);
@@ -100,22 +131,24 @@ export function CarouselComponent({ images = [], title }) {
 
       {selectedImage && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-[9999] p-4"
           onClick={() => setSelectedImage(null)}
-          onKeyDown={(e) => e.key === "Escape" && setSelectedImage(null)}
-          tabIndex={-1}
         >
-          <div className="relative">
+          <div
+            className="relative w-full h-full flex items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-2 right-2 text-white text-2xl"
+              className="fixed top-4 right-4 text-white text-3xl z-[10000] cursor-pointer"
             >
               ✕
             </button>
+
             <img
               src={selectedImage}
               alt="Selected"
-              className="max-h-[90vh] max-w-[90vw] rounded-lg"
+              className="max-w-[95vw] max-h-[90vh] object-contain rounded-lg"
             />
           </div>
         </div>

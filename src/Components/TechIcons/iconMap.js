@@ -10,8 +10,9 @@ import canva from "../../assets/devIcons/canva-svgrepo-com.svg";
 import github from "../../assets/devIcons/github-142-svgrepo-com.svg";
 import postman from "../../assets/devIcons/postman-icon-svgrepo-com.svg";
 import vite from "../../assets/devIcons/vite.svg";
+import sanity from "../../assets/devIcons/sanity-svgrepo-com.svg";
 
-// Keys you will use in your portfolio data, e.g. "js", "react", "figma", etc.
+// Keys   portfolio data, e.g. "js", "react", "figma", etc.
 export const techIconMap = {
   js: { src: js, alt: "JavaScript" },
   typescript: { src: typescript, alt: "TypeScript" },
@@ -24,4 +25,5 @@ export const techIconMap = {
   github: { src: github, alt: "GitHub" },
   postman: { src: postman, alt: "Postman" },
   vite: { src: vite, alt: "Vite" },
+  sanity: { src: sanity, alt: "Sanity" },
 };
