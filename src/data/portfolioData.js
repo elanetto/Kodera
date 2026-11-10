@@ -57,6 +57,19 @@ import maritMobile2 from "../assets/projectImages/screen-single-home.webp";
 import maritMobile3 from "../assets/projectImages/screen-singlepage.webp";
 import maritMobile4 from "../assets/projectImages/screen-cus.webp";
 
+//ID 11 Brytningstid
+import brytImg1 from "../assets/projectImages/bryt-1-desktop.webp";
+import brytImg2 from "../assets/projectImages/bryt-2-desktop.webp";
+import brytImg3 from "../assets/projectImages/bryt-3-desktop.webp";
+import brytImg4 from "../assets/projectImages/bryt-4-desktop.webp";
+import brytImg5 from "../assets/projectImages/bryt-5-desktop.webp";
+
+import brytImgMob1 from "../assets/projectImages/bryt-1-mob.webp";
+import brytImgMob2 from "../assets/projectImages/bryt-2-mob.webp";
+import brytImgMob3 from "../assets/projectImages/bryt-3-mob.webp";
+import brytImgMob4 from "../assets/projectImages/bryt-4-mob.webp";
+import brytImgMob5 from "../assets/projectImages/bryt-5-mob.webp";
+
 export const projects = [
   {
     id: "1",
@@ -74,6 +87,7 @@ export const projects = [
       "/portfolio/anettetherese/at-03.webp",
     ],
     mobileImages: [anetteMob1, anetteMob2, anetteMob3],
+    date: "2025-05-22",
   },
   {
     id: "2",
@@ -91,6 +105,7 @@ export const projects = [
       "/portfolio/elanetto/elanetto-03.webp",
     ],
     mobileImages: [elanettoMob1, elanettoMob2, elanettoMob3],
+    date: "2026-01-01",
   },
   {
     id: "3",
@@ -108,6 +123,7 @@ export const projects = [
       "/portfolio/holidaze-a/hol-03.webp",
     ],
     mobileImages: [anHolMob1, anHolMob2, anHolMob3],
+    date: "2024-01-01",
   },
   {
     id: "4",
@@ -124,6 +140,7 @@ export const projects = [
       "/portfolio/floppyflap/floppy-03.webp",
     ],
     mobileImages: [ffMob1, ffMob2, ffMob3],
+    date: "2025-05-05",
   },
   {
     id: "5",
@@ -141,6 +158,7 @@ export const projects = [
       "/portfolio/holidaze-l/hol-03.webp",
     ],
     mobileImages: [linHolMob1, linHolMob2, linHolMob3],
+    date: "2024-01-01",
   },
   {
     id: "6",
@@ -158,6 +176,7 @@ export const projects = [
       "/portfolio/bidbuddy/bidbuddy-03.webp",
     ],
     mobileImages: [bbMob1, bbMob2, bbMob3],
+    date: "2025-06-06",
   },
   {
     id: "7",
@@ -174,6 +193,7 @@ export const projects = [
       "/portfolio/shopdrop/shopdrop-03.webp",
     ],
     mobileImages: [lidrop1, lidrop2, lidrop3],
+    date: "2025-04-05",
   },
   {
     id: "8",
@@ -192,6 +212,7 @@ export const projects = [
       "/portfolio/gamehub/gamehub-4.webp",
     ],
     mobileImages: [anspill1, anspill2, anspill3],
+    date: "2023-03-03",
   },
   {
     id: "9",
@@ -209,6 +230,7 @@ export const projects = [
       "/portfolio/bryllup/bryllup-03.webp",
     ],
     mobileImages: [bryllupMob1, bryllupMob2, bryllupMob3],
+    date: "2022-06-06",
   },
   {
     id: "10",
@@ -223,5 +245,27 @@ export const projects = [
     repoUrl: "https://github.com/linesvensen/diktglede",
     images: [maritProsjekt1, maritProsjekt2, maritProsjekt3, maritProsjekt4],
     mobileImages: [maritMobile1, maritMobile2, maritMobile3, maritMobile4],
+    date: "2026-05-22",
+  },
+  {
+    id: "11",
+    slug: "Dokumentarfilm",
+    title: "Showcase: Dokumentarfilm",
+    subtitle: "Showcase av produkt",
+    description: "Presentasjon av filmen Brytningstid og trailer",
+    longDescription:
+      "Denne nettsiden er en showcase av dokumentarfilmen Brytningstid av Jakob Hardeberg. Jakob ønsket en leken og levende nettside som ga en følelse av å være inne i filmen. Nettsiden er til for å presentere filmen til både potensielle samarbeidspartnere og seere, samt at filmen får en digital tilstedeværelse.",
+    tech: ["react", "js", "tailwind", "github"],
+    liveUrl: "https://brytningstid.no/",
+    repoUrl: "https://github.com/linesvensen/brytningstid",
+    images: [brytImg1, brytImg2, brytImg3, brytImg4, brytImg5],
+    mobileImages: [
+      brytImgMob1,
+      brytImgMob2,
+      brytImgMob3,
+      brytImgMob4,
+      brytImgMob5,
+    ],
+    date: "2026-11-05",
   },
 ];

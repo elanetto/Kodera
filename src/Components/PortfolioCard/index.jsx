@@ -15,11 +15,12 @@ export default function PortfolioCard({ project, variant = "grid" }) {
     <Link
       to={`/portfolio/${project.id}`}
       className="
-        group  rounded-2xl overflow-hidden mx-auto
-        bg-coal
-        hover:shadow-xl hover:shadow-coal/10 border-0 ring-0 outline-none
-        flex flex-col h-full
-      "
+    group w-full rounded-2xl overflow-hidden
+    bg-coal
+    hover:shadow-xl hover:shadow-coal/10
+    border-0 ring-0 outline-none
+    flex flex-col h-full
+  "
     >
       {/* Thumbnail (NO overlay here) */}
       {thumbnail?.src && (

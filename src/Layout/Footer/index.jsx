@@ -1,9 +1,4 @@
-import {
-  FaReact,
-  FaHtml5,
-  FaGithub,
-  FaCode,
-} from "react-icons/fa";
+import { FaReact, FaHtml5, FaGithub, FaCode } from "react-icons/fa";
 import { SiVite, SiTailwindcss, SiJavascript } from "react-icons/si";
 import { Link } from "react-router-dom";
 import NewsletterForm from "../../Components/Subscribe";
@@ -20,8 +15,8 @@ export function Footer() {
             <div className="space-y-4">
               <h2 className="text-2xl font-bold tracking-tight">Kodera</h2>
               <p className="text-sm text-white/80 leading-relaxed mx-auto md:mx-0 max-w-sm">
-                Frontend-utvikling kodet av kvinner i Oslo. Vi bygger gode digitale
-                opplevelser.
+                Frontend-utvikling kodet av kvinner i Oslo. Vi bygger gode
+                digitale opplevelser.
               </p>
 
               <p className="text-sm text-white/70">
@@ -38,8 +33,9 @@ export function Footer() {
             {/* Built with */}
             <div className="space-y-3">
               <p className="text-sm text-white/80 leading-relaxed mx-auto md:mx-0 max-w-sm">
-                Denne nettsiden er bygget med Vite, React, Tailwind, JavaScript og
-                HTML5. Prosjektet er satt opp i komponenter og kodet i Visual Studio Code.
+                Denne nettsiden er bygget med Vite, React, Tailwind, JavaScript
+                og HTML5. Prosjektet er satt opp i komponenter og kodet i Visual
+                Studio Code.
               </p>
 
               <div className="flex flex-wrap justify-center md:justify-start items-center gap-4 text-white/90">
@@ -115,12 +111,18 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link className="text-white/80 hover:text-white" to="/tjenester">
+                <Link
+                  className="text-white/80 hover:text-white"
+                  to="/tjenester"
+                >
                   Tjenester
                 </Link>
               </li>
               <li>
-                <Link className="text-white/80 hover:text-white" to="/portfolio">
+                <Link
+                  className="text-white/80 hover:text-white"
+                  to="/portfolio"
+                >
                   Portefølje
                 </Link>
               </li>
@@ -134,7 +136,8 @@ export function Footer() {
             </h3>
 
             <p className="text-sm text-white/80">
-              Få tips og triks om design og oppbygging av gode nettsider, og oppdateringer fra oss!
+              Få tips og triks om design og oppbygging av gode nettsider, og
+              oppdateringer fra oss!
             </p>
 
             <div className="mx-auto md:mx-0 max-w-md">
@@ -165,8 +168,8 @@ export function Footer() {
             </div>
           </div>
 
-          <p className="mt-4 text-[11px] text-white/50 text-center">
-            Kodera © {new Date().getFullYear()}
+          <p className="mt-4 text-[10px] text-white/50 text-center">
+            KODERA Line Svensen Lini Karalo · Org. 925104159{" "}
           </p>
         </div>
       </div>

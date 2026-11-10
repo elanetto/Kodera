@@ -16,7 +16,7 @@ export default function HeroSlide1({
         w-full 
         flex flex-col justify-center md:justify-start 
         bg-coal
-        bg-[url('/src/assets/images/kode-pc.png')]
+        bg-[url('/src/assets/images/kode-pc.webp')]
         bg-top bg-no-repeat bg-cover
         before:content-[''] before:absolute before:inset-0
         before:bg-gradient-to-t before:from-coal/70 before:via-coal before:to-coal
